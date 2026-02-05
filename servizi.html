@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servizi di Officina Gemmologica: taglio gemme personalizzato, consulenze gemmologiche, progettazione gioielli, restauro e ricerca pietre preziose a Roma.">
+  <meta name="keywords" content="taglio gemme, consulenza gemmologica, progettazione gioielli, restauro gioielli, pietre preziose, Roma">
+
+  <title>Servizi - Officina Gemmologica | Taglio Gemme e Consulenza</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Stili specifici per la pagina servizi */
+    .service-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      padding: 4rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .service-detail:last-child {
+      border-bottom: none;
+    }
+
+    .service-detail:nth-child(even) {
+      direction: rtl;
+    }
+
+    .service-detail:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .service-detail-image {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+    }
+
+    .service-detail-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .service-detail-content h3 {
+      margin-bottom: 1rem;
+    }
+
+    .service-detail-content .gold-line {
+      margin: 1rem 0 1.5rem;
+      margin-left: 0;
+    }
+
+    .service-detail-content p {
+      color: var(--color-text-light);
+      margin-bottom: 1rem;
+    }
+
+    .service-features {
+      margin-top: 1.5rem;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text);
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--color-accent);
+      font-weight: bold;
+    }
+
+    .pricing-note {
+      background: var(--color-light);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      margin-top: 1.5rem;
+      border-left: 3px solid var(--color-accent);
+    }
+
+    .pricing-note p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 968px) {
+      .service-detail,
+      .service-detail:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+
+      .service-detail-image img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Officina <span>Gemmologica</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="servizi.html" class="active">Servizi</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>I Nostri Servizi</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">Dalla pietra grezza al gioiello finito: un servizio completo a 360 gradi</p>
+    </div>
+  </section>
+
+  <!-- Servizi Overview -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="services-grid">
+        <a href="#taglio" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#9670;</div>
+          <h3>Taglio Gemme</h3>
+          <p>Taglio personalizzato di pietre preziose con tecniche artigianali</p>
+        </a>
+
+        <a href="#consulenza" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#128269;</div>
+          <h3>Consulenza</h3>
+          <p>Analisi, valutazione e certificazione professionale</p>
+        </a>
+
+        <a href="#progettazione" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#9998;</div>
+          <h3>Progettazione</h3>
+          <p>Creazione di gioielli unici su misura</p>
+        </a>
+
+        <a href="#ricerca" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#127760;</div>
+          <h3>Ricerca Pietre</h3>
+          <p>Selezione e approvvigionamento di gemme rare</p>
+        </a>
+
+        <a href="#restauro" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#128736;</div>
+          <h3>Restauro</h3>
+          <p>Riparazione e restauro di gioielli antichi</p>
+        </a>
+
+        <a href="#formazione" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#127891;</div>
+          <h3>Formazione</h3>
+          <p>Corsi e workshop di gemmologia</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servizi Dettagliati -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Taglio Gemme -->
+      <div class="service-detail reveal" id="taglio">
+        <div class="service-detail-image">
+          <!-- MODIFICA: Inserisci immagine taglio gemme -->
+          <img src="images/servizio-taglio.jpg" alt="Taglio Gemme"
+               onerror="this.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Taglio Gemme Personalizzato</h3>
+          <div class="gold-line"></div>
+          <p>
+            Il taglio è l'arte di trasformare una pietra grezza in una gemma che cattura la luce
+            e rivela tutta la sua bellezza. Ogni taglio viene studiato in base alle caratteristiche
+            uniche della pietra per massimizzarne brillantezza e colore.
+          </p>
+          <p>
+            Eseguiamo tutti i tipi di taglio: brillante, smeraldo, princess, marquise, ovale,
+            goccia, cabochon e tagli fantasia personalizzati secondo le vostre esigenze.
+          </p>
+          <ul class="service-features">
+            <li>Taglio su misura per ogni pietra</li>
+            <li>Tutti i tipi di taglio classici e fantasia</li>
+            <li>Ritaglio e correzione di gemme esistenti</li>
+            <li>Lavorazione di pietre preziose e semipreziose</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Consulenza -->
+      <div class="service-detail reveal" id="consulenza">
+        <div class="service-detail-image">
+          <!-- MODIFICA: Inserisci immagine consulenza -->
+          <img src="images/servizio-consulenza.jpg" alt="Consulenza Gemmologica"
+               onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Consulenza Gemmologica</h3>
+          <div class="gold-line"></div>
+          <p>
+            Offriamo consulenze professionali per aiutarvi a comprendere il valore
+            e le caratteristiche delle vostre pietre. Analisi approfondite con strumenti
+            gemmologici professionali per identificare natura, trattamenti e qualità.
+          </p>
+          <p>
+            Vi guidiamo anche negli acquisti, assicurandovi di fare scelte consapevoli
+            e di ottenere il miglior rapporto qualità-prezzo.
+          </p>
+          <ul class="service-features">
+            <li>Identificazione e analisi delle gemme</li>
+            <li>Valutazione e stima del valore</li>
+            <li>Rilevamento di trattamenti e sintesi</li>
+            <li>Consulenza per acquisti e investimenti</li>
+            <li>Perizie per assicurazioni e successioni</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Progettazione -->
+      <div class="service-detail reveal" id="progettazione">
+        <div class="service-detail-image">
+          <!-- MODIFICA: Inserisci immagine progettazione -->
+          <img src="images/servizio-progettazione.jpg" alt="Progettazione Gioielli"
+               onerror="this.style.background='linear-gradient(135deg, #2d2d2d, #1a1a1a)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Progettazione Gioielli</h3>
+          <div class="gold-line"></div>
+          <p>
+            Trasformiamo le vostre idee in gioielli unici. Dalla prima bozza al prodotto finito,
+            vi accompagniamo in ogni fase della creazione, curando ogni dettaglio con passione artigianale.
+          </p>
+          <p>
+            Realizziamo anelli di fidanzamento, fedi nuziali, collane, orecchini e qualsiasi
+            tipo di gioiello personalizzato. Ogni creazione è un pezzo unico, fatto su misura per voi.
+          </p>
+          <ul class="service-features">
+            <li>Design personalizzato su vostre indicazioni</li>
+            <li>Rendering 3D del progetto</li>
+            <li>Scelta dei materiali (oro, platino, argento)</li>
+            <li>Incastonatura professionale</li>
+            <li>Finitura e lucidatura artigianale</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ricerca Pietre -->
+      <div class="service-detail reveal" id="ricerca">
+        <div class="service-detail-image">
+          <!-- MODIFICA: Inserisci immagine ricerca pietre -->
+          <img src="images/servizio-ricerca.jpg" alt="Ricerca Pietre Preziose"
+               onerror="this.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Ricerca Pietre Preziose</h3>
+          <div class="gold-line"></div>
+          <p>
+            Cercate una pietra particolare? Grazie alla nostra rete di fornitori
+            e alla nostra esperienza, possiamo trovare gemme rare e di alta qualità
+            in tutto il mondo.
+          </p>
+          <p>
+            Che si tratti di un rubino birmano, uno smeraldo colombiano o un raro
+            alessandrite, ci impegniamo a trovare la pietra perfetta per voi.
+          </p>
+          <ul class="service-features">
+            <li>Ricerca gemme su commissione</li>
+            <li>Accesso a fornitori internazionali</li>
+            <li>Selezione accurata in base alle vostre esigenze</li>
+            <li>Garanzia di provenienza etica</li>
+            <li>Certificazione inclusa</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Restauro -->
+      <div class="service-detail reveal" id="restauro">
+        <div class="service-detail-image">
+          <!-- MODIFICA: Inserisci immagine restauro -->
+          <img src="images/servizio-restauro.jpg" alt="Restauro Gioielli"
+               onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Restauro e Riparazione</h3>
+          <div class="gold-line"></div>
+          <p>
+            I gioielli di famiglia meritano una seconda vita. Restauriamo con cura
+            gioielli antichi e d'epoca, preservandone il carattere originale
+            mentre li riportiamo al loro antico splendore.
+          </p>
+          <p>
+            Offriamo anche servizi di riparazione: sostituzione pietre, riparazione
+            di chiusure, ridimensionamento anelli e molto altro.
+          </p>
+          <ul class="service-features">
+            <li>Restauro conservativo di gioielli antichi</li>
+            <li>Riparazione di montature danneggiate</li>
+            <li>Sostituzione pietre mancanti</li>
+            <li>Ridimensionamento anelli</li>
+            <li>Pulizia e lucidatura professionale</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Formazione -->
+      <div class="service-detail reveal" id="formazione">
+        <div class="service-detail-image">
+          <!-- MODIFICA: Inserisci immagine formazione -->
+          <img src="images/servizio-formazione.jpg" alt="Corsi di Gemmologia"
+               onerror="this.style.background='linear-gradient(135deg, #2d2d2d, #1a1a1a)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Formazione e Workshop</h3>
+          <div class="gold-line"></div>
+          <p>
+            Condividiamo la nostra passione e conoscenza attraverso corsi e workshop
+            dedicati a chi vuole avvicinarsi al mondo della gemmologia o approfondire
+            le proprie competenze.
+          </p>
+          <p>
+            Organizziamo sessioni individuali e di gruppo, adatte sia a principianti
+            che a professionisti del settore.
+          </p>
+          <ul class="service-features">
+            <li>Introduzione alla gemmologia</li>
+            <li>Riconoscimento delle pietre preziose</li>
+            <li>Workshop pratici sul taglio</li>
+            <li>Corsi personalizzati su richiesta</li>
+          </ul>
+          <div class="pricing-note">
+            <p><strong>Nota:</strong> Contattaci per conoscere il calendario dei prossimi corsi e workshop disponibili.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2>Richiedi un Preventivo</h2>
+        <div class="gold-line"></div>
+        <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--color-gray);">
+          Ogni progetto è unico e merita un'attenzione personalizzata.
+          Contattaci per discutere delle tue esigenze e ricevere un preventivo gratuito.
+        </p>
+        <a href="contatti.html" class="btn btn-primary">Contattaci Ora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Officina <span>Gemmologica</span></a>
+          <p>Laboratorio artigianale di taglio pietre preziose nel cuore di Roma. Esperienza ventennale al servizio della bellezza.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="WhatsApp">&#128222;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Link Rapidi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Servizi</h4>
+          <ul class="footer-links">
+            <li><a href="#taglio">Taglio Gemme</a></li>
+            <li><a href="#consulenza">Consulenza</a></li>
+            <li><a href="#progettazione">Progettazione</a></li>
+            <li><a href="#restauro">Restauro</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contatti</h4>
+          <ul class="footer-links">
+            <li>Centro Storico, Roma</li>
+            <li>Tel: +39 06 XXXXXXX</li>
+            <li>info@officinagemmologica.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Officina Gemmologica di Monica Amato s.a.s. - Tutti i diritti riservati</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

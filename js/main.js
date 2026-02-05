@@ -1,0 +1,416 @@
+/**
+ * ============================================
+ * OFFICINA GEMMOLOGICA - JavaScript Principale
+ * ============================================
+ *
+ * Questo file contiene tutte le funzionalità interattive del sito.
+ * Include: navigazione mobile, animazioni scroll, galleria, form di contatto.
+ *
+ */
+
+// Attendi che il DOM sia caricato
+document.addEventListener('DOMContentLoaded', function() {
+
+  // ============================================
+  // PAGE LOADER
+  // ============================================
+  const pageLoader = document.querySelector('.page-loader');
+  if (pageLoader) {
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        pageLoader.classList.add('hidden');
+      }, 500);
+    });
+
+    // Fallback: nascondi loader dopo 3 secondi in ogni caso
+    setTimeout(function() {
+      pageLoader.classList.add('hidden');
+    }, 3000);
+  }
+
+  // ============================================
+  // NAVIGAZIONE MOBILE
+  // ============================================
+  const menuToggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function() {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Chiudi menu quando si clicca su un link
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Chiudi menu con ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && nav.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // ============================================
+  // HEADER SCROLL EFFECT
+  // ============================================
+  const header = document.querySelector('.header');
+
+  if (header) {
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', function() {
+      const currentScroll = window.pageYOffset;
+
+      // Aggiungi classe "scrolled" quando si scrolla
+      if (currentScroll > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      lastScroll = currentScroll;
+    });
+  }
+
+  // ============================================
+  // ANIMAZIONI SCROLL (REVEAL)
+  // ============================================
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 150;
+
+    revealElements.forEach(function(element) {
+      const elementTop = element.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - revealPoint) {
+        element.classList.add('active');
+      }
+    });
+  }
+
+  // Esegui subito e poi su scroll
+  revealOnScroll();
+  window.addEventListener('scroll', revealOnScroll);
+
+  // ============================================
+  // SMOOTH SCROLL PER LINK INTERNI
+  // ============================================
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+
+        if (target) {
+          const headerHeight = header ? header.offsetHeight : 0;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+  // ============================================
+  // GALLERIA - FILTRI
+  // ============================================
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  if (filterButtons.length > 0 && galleryItems.length > 0) {
+    filterButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        // Rimuovi active da tutti i bottoni
+        filterButtons.forEach(function(btn) {
+          btn.classList.remove('active');
+        });
+
+        // Aggiungi active al bottone cliccato
+        this.classList.add('active');
+
+        // Filtra gli elementi
+        const filter = this.getAttribute('data-filter');
+
+        galleryItems.forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+            // Riattiva animazione
+            item.classList.remove('active');
+            setTimeout(function() {
+              item.classList.add('active');
+            }, 50);
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // ============================================
+  // GALLERIA - LIGHTBOX
+  // ============================================
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  if (lightbox && galleryItems.length > 0) {
+    galleryItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        const overlay = this.querySelector('.gallery-overlay');
+
+        if (img && overlay) {
+          const title = overlay.querySelector('h4');
+          const desc = overlay.querySelector('p');
+
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt;
+          lightboxTitle.textContent = title ? title.textContent : '';
+          lightboxDesc.textContent = desc ? desc.textContent : '';
+
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    // Chiudi lightbox
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
+
+  // ============================================
+  // FORM DI CONTATTO
+  // ============================================
+  const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Raccogli i dati del form
+      const formData = new FormData(contactForm);
+      const data = {};
+      formData.forEach(function(value, key) {
+        data[key] = value;
+      });
+
+      // Validazione base
+      if (!data.nome || !data.cognome || !data.email || !data.messaggio) {
+        showFormMessage('Compila tutti i campi obbligatori.', 'error');
+        return;
+      }
+
+      if (!isValidEmail(data.email)) {
+        showFormMessage('Inserisci un indirizzo email valido.', 'error');
+        return;
+      }
+
+      if (!data.privacy) {
+        showFormMessage('Devi accettare la Privacy Policy per procedere.', 'error');
+        return;
+      }
+
+      // Simula invio (in produzione, sostituire con chiamata AJAX reale)
+      // Per funzionare realmente, configura un servizio come:
+      // - Formspree.io
+      // - Netlify Forms
+      // - Un endpoint PHP/Node.js personalizzato
+
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      submitButton.textContent = 'Invio in corso...';
+      submitButton.disabled = true;
+
+      // Simula delay di rete
+      setTimeout(function() {
+        showFormMessage('Grazie per averci contattato! Ti risponderemo il prima possibile.', 'success');
+        contactForm.reset();
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      }, 1500);
+
+      /*
+      // ESEMPIO DI INTEGRAZIONE REALE CON FORMSPREE:
+      fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          showFormMessage('Grazie per averci contattato! Ti risponderemo il prima possibile.', 'success');
+          contactForm.reset();
+        } else {
+          showFormMessage('Si è verificato un errore. Riprova più tardi.', 'error');
+        }
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      })
+      .catch(error => {
+        showFormMessage('Si è verificato un errore. Riprova più tardi.', 'error');
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      });
+      */
+    });
+  }
+
+  function showFormMessage(message, type) {
+    if (formMessage) {
+      formMessage.textContent = message;
+      formMessage.className = 'form-message ' + type;
+      formMessage.style.display = 'block';
+
+      // Nascondi dopo 5 secondi
+      setTimeout(function() {
+        formMessage.style.display = 'none';
+      }, 5000);
+    }
+  }
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  // ============================================
+  // LAZY LOADING IMMAGINI (opzionale)
+  // ============================================
+  if ('IntersectionObserver' in window) {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    const imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(img) {
+      imageObserver.observe(img);
+    });
+  }
+
+  // ============================================
+  // ANNO CORRENTE NEL FOOTER
+  // ============================================
+  const yearElements = document.querySelectorAll('.current-year');
+  const currentYear = new Date().getFullYear();
+
+  yearElements.forEach(function(el) {
+    el.textContent = currentYear;
+  });
+
+  // ============================================
+  // PREVENZIONE DOPPIO CLICK SU LINK
+  // ============================================
+  document.querySelectorAll('a').forEach(function(link) {
+    let clicked = false;
+    link.addEventListener('click', function(e) {
+      if (clicked) {
+        e.preventDefault();
+        return;
+      }
+      clicked = true;
+      setTimeout(function() {
+        clicked = false;
+      }, 500);
+    });
+  });
+
+  // ============================================
+  // DEBUG INFO (rimuovi in produzione)
+  // ============================================
+  console.log('Officina Gemmologica - Sito caricato correttamente');
+
+});
+
+// ============================================
+// UTILITY FUNCTIONS (esportate globalmente)
+// ============================================
+
+/**
+ * Funzione per aggiungere facilmente nuove immagini alla galleria
+ * Usa questa funzione nel file config.js per gestire i contenuti
+ */
+window.OG = window.OG || {};
+
+window.OG.addGalleryItem = function(options) {
+  const defaults = {
+    image: '',
+    title: '',
+    description: '',
+    category: 'altro',
+    size: 'normal' // normal, tall, wide
+  };
+
+  const config = Object.assign({}, defaults, options);
+  const grid = document.getElementById('galleryGrid');
+
+  if (grid && config.image) {
+    const item = document.createElement('div');
+    item.className = 'gallery-item reveal active';
+    if (config.size !== 'normal') {
+      item.classList.add(config.size);
+    }
+    item.setAttribute('data-category', config.category);
+
+    item.innerHTML = `
+      <img src="${config.image}" alt="${config.title}">
+      <div class="gallery-overlay">
+        <span class="category">${config.category}</span>
+        <h4>${config.title}</h4>
+        <p>${config.description}</p>
+      </div>
+    `;
+
+    grid.appendChild(item);
+  }
+};

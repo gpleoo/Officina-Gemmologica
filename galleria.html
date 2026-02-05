@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galleria delle creazioni di Officina Gemmologica: gemme tagliate a mano, gioielli unici e pietre preziose lavorate con maestria artigianale a Roma.">
+  <meta name="keywords" content="galleria gemme, portfolio gioielli, pietre preziose, creazioni artigianali, Roma">
+
+  <title>Galleria - Officina Gemmologica | Le Nostre Creazioni</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Filtri Galleria */
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: 2px solid var(--color-primary);
+      border-radius: var(--border-radius);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    /* Gallery Grid Migliorata */
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      background: var(--color-light);
+    }
+
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .gallery-item.tall img {
+      min-height: 620px;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(26,26,26,0.95) 0%, rgba(26,26,26,0.3) 40%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay h4 {
+      color: var(--color-white);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-overlay p {
+      color: var(--color-accent);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .gallery-overlay .category {
+      display: inline-block;
+      background: var(--color-accent);
+      color: var(--color-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .gallery-item.tall,
+      .gallery-item.wide {
+        grid-row: span 1;
+        grid-column: span 1;
+      }
+
+      .gallery-item img,
+      .gallery-item.tall img {
+        min-height: 250px;
+      }
+    }
+
+    /* Empty State */
+    .gallery-empty {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--color-text-light);
+    }
+
+    .gallery-empty h3 {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Officina <span>Gemmologica</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="galleria.html" class="active">Galleria</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>La Nostra Galleria</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">Una selezione delle nostre creazioni più significative</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="container">
+      <!-- Filtri -->
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">Tutti</button>
+        <button class="filter-btn" data-filter="gemme">Gemme</button>
+        <button class="filter-btn" data-filter="anelli">Anelli</button>
+        <button class="filter-btn" data-filter="collane">Collane</button>
+        <button class="filter-btn" data-filter="orecchini">Orecchini</button>
+        <button class="filter-btn" data-filter="altro">Altro</button>
+      </div>
+
+      <!-- Galleria -->
+      <!-- ============================================
+           COME AGGIUNGERE NUOVE IMMAGINI:
+
+           1. Aggiungi la tua immagine nella cartella "images/"
+           2. Copia uno dei blocchi <div class="gallery-item"> qui sotto
+           3. Modifica:
+              - src="images/NOME-TUA-IMMAGINE.jpg"
+              - alt="Descrizione immagine"
+              - data-category="categoria" (gemme/anelli/collane/orecchini/altro)
+              - <h4>Titolo</h4>
+              - <p>Descrizione</p>
+              - <span class="category">Categoria</span>
+
+           4. Per immagini verticali aggiungi class="gallery-item tall"
+           5. Per immagini orizzontali larghe aggiungi class="gallery-item wide"
+      ============================================ -->
+
+      <div class="gallery-masonry" id="galleryGrid">
+
+        <!-- Item 1 - Esempio Gemma -->
+        <div class="gallery-item reveal" data-category="gemme">
+          <img src="images/gallery/gemma-rubino.jpg" alt="Rubino taglio brillante"
+               onerror="this.style.background='linear-gradient(135deg, #c41e3a, #8b0000)'; this.alt='Rubino';">
+          <div class="gallery-overlay">
+            <span class="category">Gemme</span>
+            <h4>Rubino Birmano</h4>
+            <p>Taglio brillante, 2.5 carati</p>
+          </div>
+        </div>
+
+        <!-- Item 2 - Esempio Anello -->
+        <div class="gallery-item tall reveal" data-category="anelli">
+          <img src="images/gallery/anello-smeraldo.jpg" alt="Anello con smeraldo"
+               onerror="this.style.background='linear-gradient(135deg, #046307, #013220)'; this.alt='Smeraldo';">
+          <div class="gallery-overlay">
+            <span class="category">Anelli</span>
+            <h4>Anello Solitario</h4>
+            <p>Smeraldo colombiano in oro bianco</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item reveal" data-category="gemme">
+          <img src="images/gallery/zaffiro-ceylon.jpg" alt="Zaffiro Ceylon"
+               onerror="this.style.background='linear-gradient(135deg, #0f52ba, #000080)'; this.alt='Zaffiro';">
+          <div class="gallery-overlay">
+            <span class="category">Gemme</span>
+            <h4>Zaffiro Ceylon</h4>
+            <p>Taglio ovale, 3.8 carati</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item reveal" data-category="collane">
+          <img src="images/gallery/collana-perle.jpg" alt="Collana di perle"
+               onerror="this.style.background='linear-gradient(135deg, #f5f5dc, #d4af37)'; this.alt='Perle';">
+          <div class="gallery-overlay">
+            <span class="category">Collane</span>
+            <h4>Collana Perle Akoya</h4>
+            <p>Perle giapponesi con chiusura in oro</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item reveal" data-category="gemme">
+          <img src="images/gallery/ametista.jpg" alt="Ametista"
+               onerror="this.style.background='linear-gradient(135deg, #9966cc, #4b0082)'; this.alt='Ametista';">
+          <div class="gallery-overlay">
+            <span class="category">Gemme</span>
+            <h4>Ametista Brasiliana</h4>
+            <p>Taglio fantasia, 15 carati</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item tall reveal" data-category="orecchini">
+          <img src="images/gallery/orecchini-diamanti.jpg" alt="Orecchini con diamanti"
+               onerror="this.style.background='linear-gradient(135deg, #e8e8e8, #c0c0c0)'; this.alt='Diamanti';">
+          <div class="gallery-overlay">
+            <span class="category">Orecchini</span>
+            <h4>Orecchini Pendenti</h4>
+            <p>Diamanti e zaffiri in platino</p>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item reveal" data-category="anelli">
+          <img src="images/gallery/anello-fidanzamento.jpg" alt="Anello di fidanzamento"
+               onerror="this.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)'; this.alt='Anello';">
+          <div class="gallery-overlay">
+            <span class="category">Anelli</span>
+            <h4>Anello Trilogy</h4>
+            <p>Tre diamanti in oro rosa 18kt</p>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item reveal" data-category="gemme">
+          <img src="images/gallery/acquamarina.jpg" alt="Acquamarina"
+               onerror="this.style.background='linear-gradient(135deg, #7fffd4, #40e0d0)'; this.alt='Acquamarina';">
+          <div class="gallery-overlay">
+            <span class="category">Gemme</span>
+            <h4>Acquamarina</h4>
+            <p>Taglio smeraldo, 8.2 carati</p>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="gallery-item reveal" data-category="altro">
+          <img src="images/gallery/spilla-vintage.jpg" alt="Spilla vintage"
+               onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)'; this.alt='Spilla';">
+          <div class="gallery-overlay">
+            <span class="category">Altro</span>
+            <h4>Spilla Art Déco</h4>
+            <p>Restauro di pezzo d'epoca</p>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="gallery-item reveal" data-category="collane">
+          <img src="images/gallery/pendente-tormalina.jpg" alt="Pendente con tormalina"
+               onerror="this.style.background='linear-gradient(135deg, #ff1493, #c71585)'; this.alt='Tormalina';">
+          <div class="gallery-overlay">
+            <span class="category">Collane</span>
+            <h4>Pendente Tormalina</h4>
+            <p>Tormalina rosa in oro giallo</p>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="gallery-item reveal" data-category="gemme">
+          <img src="images/gallery/opale-nero.jpg" alt="Opale nero"
+               onerror="this.style.background='linear-gradient(135deg, #2d2d2d, #1a1a1a)'; this.alt='Opale';">
+          <div class="gallery-overlay">
+            <span class="category">Gemme</span>
+            <h4>Opale Nero Australiano</h4>
+            <p>Taglio cabochon, 4.5 carati</p>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="gallery-item reveal" data-category="anelli">
+          <img src="images/gallery/anello-tanzanite.jpg" alt="Anello con tanzanite"
+               onerror="this.style.background='linear-gradient(135deg, #6666ff, #4b0082)'; this.alt='Tanzanite';">
+          <div class="gallery-overlay">
+            <span class="category">Anelli</span>
+            <h4>Anello Tanzanite</h4>
+            <p>Tanzanite AAA con diamanti</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2>Ti Piace Quello che Vedi?</h2>
+        <div class="gold-line"></div>
+        <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--color-text-light);">
+          Ogni creazione è unica e realizzata su misura. Contattaci per discutere
+          del tuo progetto o per richiedere qualcosa di simile.
+        </p>
+        <a href="contatti.html" class="btn btn-primary">Richiedi Informazioni</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImage">
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle"></h4>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Officina <span>Gemmologica</span></a>
+          <p>Laboratorio artigianale di taglio pietre preziose nel cuore di Roma. Esperienza ventennale al servizio della bellezza.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="WhatsApp">&#128222;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Link Rapidi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Servizi</h4>
+          <ul class="footer-links">
+            <li><a href="servizi.html#taglio">Taglio Gemme</a></li>
+            <li><a href="servizi.html#consulenza">Consulenza</a></li>
+            <li><a href="servizi.html#progettazione">Progettazione</a></li>
+            <li><a href="servizi.html#restauro">Restauro</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contatti</h4>
+          <ul class="footer-links">
+            <li>Centro Storico, Roma</li>
+            <li>Tel: +39 06 XXXXXXX</li>
+            <li>info@officinagemmologica.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Officina Gemmologica di Monica Amato s.a.s. - Tutti i diritti riservati</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
