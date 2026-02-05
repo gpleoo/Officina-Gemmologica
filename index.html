@@ -26,6 +26,95 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Hreflang per multilingua -->
+  <link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/">
+  <link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.officinagemmologica.com/">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.officinagemmologica.com",
+    "name": "Officina Gemmologica di Monica Amato",
+    "description": "Laboratorio artigianale di taglio pietre preziose a Roma. Consulenze gemmologiche, progettazione gioielli e creazioni uniche dal 2004.",
+    "url": "https://www.officinagemmologica.com",
+    "logo": "https://www.officinagemmologica.com/images/logo.png",
+    "image": "https://www.officinagemmologica.com/images/og-image.jpg",
+    "telephone": "+39 06 XXXXXXX",
+    "email": "info@officinagemmologica.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via del Centro Storico",
+      "addressLocality": "Roma",
+      "addressRegion": "RM",
+      "postalCode": "00100",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.9028",
+      "longitude": "12.4964"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:30",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "13:00"
+      }
+    ],
+    "priceRange": "€€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+    "areaServed": {
+      "@type": "City",
+      "name": "Roma"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi Gemmologici",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Taglio Gemme",
+            "description": "Taglio personalizzato di pietre preziose"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Consulenza Gemmologica",
+            "description": "Analisi e valutazione professionale delle gemme"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Progettazione Gioielli",
+            "description": "Creazione di gioielli unici su misura"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/officinagemmologica",
+      "https://www.instagram.com/officinagemmologica"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Page Loader -->
@@ -44,6 +133,12 @@
         <a href="servizi.html">Servizi</a>
         <a href="galleria.html">Galleria</a>
         <a href="contatti.html">Contatti</a>
+        <a href="faq.html">FAQ</a>
+        <div class="lang-switcher">
+          <a href="index.html" class="active" title="Italiano">IT</a>
+          <span>|</span>
+          <a href="en/index.html" title="English">EN</a>
+        </div>
       </nav>
 
       <div class="menu-toggle" id="menuToggle">
@@ -189,10 +284,67 @@
     </div>
   </section>
 
-  <!-- Testimonial / Quote -->
+  <!-- Testimonianze Clienti -->
   <section class="section section-dark">
     <div class="container">
-      <div class="testimonials-slider">
+      <div class="section-header reveal">
+        <h2 style="color: var(--color-white);">Cosa Dicono i Nostri Clienti</h2>
+        <div class="gold-line"></div>
+        <p class="subtitle">La soddisfazione dei nostri clienti è la nostra migliore referenza</p>
+      </div>
+
+      <div class="cards-grid" style="max-width: 1200px; margin: 0 auto;">
+        <!-- Testimonianza 1 -->
+        <div class="card reveal" style="background: var(--color-secondary); border: none;">
+          <div class="card-content">
+            <p style="color: var(--color-gray); font-style: italic; margin-bottom: 1.5rem;">
+              "Ho affidato a Monica una pietra di famiglia per un nuovo taglio. Il risultato ha superato ogni aspettativa. Professionalità e passione in ogni dettaglio."
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 50px; height: 50px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-weight: bold;">MR</div>
+              <div>
+                <h4 style="color: var(--color-white); font-size: 1rem; margin: 0;">Marco R.</h4>
+                <p style="color: var(--color-accent); font-size: 0.85rem; margin: 0;">Roma</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonianza 2 -->
+        <div class="card reveal" style="background: var(--color-secondary); border: none;">
+          <div class="card-content">
+            <p style="color: var(--color-gray); font-style: italic; margin-bottom: 1.5rem;">
+              "Cercavo uno zaffiro particolare per l'anello di fidanzamento. Mi hanno guidato nella scelta e creato un gioiello unico. La mia fidanzata è rimasta senza parole!"
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 50px; height: 50px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-weight: bold;">LB</div>
+              <div>
+                <h4 style="color: var(--color-white); font-size: 1rem; margin: 0;">Luca B.</h4>
+                <p style="color: var(--color-accent); font-size: 0.85rem; margin: 0;">Milano</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonianza 3 -->
+        <div class="card reveal" style="background: var(--color-secondary); border: none;">
+          <div class="card-content">
+            <p style="color: var(--color-gray); font-style: italic; margin-bottom: 1.5rem;">
+              "Competenza eccezionale nella valutazione delle mie gemme. Finalmente qualcuno di cui fidarsi per consulenze gemmologiche serie e oneste."
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 50px; height: 50px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-weight: bold;">SV</div>
+              <div>
+                <h4 style="color: var(--color-white); font-size: 1rem; margin: 0;">Silvia V.</h4>
+                <p style="color: var(--color-accent); font-size: 0.85rem; margin: 0;">Firenze</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote filosofica -->
+      <div class="testimonials-slider" style="margin-top: 4rem;">
         <div class="testimonial reveal">
           <p class="testimonial-quote">
             Ogni pietra ha una sua anima, un suo carattere unico.
@@ -242,6 +394,7 @@
             <li><a href="chi-siamo.html">Chi Siamo</a></li>
             <li><a href="servizi.html">Servizi</a></li>
             <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
 

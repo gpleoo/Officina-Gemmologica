@@ -311,6 +311,40 @@ img {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+.lang-switcher a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+  transition: all var(--transition-fast);
+}
+
+.lang-switcher a::after {
+  display: none;
+}
+
+.lang-switcher a:hover,
+.lang-switcher a.active {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.lang-switcher span {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.8rem;
+}
+
 /* === HERO SECTION === */
 .hero {
   position: relative;

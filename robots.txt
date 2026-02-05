@@ -1,0 +1,18 @@
+# robots.txt per Officina Gemmologica
+# https://www.officinagemmologica.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.officinagemmologica.com/sitemap.xml
+
+# Blocca cartelle non necessarie per i motori di ricerca
+Disallow: /js/
+Disallow: /css/
+
+# Permetti le immagini
+Allow: /images/
+
+# Crawl delay suggerito (opzionale)
+Crawl-delay: 1

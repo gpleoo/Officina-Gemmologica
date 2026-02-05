@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Domande frequenti su Officina Gemmologica: informazioni su servizi, prezzi, tempi di lavorazione, appuntamenti e modalità di pagamento.">
+  <meta name="keywords" content="FAQ, domande frequenti, gemmologia, taglio gemme, prezzi, appuntamento, Roma">
+
+  <title>FAQ - Officina Gemmologica di Monica Amato | Domande Frequenti</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/faq.html">
+  <link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/faq.html">
+
+  <!-- Schema.org FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "È necessario prendere un appuntamento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per consulenze personalizzate, valutazioni e preventivi, consigliamo di fissare un appuntamento telefonando o scrivendo via email. Per informazioni generali è possibile passare in laboratorio durante gli orari di apertura."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quali metodi di pagamento accettate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Accettiamo contanti, carte di credito e debito (Visa, Mastercard), e bonifico bancario. Per lavori di importo elevato è possibile concordare un piano di pagamento personalizzato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo richiede il taglio di una gemma?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I tempi variano in base alla complessità del lavoro. Un taglio standard può richiedere da pochi giorni a una settimana, mentre progetti complessi o pietre particolari possono richiedere 2-4 settimane. Forniamo sempre una stima precisa prima di iniziare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso portare una mia pietra da far tagliare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certamente! Lavoriamo sia su pietre nostre che su materiale fornito dal cliente. Prima di procedere valutiamo la pietra per consigliare il taglio più adatto a massimizzarne bellezza e valore."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Rilasciate certificazioni per le gemme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Forniamo documentazione dettagliata per ogni lavoro eseguito. Per certificazioni ufficiali possiamo indirizzarvi a laboratori gemmologici accreditati con cui collaboriamo."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* FAQ Styles */
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-category {
+      margin-bottom: 3rem;
+    }
+
+    .faq-category h3 {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    .faq-item {
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .faq-item:hover {
+      border-color: var(--color-accent);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-white);
+      border: none;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: all var(--transition-fast);
+    }
+
+    .faq-question:hover {
+      background: var(--color-light);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--color-accent);
+      transition: transform var(--transition-normal);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item.active .faq-question {
+      background: var(--color-light);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-content {
+      padding: 1.25rem 1.5rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .faq-answer-content p {
+      margin: 0;
+    }
+
+    .faq-answer-content ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .faq-answer-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* CTA Box */
+    .faq-cta {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .faq-cta h3 {
+      color: var(--color-white);
+      margin-bottom: 1rem;
+    }
+
+    .faq-cta p {
+      color: var(--color-gray);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <div class="lang-switcher">
+          <a href="faq.html" class="active" title="Italiano">IT</a>
+          <span>|</span>
+          <a href="en/faq.html" title="English">EN</a>
+        </div>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Domande Frequenti</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">Trova le risposte alle domande più comuni sui nostri servizi</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="faq-container">
+
+        <!-- Categoria: Servizi -->
+        <div class="faq-category reveal">
+          <h3>Servizi e Lavorazioni</h3>
+
+          <div class="faq-item">
+            <button class="faq-question">Che tipo di pietre lavorate?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Lavoriamo tutte le tipologie di pietre preziose e semipreziose: diamanti, rubini, zaffiri, smeraldi, acquamarine, tormaline, topazi, ametiste e molte altre. Trattiamo sia pietre naturali che alcune tipologie di pietre sintetiche per applicazioni specifiche.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Posso portare una mia pietra da far tagliare?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Certamente! Lavoriamo sia su pietre nostre che su materiale fornito dal cliente. Prima di procedere valutiamo la pietra per consigliare il taglio più adatto a massimizzarne bellezza e valore. Offriamo anche servizi di ritaglio per gemme già lavorate che necessitano di correzioni.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Quali tipi di taglio offrite?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Eseguiamo tutti i tagli classici e molti tagli fantasia personalizzati:</p>
+                <ul>
+                  <li><strong>Tagli sfaccettati:</strong> brillante, princess, smeraldo, ovale, marquise, goccia, cuore, cuscino</li>
+                  <li><strong>Tagli cabochon:</strong> per opali, turchesi, pietre stellate</li>
+                  <li><strong>Tagli fantasia:</strong> design personalizzati su richiesta</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Quanto tempo richiede il taglio di una gemma?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>I tempi variano in base alla complessità del lavoro:</p>
+                <ul>
+                  <li><strong>Taglio standard:</strong> 3-7 giorni lavorativi</li>
+                  <li><strong>Taglio complesso/fantasia:</strong> 1-2 settimane</li>
+                  <li><strong>Progetti speciali:</strong> 2-4 settimane</li>
+                </ul>
+                <p>Forniamo sempre una stima precisa prima di iniziare il lavoro.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Rilasciate certificazioni per le gemme?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Forniamo documentazione dettagliata per ogni lavoro eseguito, includendo caratteristiche della pietra, tipo di taglio e specifiche tecniche. Per certificazioni gemmologiche ufficiali (IGI, GIA, etc.), possiamo indirizzarvi a laboratori accreditati con cui collaboriamo regolarmente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoria: Appuntamenti -->
+        <div class="faq-category reveal">
+          <h3>Appuntamenti e Visite</h3>
+
+          <div class="faq-item">
+            <button class="faq-question">È necessario prendere un appuntamento?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Per consulenze personalizzate, valutazioni e preventivi, <strong>consigliamo vivamente di fissare un appuntamento</strong> telefonando o scrivendo via email. Questo ci permette di dedicarvi tutto il tempo necessario.</p>
+                <p>Per informazioni generali o per vedere il laboratorio, è possibile passare durante gli orari di apertura, ma la disponibilità potrebbe essere limitata senza preavviso.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Quali sono i vostri orari di apertura?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <ul>
+                  <li><strong>Lunedì - Venerdì:</strong> 09:30 - 18:30</li>
+                  <li><strong>Sabato:</strong> 10:00 - 13:00 (solo su appuntamento)</li>
+                  <li><strong>Domenica:</strong> Chiuso</li>
+                </ul>
+                <p>Durante le festività gli orari potrebbero variare. Vi consigliamo di contattarci per conferma.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Dove si trova il vostro laboratorio?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Il nostro laboratorio si trova nel <strong>centro storico di Roma</strong>, facilmente raggiungibile con i mezzi pubblici. L'indirizzo preciso e le indicazioni per raggiungerci sono disponibili nella pagina <a href="contatti.html">Contatti</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoria: Prezzi e Pagamenti -->
+        <div class="faq-category reveal">
+          <h3>Prezzi e Pagamenti</h3>
+
+          <div class="faq-item">
+            <button class="faq-question">Come vengono calcolati i prezzi?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>I prezzi dipendono da diversi fattori:</p>
+                <ul>
+                  <li>Tipo di pietra e sue caratteristiche</li>
+                  <li>Complessità del taglio richiesto</li>
+                  <li>Dimensione della gemma</li>
+                  <li>Tempo di lavorazione stimato</li>
+                </ul>
+                <p>Forniamo sempre un <strong>preventivo gratuito e dettagliato</strong> prima di iniziare qualsiasi lavoro, senza impegno da parte vostra.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Quali metodi di pagamento accettate?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Accettiamo diverse modalità di pagamento:</p>
+                <ul>
+                  <li>Contanti</li>
+                  <li>Carte di credito e debito (Visa, Mastercard, Maestro)</li>
+                  <li>Bonifico bancario</li>
+                </ul>
+                <p>Per lavori di importo elevato è possibile concordare un <strong>piano di pagamento personalizzato</strong> con acconto iniziale e saldo alla consegna.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">È richiesto un acconto?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Per la maggior parte dei lavori richiediamo un acconto del 30-50% al momento della conferma dell'ordine. Il saldo viene corrisposto alla consegna del lavoro completato. Per lavori di piccola entità potremmo non richiedere acconto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoria: Garanzie -->
+        <div class="faq-category reveal">
+          <h3>Garanzie e Assistenza</h3>
+
+          <div class="faq-item">
+            <button class="faq-question">Offrite garanzia sui lavori eseguiti?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Sì, tutti i nostri lavori sono garantiti. In caso di difetti di lavorazione, provvediamo alla correzione senza costi aggiuntivi. La garanzia non copre danni causati da uso improprio, urti o incidenti.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Cosa succede se non sono soddisfatto del risultato?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>La vostra soddisfazione è la nostra priorità. Prima di iniziare qualsiasi lavoro, discutiamo in dettaglio le vostre aspettative e forniamo rendering o bozze quando possibile. Se il risultato finale non corrisponde a quanto concordato, lavoriamo insieme per trovare una soluzione.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Le mie pietre sono assicurate mentre sono nel vostro laboratorio?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Sì, tutte le pietre affidate al nostro laboratorio sono coperte dalla nostra assicurazione professionale. Al momento della consegna rilasciamo una ricevuta dettagliata con descrizione e valore dichiarato della pietra.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="faq-cta reveal">
+          <h3>Non hai trovato la risposta che cercavi?</h3>
+          <p>Contattaci direttamente, saremo felici di rispondere a tutte le tue domande.</p>
+          <a href="contatti.html" class="btn btn-primary">Contattaci</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+          <p>Laboratorio artigianale di taglio pietre preziose nel cuore di Roma. Esperienza ventennale al servizio della bellezza.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="WhatsApp">&#128222;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Link Rapidi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Servizi</h4>
+          <ul class="footer-links">
+            <li><a href="servizi.html#taglio">Taglio Gemme</a></li>
+            <li><a href="servizi.html#consulenza">Consulenza</a></li>
+            <li><a href="servizi.html#progettazione">Progettazione</a></li>
+            <li><a href="servizi.html#restauro">Restauro</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contatti</h4>
+          <ul class="footer-links">
+            <li>Centro Storico, Roma</li>
+            <li>Tel: +39 06 XXXXXXX</li>
+            <li>info@officinagemmologica.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Officina Gemmologica di Monica Amato s.a.s. - Tutti i diritti riservati</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+  <!-- FAQ Accordion Script -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(button) {
+      button.addEventListener('click', function() {
+        const item = this.parentElement;
+        const isActive = item.classList.contains('active');
+
+        // Chiudi tutti gli altri
+        document.querySelectorAll('.faq-item').forEach(function(faq) {
+          faq.classList.remove('active');
+        });
+
+        // Toggle corrente
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
