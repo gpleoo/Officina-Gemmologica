@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Officina Gemmologica in Rome for consultations, quotes and information. Laboratory in the historic center, phone, email and contact form.">
+  <meta name="keywords" content="contact, officina gemmologica, Rome, historic center, consultation, quote">
+
+  <title>Contact - Officina Gemmologica di Monica Amato | Rome Historic Center</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/contatti.html">
+  <link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/contact.html">
+
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
+    .contact-info-card { background: var(--color-primary); color: var(--color-white); padding: 3rem; border-radius: var(--border-radius); height: fit-content; }
+    .contact-info-card h3 { color: var(--color-white); margin-bottom: 1rem; }
+    .contact-info-card > p { color: var(--color-gray); margin-bottom: 2rem; }
+    .contact-list { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem; }
+    .contact-list-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .contact-list-icon { width: 50px; height: 50px; min-width: 50px; display: flex; align-items: center; justify-content: center; background: var(--color-secondary); border-radius: 50%; color: var(--color-accent); font-size: 1.2rem; }
+    .contact-list-content h4 { color: var(--color-white); font-size: 1rem; margin-bottom: 0.25rem; font-family: var(--font-body); font-weight: 600; }
+    .contact-list-content p, .contact-list-content a { color: var(--color-gray); font-size: 0.95rem; margin: 0; }
+    .contact-list-content a:hover { color: var(--color-accent); }
+    .contact-social { padding-top: 2rem; border-top: 1px solid var(--color-secondary); }
+    .contact-social h4 { color: var(--color-white); font-size: 1rem; margin-bottom: 1rem; font-family: var(--font-body); font-weight: 600; }
+    .contact-social-links { display: flex; gap: 1rem; }
+    .contact-social-links a { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; background: var(--color-secondary); border-radius: 50%; color: var(--color-white); font-size: 1.2rem; transition: all var(--transition-fast); }
+    .contact-social-links a:hover { background: var(--color-accent); color: var(--color-primary); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-primary); font-size: 0.95rem; }
+    .form-group label .required { color: var(--color-accent); }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 1rem 1.25rem; font-family: var(--font-body); font-size: 1rem; border: 2px solid var(--color-light); border-radius: var(--border-radius); background: var(--color-light); transition: all var(--transition-fast); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--color-accent); background: var(--color-white); }
+    .form-group textarea { min-height: 150px; resize: vertical; }
+    .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; }
+    .form-privacy { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .form-privacy input[type="checkbox"] { width: 20px; height: 20px; margin-top: 0.2rem; cursor: pointer; accent-color: var(--color-accent); }
+    .form-privacy label { font-size: 0.9rem; color: var(--color-text-light); cursor: pointer; }
+    .form-privacy a { color: var(--color-accent); text-decoration: underline; }
+    .hours-table { width: 100%; margin-top: 1rem; }
+    .hours-table tr { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-secondary); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td { color: var(--color-gray); font-size: 0.9rem; }
+    .hours-table td:last-child { color: var(--color-white); font-weight: 500; }
+    @media (max-width: 968px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .contact-info-card { order: 2; } }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <div class="lang-switcher">
+          <a href="../contatti.html" title="Italiano">IT</a>
+          <span>|</span>
+          <a href="contact.html" class="active" title="English">EN</a>
+        </div>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">We're here to answer all your questions</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info Card -->
+        <div class="contact-info-card reveal-left">
+          <h3>Contact Information</h3>
+          <p>Visit us at our laboratory in the heart of Rome or contact us for any information.</p>
+
+          <div class="contact-list">
+            <div class="contact-list-item">
+              <div class="contact-list-icon">&#128205;</div>
+              <div class="contact-list-content">
+                <h4>Address</h4>
+                <p>Via del Centro Storico, 00<br>00100 Rome, Italy</p>
+              </div>
+            </div>
+
+            <div class="contact-list-item">
+              <div class="contact-list-icon">&#128222;</div>
+              <div class="contact-list-content">
+                <h4>Phone</h4>
+                <a href="tel:+3906XXXXXXX">+39 06 XXX XXXX</a>
+              </div>
+            </div>
+
+            <div class="contact-list-item">
+              <div class="contact-list-icon">&#128172;</div>
+              <div class="contact-list-content">
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/39XXXXXXXXXX">+39 XXX XXX XXXX</a>
+              </div>
+            </div>
+
+            <div class="contact-list-item">
+              <div class="contact-list-icon">&#9993;</div>
+              <div class="contact-list-content">
+                <h4>Email</h4>
+                <a href="mailto:info@officinagemmologica.com">info@officinagemmologica.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-hours">
+            <h4 style="color: var(--color-white); margin-bottom: 0.5rem;">Opening Hours</h4>
+            <table class="hours-table">
+              <tr><td>Monday - Friday</td><td>09:30 - 18:30</td></tr>
+              <tr><td>Saturday</td><td>10:00 - 13:00</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </table>
+            <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 1rem;">
+              * We recommend booking an appointment for personalized consultations
+            </p>
+          </div>
+
+          <div class="contact-social">
+            <h4>Follow Us</h4>
+            <div class="contact-social-links">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">&#128247;</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrapper reveal-right">
+          <h3>Send Us a Message</h3>
+          <p style="color: var(--color-text-light); margin-bottom: 2rem;">Fill out the form and we'll get back to you as soon as possible.</p>
+
+          <form id="contactForm" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">First Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Your first name">
+              </div>
+              <div class="form-group">
+                <label for="surname">Last Name <span class="required">*</span></label>
+                <input type="text" id="surname" name="surname" required placeholder="Your last name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="Your email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="cutting">Gem Cutting</option>
+                <option value="consulting">Gemological Consulting</option>
+                <option value="design">Jewelry Design</option>
+                <option value="sourcing">Stone Sourcing</option>
+                <option value="restoration">Restoration</option>
+                <option value="training">Training/Workshop</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" required placeholder="Describe your request..."></textarea>
+            </div>
+
+            <div class="form-privacy">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">
+                I have read and accept the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                and consent to the processing of my personal data. <span class="required">*</span>
+              </label>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+
+            <div class="form-message" id="formMessage"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+          <p>Artisan gemstone cutting laboratory in the heart of Rome. Twenty years of experience at the service of beauty.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="WhatsApp">&#128222;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#cutting">Gem Cutting</a></li>
+            <li><a href="services.html#consulting">Consulting</a></li>
+            <li><a href="services.html#design">Design</a></li>
+            <li><a href="services.html#restoration">Restoration</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>Historic Center, Rome</li>
+            <li>Tel: +39 06 XXXXXXX</li>
+            <li>info@officinagemmologica.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Officina Gemmologica di Monica Amato s.a.s. - All rights reserved | <a href="privacy-policy.html">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+</body>
+</html>

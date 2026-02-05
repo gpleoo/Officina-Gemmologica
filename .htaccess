@@ -1,0 +1,145 @@
+# ============================================
+# OFFICINA GEMMOLOGICA - .htaccess
+# Configurazione sicurezza e performance
+# ============================================
+
+# ============================================
+# SICUREZZA
+# ============================================
+
+# Previeni clickjacking
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Previeni XSS
+Header always set X-XSS-Protection "1; mode=block"
+
+# Previeni MIME-type sniffing
+Header always set X-Content-Type-Options "nosniff"
+
+# Referrer Policy
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Content Security Policy (base)
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-ancestors 'self';"
+
+# Permissions Policy
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# Nascondi versione server
+ServerSignature Off
+
+# Blocca accesso a file sensibili
+<FilesMatch "(^\.htaccess|\.htpasswd|\.git|\.env|\.gitignore)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Blocca accesso diretto a file di backup
+<FilesMatch "\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ============================================
+# HTTPS REDIRECT (decommentare se necessario)
+# ============================================
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ============================================
+# PERFORMANCE - CACHING
+# ============================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Immagini
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS e JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+
+    # Font
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # HTML
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+    # Immagini - cache lunga
+    <FilesMatch "\.(ico|jpe?g|png|gif|webp|svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # CSS/JS - cache media
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # HTML - cache corta
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# ============================================
+# COMPRESSIONE GZIP
+# ============================================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ============================================
+# URL REWRITE (opzionale)
+# ============================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Rimuovi .html dall'URL (opzionale - decommentare se desiderato)
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_FILENAME}\.html -f
+    # RewriteRule ^(.*)$ $1.html [L]
+
+    # Redirect www a non-www (o viceversa - scegliere uno)
+    # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
+
+# ============================================
+# ERROR PAGES (opzionale)
+# ============================================
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# ============================================
+# MIME TYPES
+# ============================================
+
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType font/woff .woff
+    AddType font/woff2 .woff2
+    AddType application/json .json
+</IfModule>

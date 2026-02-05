@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage Italiana -->
+  <url>
+    <loc>https://www.officinagemmologica.com/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Chi Siamo -->
+  <url>
+    <loc>https://www.officinagemmologica.com/chi-siamo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/about.html"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Servizi -->
+  <url>
+    <loc>https://www.officinagemmologica.com/servizi.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/servizi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/services.html"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Galleria -->
+  <url>
+    <loc>https://www.officinagemmologica.com/galleria.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/galleria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/gallery.html"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contatti -->
+  <url>
+    <loc>https://www.officinagemmologica.com/contatti.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/contatti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/contact.html"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://www.officinagemmologica.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/faq.html"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- English Homepage -->
+  <url>
+    <loc>https://www.officinagemmologica.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>
