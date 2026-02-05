@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Officina Gemmologica services: custom gem cutting, gemological consulting, jewelry design, restoration and precious stone sourcing in Rome.">
+  <meta name="keywords" content="gem cutting, gemological consulting, jewelry design, jewelry restoration, precious stones, Rome">
+
+  <title>Services - Officina Gemmologica di Monica Amato | Gem Cutting and Consulting</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/servizi.html">
+  <link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/services.html">
+
+  <style>
+    .service-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      padding: 4rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .service-detail:last-child { border-bottom: none; }
+    .service-detail:nth-child(even) { direction: rtl; }
+    .service-detail:nth-child(even) > * { direction: ltr; }
+    .service-detail-image { position: relative; border-radius: var(--border-radius); overflow: hidden; }
+    .service-detail-image img { width: 100%; height: 400px; object-fit: cover; }
+    .service-detail-content h3 { margin-bottom: 1rem; }
+    .service-detail-content .gold-line { margin: 1rem 0 1.5rem; margin-left: 0; }
+    .service-detail-content p { color: var(--color-text-light); margin-bottom: 1rem; }
+    .service-features { margin-top: 1.5rem; }
+    .service-features li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--color-text); }
+    .service-features li::before { content: '✓'; color: var(--color-accent); font-weight: bold; }
+    @media (max-width: 968px) {
+      .service-detail, .service-detail:nth-child(even) { grid-template-columns: 1fr; direction: ltr; }
+      .service-detail-image img { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <div class="lang-switcher">
+          <a href="../servizi.html" title="Italiano">IT</a>
+          <span>|</span>
+          <a href="services.html" class="active" title="English">EN</a>
+        </div>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Services</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">From rough stone to finished jewel: a complete 360-degree service</p>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="services-grid">
+        <a href="#cutting" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#9670;</div>
+          <h3>Gem Cutting</h3>
+          <p>Custom cutting of precious stones with artisan techniques</p>
+        </a>
+
+        <a href="#consulting" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#128269;</div>
+          <h3>Consulting</h3>
+          <p>Professional analysis, evaluation and certification</p>
+        </a>
+
+        <a href="#design" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#9998;</div>
+          <h3>Design</h3>
+          <p>Creation of unique custom jewelry</p>
+        </a>
+
+        <a href="#sourcing" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#127760;</div>
+          <h3>Stone Sourcing</h3>
+          <p>Selection and procurement of rare gems</p>
+        </a>
+
+        <a href="#restoration" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#128736;</div>
+          <h3>Restoration</h3>
+          <p>Repair and restoration of antique jewelry</p>
+        </a>
+
+        <a href="#training" class="service-card reveal" style="text-decoration: none; color: inherit;">
+          <div class="service-icon">&#127891;</div>
+          <h3>Training</h3>
+          <p>Gemology courses and workshops</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Services -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Gem Cutting -->
+      <div class="service-detail reveal" id="cutting">
+        <div class="service-detail-image">
+          <img src="../images/servizio-taglio.jpg" alt="Gem Cutting"
+               onerror="this.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Custom Gem Cutting</h3>
+          <div class="gold-line"></div>
+          <p>
+            Cutting is the art of transforming a rough stone into a gem that captures light
+            and reveals all its beauty. Each cut is designed based on the unique characteristics
+            of the stone to maximize its brilliance and color.
+          </p>
+          <p>
+            We perform all types of cuts: brilliant, emerald, princess, marquise, oval,
+            pear, cabochon and custom fantasy cuts according to your needs.
+          </p>
+          <ul class="service-features">
+            <li>Custom cutting for each stone</li>
+            <li>All classic and fantasy cut types</li>
+            <li>Re-cutting and correction of existing gems</li>
+            <li>Work with precious and semi-precious stones</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Consulting -->
+      <div class="service-detail reveal" id="consulting">
+        <div class="service-detail-image">
+          <img src="../images/servizio-consulenza.jpg" alt="Gemological Consulting"
+               onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Gemological Consulting</h3>
+          <div class="gold-line"></div>
+          <p>
+            We offer professional consultations to help you understand the value
+            and characteristics of your stones. In-depth analysis with professional
+            gemological instruments to identify nature, treatments and quality.
+          </p>
+          <ul class="service-features">
+            <li>Gem identification and analysis</li>
+            <li>Valuation and value estimation</li>
+            <li>Detection of treatments and synthetics</li>
+            <li>Purchase and investment consulting</li>
+            <li>Appraisals for insurance and estates</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="service-detail reveal" id="design">
+        <div class="service-detail-image">
+          <img src="../images/servizio-progettazione.jpg" alt="Jewelry Design"
+               onerror="this.style.background='linear-gradient(135deg, #2d2d2d, #1a1a1a)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Jewelry Design</h3>
+          <div class="gold-line"></div>
+          <p>
+            We transform your ideas into unique jewelry. From the first sketch to the finished product,
+            we accompany you through every phase of creation, caring for every detail with artisan passion.
+          </p>
+          <ul class="service-features">
+            <li>Custom design to your specifications</li>
+            <li>3D rendering of the project</li>
+            <li>Choice of materials (gold, platinum, silver)</li>
+            <li>Professional stone setting</li>
+            <li>Artisan finishing and polishing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sourcing -->
+      <div class="service-detail reveal" id="sourcing">
+        <div class="service-detail-image">
+          <img src="../images/servizio-ricerca.jpg" alt="Precious Stone Sourcing"
+               onerror="this.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Precious Stone Sourcing</h3>
+          <div class="gold-line"></div>
+          <p>
+            Looking for a particular stone? Thanks to our network of suppliers
+            and our experience, we can find rare and high-quality gems
+            from around the world.
+          </p>
+          <ul class="service-features">
+            <li>Commission-based gem search</li>
+            <li>Access to international suppliers</li>
+            <li>Careful selection based on your needs</li>
+            <li>Ethical sourcing guarantee</li>
+            <li>Certification included</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Restoration -->
+      <div class="service-detail reveal" id="restoration">
+        <div class="service-detail-image">
+          <img src="../images/servizio-restauro.jpg" alt="Jewelry Restoration"
+               onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Restoration and Repair</h3>
+          <div class="gold-line"></div>
+          <p>
+            Family jewelry deserves a second life. We carefully restore
+            antique and vintage jewelry, preserving their original character
+            while bringing them back to their former glory.
+          </p>
+          <ul class="service-features">
+            <li>Conservative restoration of antique jewelry</li>
+            <li>Repair of damaged settings</li>
+            <li>Replacement of missing stones</li>
+            <li>Ring resizing</li>
+            <li>Professional cleaning and polishing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Training -->
+      <div class="service-detail reveal" id="training">
+        <div class="service-detail-image">
+          <img src="../images/servizio-formazione.jpg" alt="Gemology Courses"
+               onerror="this.style.background='linear-gradient(135deg, #2d2d2d, #1a1a1a)';">
+        </div>
+        <div class="service-detail-content">
+          <h3>Training and Workshops</h3>
+          <div class="gold-line"></div>
+          <p>
+            We share our passion and knowledge through courses and workshops
+            dedicated to those who want to approach the world of gemology or deepen
+            their skills.
+          </p>
+          <ul class="service-features">
+            <li>Introduction to gemology</li>
+            <li>Precious stone recognition</li>
+            <li>Practical cutting workshops</li>
+            <li>Customized courses on request</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2>Request a Quote</h2>
+        <div class="gold-line"></div>
+        <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--color-gray);">
+          Every project is unique and deserves personalized attention.
+          Contact us to discuss your needs and receive a free quote.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+          <p>Artisan gemstone cutting laboratory in the heart of Rome. Twenty years of experience at the service of beauty.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="WhatsApp">&#128222;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#cutting">Gem Cutting</a></li>
+            <li><a href="#consulting">Consulting</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#restoration">Restoration</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>Historic Center, Rome</li>
+            <li>Tel: +39 06 XXXXXXX</li>
+            <li>info@officinagemmologica.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Officina Gemmologica di Monica Amato s.a.s. - All rights reserved | <a href="privacy-policy.html">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+</body>
+</html>

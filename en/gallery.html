@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery of Officina Gemmologica creations: hand-cut gems, unique jewelry and precious stones crafted with artisan mastery in Rome.">
+  <meta name="keywords" content="gem gallery, jewelry portfolio, precious stones, artisan creations, Rome">
+
+  <title>Gallery - Officina Gemmologica di Monica Amato | Our Creations</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/galleria.html">
+  <link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/gallery.html">
+
+  <style>
+    .gallery-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+    .filter-btn { padding: 0.75rem 1.5rem; background: transparent; border: 2px solid var(--color-primary); border-radius: var(--border-radius); font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; color: var(--color-primary); cursor: pointer; transition: all var(--transition-normal); text-transform: uppercase; letter-spacing: 1px; }
+    .filter-btn:hover, .filter-btn.active { background: var(--color-primary); color: var(--color-white); }
+    .gallery-masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .gallery-item { position: relative; overflow: hidden; border-radius: var(--border-radius); cursor: pointer; background: var(--color-light); }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; transition: transform var(--transition-slow); }
+    .gallery-item.tall img { min-height: 620px; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to top, rgba(26,26,26,0.95) 0%, rgba(26,26,26,0.3) 40%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; opacity: 0; transition: opacity var(--transition-normal); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay h4 { color: var(--color-white); font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .gallery-overlay p { color: var(--color-accent); font-size: 0.9rem; margin: 0; }
+    .gallery-overlay .category { display: inline-block; background: var(--color-accent); color: var(--color-primary); padding: 0.25rem 0.75rem; border-radius: 2px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; }
+    @media (max-width: 768px) { .gallery-item.tall { grid-row: span 1; } .gallery-item img, .gallery-item.tall img { min-height: 250px; } }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <div class="lang-switcher">
+          <a href="../galleria.html" title="Italiano">IT</a>
+          <span>|</span>
+          <a href="gallery.html" class="active" title="English">EN</a>
+        </div>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Gallery</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">A selection of our most significant creations</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="container">
+      <!-- Filters -->
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="gems">Gems</button>
+        <button class="filter-btn" data-filter="rings">Rings</button>
+        <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+        <button class="filter-btn" data-filter="earrings">Earrings</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+      </div>
+
+      <div class="gallery-masonry" id="galleryGrid">
+
+        <div class="gallery-item reveal" data-category="gems">
+          <img src="../images/gallery/gemma-rubino.jpg" alt="Brilliant cut ruby"
+               onerror="this.style.background='linear-gradient(135deg, #c41e3a, #8b0000)';">
+          <div class="gallery-overlay">
+            <span class="category">Gems</span>
+            <h4>Burmese Ruby</h4>
+            <p>Brilliant cut, 2.5 carats</p>
+          </div>
+        </div>
+
+        <div class="gallery-item tall reveal" data-category="rings">
+          <img src="../images/gallery/anello-smeraldo.jpg" alt="Emerald ring"
+               onerror="this.style.background='linear-gradient(135deg, #046307, #013220)';">
+          <div class="gallery-overlay">
+            <span class="category">Rings</span>
+            <h4>Solitaire Ring</h4>
+            <p>Colombian emerald in white gold</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="gems">
+          <img src="../images/gallery/zaffiro-ceylon.jpg" alt="Ceylon Sapphire"
+               onerror="this.style.background='linear-gradient(135deg, #0f52ba, #000080)';">
+          <div class="gallery-overlay">
+            <span class="category">Gems</span>
+            <h4>Ceylon Sapphire</h4>
+            <p>Oval cut, 3.8 carats</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="necklaces">
+          <img src="../images/gallery/collana-perle.jpg" alt="Pearl necklace"
+               onerror="this.style.background='linear-gradient(135deg, #f5f5dc, #d4af37)';">
+          <div class="gallery-overlay">
+            <span class="category">Necklaces</span>
+            <h4>Akoya Pearl Necklace</h4>
+            <p>Japanese pearls with gold clasp</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="gems">
+          <img src="../images/gallery/ametista.jpg" alt="Amethyst"
+               onerror="this.style.background='linear-gradient(135deg, #9966cc, #4b0082)';">
+          <div class="gallery-overlay">
+            <span class="category">Gems</span>
+            <h4>Brazilian Amethyst</h4>
+            <p>Fantasy cut, 15 carats</p>
+          </div>
+        </div>
+
+        <div class="gallery-item tall reveal" data-category="earrings">
+          <img src="../images/gallery/orecchini-diamanti.jpg" alt="Diamond earrings"
+               onerror="this.style.background='linear-gradient(135deg, #e8e8e8, #c0c0c0)';">
+          <div class="gallery-overlay">
+            <span class="category">Earrings</span>
+            <h4>Drop Earrings</h4>
+            <p>Diamonds and sapphires in platinum</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="rings">
+          <img src="../images/gallery/anello-fidanzamento.jpg" alt="Engagement ring"
+               onerror="this.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)';">
+          <div class="gallery-overlay">
+            <span class="category">Rings</span>
+            <h4>Trilogy Ring</h4>
+            <p>Three diamonds in 18kt rose gold</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="gems">
+          <img src="../images/gallery/acquamarina.jpg" alt="Aquamarine"
+               onerror="this.style.background='linear-gradient(135deg, #7fffd4, #40e0d0)';">
+          <div class="gallery-overlay">
+            <span class="category">Gems</span>
+            <h4>Aquamarine</h4>
+            <p>Emerald cut, 8.2 carats</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="other">
+          <img src="../images/gallery/spilla-vintage.jpg" alt="Vintage brooch"
+               onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)';">
+          <div class="gallery-overlay">
+            <span class="category">Other</span>
+            <h4>Art Deco Brooch</h4>
+            <p>Restoration of vintage piece</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="necklaces">
+          <img src="../images/gallery/pendente-tormalina.jpg" alt="Tourmaline pendant"
+               onerror="this.style.background='linear-gradient(135deg, #ff1493, #c71585)';">
+          <div class="gallery-overlay">
+            <span class="category">Necklaces</span>
+            <h4>Tourmaline Pendant</h4>
+            <p>Pink tourmaline in yellow gold</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="gems">
+          <img src="../images/gallery/opale-nero.jpg" alt="Black opal"
+               onerror="this.style.background='linear-gradient(135deg, #2d2d2d, #1a1a1a)';">
+          <div class="gallery-overlay">
+            <span class="category">Gems</span>
+            <h4>Australian Black Opal</h4>
+            <p>Cabochon cut, 4.5 carats</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="rings">
+          <img src="../images/gallery/anello-tanzanite.jpg" alt="Tanzanite ring"
+               onerror="this.style.background='linear-gradient(135deg, #6666ff, #4b0082)';">
+          <div class="gallery-overlay">
+            <span class="category">Rings</span>
+            <h4>Tanzanite Ring</h4>
+            <p>AAA Tanzanite with diamonds</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2>Like What You See?</h2>
+        <div class="gold-line"></div>
+        <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--color-text-light);">
+          Each creation is unique and made to measure. Contact us to discuss
+          your project or request something similar.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImage">
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle"></h4>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+          <p>Artisan gemstone cutting laboratory in the heart of Rome. Twenty years of experience at the service of beauty.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="WhatsApp">&#128222;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#cutting">Gem Cutting</a></li>
+            <li><a href="services.html#consulting">Consulting</a></li>
+            <li><a href="services.html#design">Design</a></li>
+            <li><a href="services.html#restoration">Restoration</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>Historic Center, Rome</li>
+            <li>Tel: +39 06 XXXXXXX</li>
+            <li>info@officinagemmologica.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Officina Gemmologica di Monica Amato s.a.s. - All rights reserved | <a href="privacy-policy.html">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+</body>
+</html>
