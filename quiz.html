@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Scopri quale pietra preziosa rispecchia la tua personalità con il nostro quiz interattivo. Trova la gemma perfetta per te!">
-  <meta name="keywords" content="quiz pietre preziose, trova la tua gemma, test personalità gemme, pietra portafortuna">
+  <meta name="keywords" content="quiz pietre preziose, trova la tua gemma, test personalità gemme, pietra portafortuna, pietra del mese">
 
   <title>Quiz: Trova la Tua Pietra - Officina Gemmologica di Monica Amato</title>
 
@@ -61,7 +61,7 @@
     <div class="container">
       <h1>Trova la Tua Pietra</h1>
       <div class="gold-line"></div>
-      <p class="subtitle">Scopri quale gemma rispecchia la tua personalità</p>
+      <p class="subtitle">Scopri quale gemma rispecchia la tua personalità e il tuo mese di nascita</p>
     </div>
   </section>
 
@@ -144,8 +144,43 @@
 
   <!-- Quiz Logic -->
   <script>
+    // Pietre del mese di nascita
+    const birthstones = {
+      1: { name: "Granato", icon: "🔴", color: "#7B1113", description: "Simbolo di vitalità, passione e protezione nei viaggi." },
+      2: { name: "Ametista", icon: "💜", color: "#9966CC", description: "Pietra della calma mentale, chiarezza e rilassamento." },
+      3: { name: "Acquamarina", icon: "🩵", color: "#7FFFD4", description: "Evoca la serenità del mare, coraggio e comunicazione." },
+      4: { name: "Quarzo Ialino", icon: "🔮", color: "#E8E8E8", description: "Cristallo di purezza, amplifica l'energia e la chiarezza." },
+      5: { name: "Smeraldo", icon: "💚", color: "#50C878", description: "Pietra della rinascita, amore e saggezza." },
+      6: { name: "Perla", icon: "🤍", color: "#FDEEF4", description: "Simbolo di purezza, eleganza e femminilità." },
+      7: { name: "Rubino", icon: "❤️", color: "#E0115F", description: "La pietra della passione, coraggio e vitalità." },
+      8: { name: "Peridoto", icon: "💛", color: "#9CB770", description: "Pietra della luce, prosperità e protezione." },
+      9: { name: "Zaffiro", icon: "💙", color: "#0F52BA", description: "Simbolo di saggezza, lealtà e nobiltà." },
+      10: { name: "Opale", icon: "🌈", color: "#A8C3BC", description: "Pietra della creatività, ispirazione e fantasia." },
+      11: { name: "Topazio", icon: "🧡", color: "#FFC87C", description: "Porta gioia, abbondanza e buona fortuna." },
+      12: { name: "Tanzanite", icon: "💎", color: "#4D5BA5", description: "Pietra rara della trasformazione e spiritualità." }
+    };
+
     const quizData = {
       questions: [
+        {
+          question: "In che mese sei nato/a?",
+          subtitle: "Scopriremo anche la tua pietra portafortuna del mese",
+          type: "birthMonth",
+          options: [
+            { icon: "❄️", text: "Gennaio", value: 1 },
+            { icon: "💜", text: "Febbraio", value: 2 },
+            { icon: "🌸", text: "Marzo", value: 3 },
+            { icon: "🌷", text: "Aprile", value: 4 },
+            { icon: "🌺", text: "Maggio", value: 5 },
+            { icon: "☀️", text: "Giugno", value: 6 },
+            { icon: "🌻", text: "Luglio", value: 7 },
+            { icon: "🌾", text: "Agosto", value: 8 },
+            { icon: "🍂", text: "Settembre", value: 9 },
+            { icon: "🎃", text: "Ottobre", value: 10 },
+            { icon: "🍁", text: "Novembre", value: 11 },
+            { icon: "🎄", text: "Dicembre", value: 12 }
+          ]
+        },
         {
           question: "Come descriveresti il tuo stile personale?",
           subtitle: "Scegli quello che ti rappresenta di più",
@@ -153,7 +188,7 @@
             { icon: "👑", text: "Elegante e raffinato", value: "ruby" },
             { icon: "🌊", text: "Calmo e sereno", value: "sapphire" },
             { icon: "🌿", text: "Naturale e fresco", value: "emerald" },
-            { icon: "✨", text: "Luminoso e brillante", value: "diamond" }
+            { icon: "✨", text: "Luminoso e solare", value: "topaz" }
           ]
         },
         {
@@ -163,7 +198,7 @@
             { icon: "❤️", text: "Rosso / Rosa", value: "ruby" },
             { icon: "💙", text: "Blu / Viola", value: "sapphire" },
             { icon: "💚", text: "Verde / Acquamarina", value: "emerald" },
-            { icon: "🤍", text: "Bianco / Trasparente", value: "diamond" }
+            { icon: "🧡", text: "Giallo / Arancio / Oro", value: "topaz" }
           ]
         },
         {
@@ -173,7 +208,7 @@
             { icon: "🔥", text: "Con passione e determinazione", value: "ruby" },
             { icon: "🧘", text: "Con calma e riflessione", value: "sapphire" },
             { icon: "🌱", text: "Con creatività e adattamento", value: "emerald" },
-            { icon: "💎", text: "Con logica e precisione", value: "diamond" }
+            { icon: "☀️", text: "Con ottimismo e positività", value: "topaz" }
           ]
         },
         {
@@ -183,7 +218,7 @@
             { icon: "💖", text: "Il colore intenso e vibrante", value: "ruby" },
             { icon: "🌙", text: "La profondità e il mistero", value: "sapphire" },
             { icon: "🍀", text: "L'unicità e la rarità", value: "emerald" },
-            { icon: "⭐", text: "La brillantezza e la purezza", value: "diamond" }
+            { icon: "⭐", text: "Il calore e la luminosità", value: "topaz" }
           ]
         },
         {
@@ -193,7 +228,7 @@
             { icon: "🔥", text: "Fuoco - Energia e passione", value: "ruby" },
             { icon: "💧", text: "Acqua - Saggezza e intuizione", value: "sapphire" },
             { icon: "🌍", text: "Terra - Stabilità e crescita", value: "emerald" },
-            { icon: "💨", text: "Aria - Libertà e chiarezza", value: "diamond" }
+            { icon: "☀️", text: "Sole - Gioia e vitalità", value: "topaz" }
           ]
         }
       ],
@@ -222,19 +257,20 @@
           traits: ["Creativo", "Equilibrato", "Naturale", "Rinnovatore"],
           cta: "Scopri i nostri smeraldi"
         },
-        diamond: {
-          name: "Diamante",
-          icon: "💎",
-          color: "#b9f2ff",
-          description: "Il Diamante simboleggia purezza, forza invincibile e chiarezza mentale. Come te, brilla di luce propria e trasforma la pressione in bellezza. È la pietra di chi punta all'eccellenza in ogni cosa.",
-          traits: ["Brillante", "Forte", "Puro", "Perfezionista"],
-          cta: "Scopri i nostri diamanti"
+        topaz: {
+          name: "Topazio",
+          icon: "🧡",
+          color: "#FFC87C",
+          description: "Il Topazio è la pietra della gioia, dell'abbondanza e dell'ottimismo. Come te, porta luce e calore ovunque vada. È simbolo di buona fortuna e generosità. Le persone attratte dal topazio irradiano positività.",
+          traits: ["Ottimista", "Generoso", "Luminoso", "Fortunato"],
+          cta: "Scopri i nostri topazi"
         }
       }
     };
 
     let currentQuestion = 0;
     let answers = [];
+    let birthMonth = null;
 
     function initQuiz() {
       showQuestion(0);
@@ -252,12 +288,12 @@
           <h3>${question.question}</h3>
           <p>${question.subtitle}</p>
         </div>
-        <div class="quiz-options">
+        <div class="quiz-options ${question.type === 'birthMonth' ? 'quiz-options-months' : ''}">
       `;
 
       question.options.forEach((option, i) => {
         html += `
-          <div class="quiz-option" onclick="selectOption(${i}, '${option.value}')">
+          <div class="quiz-option ${question.type === 'birthMonth' ? 'quiz-option-month' : ''}" onclick="selectOption(${i}, '${option.value}', '${question.type || ''}')">
             <div class="quiz-option-icon">${option.icon}</div>
             <h4>${option.text}</h4>
           </div>
@@ -275,8 +311,12 @@
       document.getElementById('quizContent').innerHTML = html;
     }
 
-    function selectOption(optionIndex, value) {
-      answers[currentQuestion] = value;
+    function selectOption(optionIndex, value, type) {
+      if (type === 'birthMonth') {
+        birthMonth = parseInt(value);
+      } else {
+        answers[currentQuestion - 1] = value; // -1 perché la prima domanda è il mese
+      }
 
       // Evidenzia la selezione
       document.querySelectorAll('.quiz-option').forEach((opt, i) => {
@@ -305,30 +345,40 @@
     function showResult() {
       document.getElementById('progressBar').style.width = '100%';
 
-      // Calcola il risultato più frequente
+      // Calcola il risultato più frequente (escluso il mese)
       const counts = {};
       answers.forEach(a => {
-        counts[a] = (counts[a] || 0) + 1;
+        if (a) counts[a] = (counts[a] || 0) + 1;
       });
       const resultKey = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
       const result = quizData.results[resultKey];
+      const birthstone = birthstones[birthMonth];
 
       let traitsHtml = result.traits.map(t => `<span class="stone-property">${t}</span>`).join('');
 
       let html = `
         <div class="quiz-result">
           <div class="quiz-result-gem" style="color: ${result.color};">${result.icon}</div>
-          <h2>La tua pietra è: <span style="color: ${result.color};">${result.name}</span></h2>
+          <h2>La tua pietra della personalità è: <span style="color: ${result.color};">${result.name}</span></h2>
           <p class="quiz-result-description">${result.description}</p>
           <div class="stone-properties" style="justify-content: center; margin-bottom: 2rem;">
             ${traitsHtml}
           </div>
+
+          <div style="background: var(--color-light); padding: 1.5rem; border-radius: var(--border-radius); margin: 2rem 0; border-left: 4px solid ${birthstone.color};">
+            <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.5rem;">${birthstone.icon}</span>
+              La tua pietra del mese: <span style="color: ${birthstone.color};">${birthstone.name}</span>
+            </h3>
+            <p style="margin: 0; color: var(--color-text-light);">${birthstone.description}</p>
+          </div>
+
           <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
             <a href="guida-pietre.html" class="btn btn-primary">${result.cta}</a>
             <button class="btn btn-outline" onclick="restartQuiz()">Rifai il Quiz</button>
           </div>
           <p style="margin-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
-            Vuoi un gioiello con ${result.name}? <a href="contatti.html">Contattaci</a> per una consulenza gratuita!
+            Vuoi un gioiello con ${result.name} o ${birthstone.name}? <a href="contatti.html">Contattaci</a> per una consulenza gratuita!
           </p>
         </div>
       `;
@@ -339,11 +389,41 @@
     function restartQuiz() {
       currentQuestion = 0;
       answers = [];
+      birthMonth = null;
       showQuestion(0);
     }
 
     // Inizializza il quiz
     document.addEventListener('DOMContentLoaded', initQuiz);
   </script>
+
+  <style>
+    /* Stili per la griglia dei mesi */
+    .quiz-options-months {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1rem !important;
+    }
+
+    .quiz-option-month {
+      padding: 1rem !important;
+    }
+
+    .quiz-option-month h4 {
+      font-size: 0.9rem !important;
+    }
+
+    @media (max-width: 768px) {
+      .quiz-options-months {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .quiz-options-months {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+  </style>
 </body>
 </html>
