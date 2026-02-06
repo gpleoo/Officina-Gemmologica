@@ -17,27 +17,38 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">Officina Gemmologica</a>
-            <button class="nav-toggle" aria-label="Toggle menu">
+        <div class="container">
+            <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+
+            <nav class="nav" id="nav">
+                <a href="index.html">Home</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="servizi.html">Servizi</a>
+                <a href="galleria.html">Galleria</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Esplora <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="guida-pietre.html">Guida Pietre</a>
+                        <a href="glossario.html">Glossario</a>
+                        <a href="quiz.html">Quiz</a>
+                        <a href="configuratore.html" class="active">Configuratore</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                <a href="contatti.html">Contatti</a>
+                <div class="lang-switcher">
+                    <a href="configuratore.html" class="active" title="Italiano">IT</a>
+                    <span>|</span>
+                    <a href="en/configurator.html" title="English">EN</a>
+                </div>
+            </nav>
+
+            <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                <li><a href="servizi.html">Servizi</a></li>
-                <li><a href="galleria.html">Galleria</a></li>
-                <li><a href="guida-pietre.html">Guida Pietre</a></li>
-                <li><a href="configuratore.html" class="active">Configuratore</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
-                <li class="lang-switcher">
-                    <a href="configuratore.html" class="active">IT</a> |
-                    <a href="en/configurator.html">EN</a>
-                </li>
-            </ul>
-        </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Page Hero -->
