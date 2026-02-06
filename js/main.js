@@ -62,6 +62,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
+  // DROPDOWN MENU (MOBILE)
+  // ============================================
+  const navDropdowns = document.querySelectorAll('.nav-dropdown');
+
+  navDropdowns.forEach(function(dropdown) {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+
+    if (toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Su mobile, toggle il dropdown
+        if (window.innerWidth <= 768) {
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
+  });
+
+  // ============================================
   // HEADER SCROLL EFFECT
   // ============================================
   const header = document.querySelector('.header');
