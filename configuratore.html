@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configura il tuo gioiello personalizzato - Scegli pietra, taglio, montatura e metallo per creare il tuo pezzo unico.">
+    <meta name="keywords" content="configuratore gioielli, gioiello personalizzato, anello su misura, pietra preziosa custom">
+    <title>Configuratore Gioielli | Officina Gemmologica di Monica Amato</title>
+    <link rel="canonical" href="https://www.officinagemmologica.com/configuratore.html">
+    <link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/configuratore.html">
+    <link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/configurator.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Officina Gemmologica</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="guida-pietre.html">Guida Pietre</a></li>
+                <li><a href="configuratore.html" class="active">Configuratore</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+                <li class="lang-switcher">
+                    <a href="configuratore.html" class="active">IT</a> |
+                    <a href="en/configurator.html">EN</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="reveal-up">Configuratore Gioielli</h1>
+            <p class="reveal-up">Crea il tuo gioiello unico scegliendo ogni dettaglio</p>
+        </div>
+    </section>
+
+    <!-- Configurator Section -->
+    <section class="configurator-section section">
+        <div class="container">
+            <div class="configurator-wrapper">
+
+                <!-- Preview Area -->
+                <div class="configurator-preview reveal-up">
+                    <div class="preview-display" id="previewDisplay">
+                        <div class="gem-preview" id="gemPreview">
+                            <div class="gem-shape" id="gemShape">💎</div>
+                        </div>
+                        <div class="setting-preview" id="settingPreview">
+                            <div class="setting-base"></div>
+                        </div>
+                    </div>
+                    <div class="preview-info">
+                        <h3 id="previewTitle">Il Tuo Gioiello</h3>
+                        <p id="previewDescription">Seleziona le opzioni per visualizzare la tua creazione</p>
+                    </div>
+                </div>
+
+                <!-- Options Panel -->
+                <div class="configurator-options">
+
+                    <!-- Step 1: Gemstone -->
+                    <div class="config-step reveal-up" data-step="1">
+                        <h3><span class="step-number">1</span> Scegli la Pietra</h3>
+                        <div class="option-grid" id="gemOptions">
+                            <button class="option-btn" data-gem="diamond" data-color="#E8E8E8" data-emoji="💎">
+                                <span class="option-icon">💎</span>
+                                <span class="option-name">Diamante</span>
+                            </button>
+                            <button class="option-btn" data-gem="ruby" data-color="#E31B23" data-emoji="❤️">
+                                <span class="option-icon">❤️</span>
+                                <span class="option-name">Rubino</span>
+                            </button>
+                            <button class="option-btn" data-gem="sapphire" data-color="#0F52BA" data-emoji="💙">
+                                <span class="option-icon">💙</span>
+                                <span class="option-name">Zaffiro</span>
+                            </button>
+                            <button class="option-btn" data-gem="emerald" data-color="#50C878" data-emoji="💚">
+                                <span class="option-icon">💚</span>
+                                <span class="option-name">Smeraldo</span>
+                            </button>
+                            <button class="option-btn" data-gem="amethyst" data-color="#9966CC" data-emoji="💜">
+                                <span class="option-icon">💜</span>
+                                <span class="option-name">Ametista</span>
+                            </button>
+                            <button class="option-btn" data-gem="aquamarine" data-color="#7FFFD4" data-emoji="🩵">
+                                <span class="option-icon">🩵</span>
+                                <span class="option-name">Acquamarina</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Cut -->
+                    <div class="config-step reveal-up" data-step="2">
+                        <h3><span class="step-number">2</span> Scegli il Taglio</h3>
+                        <div class="option-grid" id="cutOptions">
+                            <button class="option-btn" data-cut="round">
+                                <span class="option-icon cut-icon">●</span>
+                                <span class="option-name">Brillante</span>
+                            </button>
+                            <button class="option-btn" data-cut="princess">
+                                <span class="option-icon cut-icon">■</span>
+                                <span class="option-name">Princess</span>
+                            </button>
+                            <button class="option-btn" data-cut="oval">
+                                <span class="option-icon cut-icon">⬭</span>
+                                <span class="option-name">Ovale</span>
+                            </button>
+                            <button class="option-btn" data-cut="marquise">
+                                <span class="option-icon cut-icon">◆</span>
+                                <span class="option-name">Marquise</span>
+                            </button>
+                            <button class="option-btn" data-cut="pear">
+                                <span class="option-icon cut-icon">🍐</span>
+                                <span class="option-name">Goccia</span>
+                            </button>
+                            <button class="option-btn" data-cut="heart">
+                                <span class="option-icon cut-icon">♥</span>
+                                <span class="option-name">Cuore</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Metal -->
+                    <div class="config-step reveal-up" data-step="3">
+                        <h3><span class="step-number">3</span> Scegli il Metallo</h3>
+                        <div class="option-grid" id="metalOptions">
+                            <button class="option-btn" data-metal="gold" data-metalcolor="#FFD700">
+                                <span class="option-icon metal-swatch" style="background: linear-gradient(135deg, #FFD700, #FFA500)"></span>
+                                <span class="option-name">Oro Giallo</span>
+                            </button>
+                            <button class="option-btn" data-metal="white-gold" data-metalcolor="#E8E8E8">
+                                <span class="option-icon metal-swatch" style="background: linear-gradient(135deg, #E8E8E8, #C0C0C0)"></span>
+                                <span class="option-name">Oro Bianco</span>
+                            </button>
+                            <button class="option-btn" data-metal="rose-gold" data-metalcolor="#E8B4B8">
+                                <span class="option-icon metal-swatch" style="background: linear-gradient(135deg, #E8B4B8, #CC8899)"></span>
+                                <span class="option-name">Oro Rosa</span>
+                            </button>
+                            <button class="option-btn" data-metal="platinum" data-metalcolor="#E5E4E2">
+                                <span class="option-icon metal-swatch" style="background: linear-gradient(135deg, #E5E4E2, #BCC6CC)"></span>
+                                <span class="option-name">Platino</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Setting -->
+                    <div class="config-step reveal-up" data-step="4">
+                        <h3><span class="step-number">4</span> Scegli la Montatura</h3>
+                        <div class="option-grid" id="settingOptions">
+                            <button class="option-btn" data-setting="solitaire">
+                                <span class="option-icon">💍</span>
+                                <span class="option-name">Solitario</span>
+                            </button>
+                            <button class="option-btn" data-setting="halo">
+                                <span class="option-icon">✨</span>
+                                <span class="option-name">Halo</span>
+                            </button>
+                            <button class="option-btn" data-setting="three-stone">
+                                <span class="option-icon">💎💎💎</span>
+                                <span class="option-name">Trilogy</span>
+                            </button>
+                            <button class="option-btn" data-setting="pave">
+                                <span class="option-icon">✦✦✦</span>
+                                <span class="option-name">Pavé</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="config-summary reveal-up" id="configSummary">
+                        <h3>Riepilogo Configurazione</h3>
+                        <div class="summary-list">
+                            <div class="summary-item">
+                                <span class="summary-label">Pietra:</span>
+                                <span class="summary-value" id="summaryGem">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Taglio:</span>
+                                <span class="summary-value" id="summaryCut">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Metallo:</span>
+                                <span class="summary-value" id="summaryMetal">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Montatura:</span>
+                                <span class="summary-value" id="summarySetting">-</span>
+                            </div>
+                        </div>
+                        <a href="contatti.html" class="btn btn-primary" id="requestQuoteBtn">Richiedi Preventivo</a>
+                        <p class="summary-note">Ti contatteremo per discutere i dettagli e fornirti un preventivo personalizzato</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="config-info section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card reveal-up">
+                    <span class="info-icon">🎨</span>
+                    <h3>Design Personalizzato</h3>
+                    <p>Ogni gioiello è unico e realizzato secondo le tue preferenze specifiche.</p>
+                </div>
+                <div class="info-card reveal-up">
+                    <span class="info-icon">💎</span>
+                    <h3>Pietre Certificate</h3>
+                    <p>Utilizziamo solo gemme certificate dai migliori laboratori internazionali.</p>
+                </div>
+                <div class="info-card reveal-up">
+                    <span class="info-icon">🛡️</span>
+                    <h3>Garanzia a Vita</h3>
+                    <p>Tutti i nostri gioielli sono coperti da garanzia e servizio di manutenzione.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Officina Gemmologica</h3>
+                    <p>L'arte del taglio delle pietre preziose dal 1990. Qualità, passione e tradizione nel cuore di Roma.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="servizi.html">Servizi</a></li>
+                        <li><a href="galleria.html">Galleria</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul>
+                        <li>📍 Via Example 123, Roma</li>
+                        <li>📞 +39 06 1234567</li>
+                        <li>✉️ info@officinagemmologica.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Pinterest">PIN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Officina Gemmologica di Monica Amato. Tutti i diritti riservati. | <a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/39061234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contattaci su WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Configurator Logic
+        const config = {
+            gem: null,
+            cut: null,
+            metal: null,
+            setting: null
+        };
+
+        const gemNames = {
+            'diamond': 'Diamante',
+            'ruby': 'Rubino',
+            'sapphire': 'Zaffiro',
+            'emerald': 'Smeraldo',
+            'amethyst': 'Ametista',
+            'aquamarine': 'Acquamarina'
+        };
+
+        const cutNames = {
+            'round': 'Brillante',
+            'princess': 'Princess',
+            'oval': 'Ovale',
+            'marquise': 'Marquise',
+            'pear': 'Goccia',
+            'heart': 'Cuore'
+        };
+
+        const metalNames = {
+            'gold': 'Oro Giallo 18kt',
+            'white-gold': 'Oro Bianco 18kt',
+            'rose-gold': 'Oro Rosa 18kt',
+            'platinum': 'Platino 950'
+        };
+
+        const settingNames = {
+            'solitaire': 'Solitario',
+            'halo': 'Halo',
+            'three-stone': 'Trilogy',
+            'pave': 'Pavé'
+        };
+
+        const cutShapes = {
+            'round': '●',
+            'princess': '◆',
+            'oval': '⬭',
+            'marquise': '◇',
+            'pear': '◈',
+            'heart': '♥'
+        };
+
+        // Handle option selection
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const parent = this.closest('.option-grid');
+                parent.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Update config
+                if (this.dataset.gem) {
+                    config.gem = this.dataset.gem;
+                    updateGemPreview(this.dataset.emoji, this.dataset.color);
+                }
+                if (this.dataset.cut) {
+                    config.cut = this.dataset.cut;
+                    updateCutPreview(this.dataset.cut);
+                }
+                if (this.dataset.metal) {
+                    config.metal = this.dataset.metal;
+                    updateMetalPreview(this.dataset.metalcolor);
+                }
+                if (this.dataset.setting) {
+                    config.setting = this.dataset.setting;
+                }
+
+                updateSummary();
+            });
+        });
+
+        function updateGemPreview(emoji, color) {
+            const gemShape = document.getElementById('gemShape');
+            gemShape.textContent = emoji;
+            gemShape.style.textShadow = `0 0 30px ${color}, 0 0 60px ${color}`;
+        }
+
+        function updateCutPreview(cut) {
+            const gemShape = document.getElementById('gemShape');
+            const shapes = {
+                'round': 'scale(1)',
+                'princess': 'scale(1) rotate(45deg)',
+                'oval': 'scaleX(0.8)',
+                'marquise': 'scaleY(0.6)',
+                'pear': 'scale(1)',
+                'heart': 'scale(1)'
+            };
+            gemShape.style.transform = shapes[cut] || 'scale(1)';
+        }
+
+        function updateMetalPreview(color) {
+            const settingBase = document.querySelector('.setting-base');
+            settingBase.style.background = `linear-gradient(135deg, ${color}, ${adjustBrightness(color, -30)})`;
+        }
+
+        function adjustBrightness(hex, percent) {
+            const num = parseInt(hex.replace('#', ''), 16);
+            const amt = Math.round(2.55 * percent);
+            const R = (num >> 16) + amt;
+            const G = (num >> 8 & 0x00FF) + amt;
+            const B = (num & 0x0000FF) + amt;
+            return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+                (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+                (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
+        }
+
+        function updateSummary() {
+            document.getElementById('summaryGem').textContent = config.gem ? gemNames[config.gem] : '-';
+            document.getElementById('summaryCut').textContent = config.cut ? cutNames[config.cut] : '-';
+            document.getElementById('summaryMetal').textContent = config.metal ? metalNames[config.metal] : '-';
+            document.getElementById('summarySetting').textContent = config.setting ? settingNames[config.setting] : '-';
+
+            // Update preview title
+            if (config.gem && config.setting) {
+                document.getElementById('previewTitle').textContent =
+                    `${settingNames[config.setting]} con ${gemNames[config.gem]}`;
+            }
+
+            // Build query string for contact form
+            if (config.gem && config.cut && config.metal && config.setting) {
+                const message = `Richiesta preventivo per: ${settingNames[config.setting]} con ${gemNames[config.gem]} taglio ${cutNames[config.cut]} in ${metalNames[config.metal]}`;
+                document.getElementById('requestQuoteBtn').href = `contatti.html?config=${encodeURIComponent(message)}`;
+            }
+        }
+    </script>
+</body>
+</html>
