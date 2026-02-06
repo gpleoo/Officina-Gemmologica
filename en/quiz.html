@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover which gemstone reflects your personality with our interactive quiz. Find the perfect gem for you!">
+  <meta name="keywords" content="gemstone quiz, find your gem, personality test gems, birthstone, month stone">
+
+  <title>Quiz: Find Your Stone - Officina Gemmologica di Monica Amato</title>
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="alternate" hreflang="it" href="https://www.officinagemmologica.com/quiz.html">
+  <link rel="alternate" hreflang="en" href="https://www.officinagemmologica.com/en/quiz.html">
+</head>
+<body>
+  <div class="page-loader"><div class="loader"></div></div>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Explore <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu">
+            <a href="stone-guide.html">Stone Guide</a>
+            <a href="quiz.html" class="active">Quiz</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <div class="lang-switcher">
+          <a href="../quiz.html" title="Italiano">IT</a>
+          <span>|</span>
+          <a href="quiz.html" class="active" title="English">EN</a>
+        </div>
+      </nav>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Find Your Stone</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">Discover which gem reflects your personality and birth month</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="quiz-container" id="quizContainer">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+        <div class="quiz-content" id="quizContent"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+          <p>Artisan gemstone cutting workshop in the heart of Rome.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="WhatsApp">&#128222;</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="quiz.html">Find Your Stone Quiz</a></li>
+            <li><a href="stone-guide.html">Stone Guide</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>Historic Center, Rome</li>
+            <li>Tel: +39 06 XXXXXXX</li>
+            <li>info@officinagemmologica.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Officina Gemmologica di Monica Amato s.a.s. - All rights reserved | <a href="privacy-policy.html">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/39061234567" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    const birthstones = {
+      1: { name: "Garnet", icon: "🔴", color: "#7B1113", description: "Symbol of vitality, passion and protection during travels." },
+      2: { name: "Amethyst", icon: "💜", color: "#9966CC", description: "Stone of mental calm, clarity and relaxation." },
+      3: { name: "Aquamarine", icon: "🩵", color: "#7FFFD4", description: "Evokes the serenity of the sea, courage and communication." },
+      4: { name: "Rock Crystal", icon: "🔮", color: "#E8E8E8", description: "Crystal of purity, amplifies energy and clarity." },
+      5: { name: "Emerald", icon: "💚", color: "#50C878", description: "Stone of rebirth, love and wisdom." },
+      6: { name: "Pearl", icon: "🤍", color: "#FDEEF4", description: "Symbol of purity, elegance and femininity." },
+      7: { name: "Ruby", icon: "❤️", color: "#E0115F", description: "The stone of passion, courage and vitality." },
+      8: { name: "Peridot", icon: "💛", color: "#9CB770", description: "Stone of light, prosperity and protection." },
+      9: { name: "Sapphire", icon: "💙", color: "#0F52BA", description: "Symbol of wisdom, loyalty and nobility." },
+      10: { name: "Opal", icon: "🌈", color: "#A8C3BC", description: "Stone of creativity, inspiration and fantasy." },
+      11: { name: "Topaz", icon: "🧡", color: "#FFC87C", description: "Brings joy, abundance and good fortune." },
+      12: { name: "Tanzanite", icon: "💎", color: "#4D5BA5", description: "Rare stone of transformation and spirituality." }
+    };
+
+    const quizData = {
+      questions: [
+        {
+          question: "What month were you born?",
+          subtitle: "We'll also discover your birthstone",
+          type: "birthMonth",
+          options: [
+            { icon: "❄️", text: "January", value: 1 },
+            { icon: "💜", text: "February", value: 2 },
+            { icon: "🌸", text: "March", value: 3 },
+            { icon: "🌷", text: "April", value: 4 },
+            { icon: "🌺", text: "May", value: 5 },
+            { icon: "☀️", text: "June", value: 6 },
+            { icon: "🌻", text: "July", value: 7 },
+            { icon: "🌾", text: "August", value: 8 },
+            { icon: "🍂", text: "September", value: 9 },
+            { icon: "🎃", text: "October", value: 10 },
+            { icon: "🍁", text: "November", value: 11 },
+            { icon: "🎄", text: "December", value: 12 }
+          ]
+        },
+        {
+          question: "How would you describe your personal style?",
+          subtitle: "Choose what represents you most",
+          options: [
+            { icon: "👑", text: "Elegant and refined", value: "ruby" },
+            { icon: "🌊", text: "Calm and serene", value: "sapphire" },
+            { icon: "🌿", text: "Natural and fresh", value: "emerald" },
+            { icon: "✨", text: "Bright and sunny", value: "topaz" }
+          ]
+        },
+        {
+          question: "What is your favorite color?",
+          subtitle: "The color that attracts you most",
+          options: [
+            { icon: "❤️", text: "Red / Pink", value: "ruby" },
+            { icon: "💙", text: "Blue / Purple", value: "sapphire" },
+            { icon: "💚", text: "Green / Aqua", value: "emerald" },
+            { icon: "🧡", text: "Yellow / Orange / Gold", value: "topaz" }
+          ]
+        },
+        {
+          question: "How do you face challenges?",
+          subtitle: "Your approach to problems",
+          options: [
+            { icon: "🔥", text: "With passion and determination", value: "ruby" },
+            { icon: "🧘", text: "With calm and reflection", value: "sapphire" },
+            { icon: "🌱", text: "With creativity and adaptation", value: "emerald" },
+            { icon: "☀️", text: "With optimism and positivity", value: "topaz" }
+          ]
+        },
+        {
+          question: "What do you value most in a jewel?",
+          subtitle: "The most important feature for you",
+          options: [
+            { icon: "💖", text: "Intense and vibrant color", value: "ruby" },
+            { icon: "🌙", text: "Depth and mystery", value: "sapphire" },
+            { icon: "🍀", text: "Uniqueness and rarity", value: "emerald" },
+            { icon: "⭐", text: "Warmth and luminosity", value: "topaz" }
+          ]
+        },
+        {
+          question: "Which element represents you?",
+          subtitle: "The element you feel in tune with",
+          options: [
+            { icon: "🔥", text: "Fire - Energy and passion", value: "ruby" },
+            { icon: "💧", text: "Water - Wisdom and intuition", value: "sapphire" },
+            { icon: "🌍", text: "Earth - Stability and growth", value: "emerald" },
+            { icon: "☀️", text: "Sun - Joy and vitality", value: "topaz" }
+          ]
+        }
+      ],
+      results: {
+        ruby: {
+          name: "Ruby",
+          icon: "❤️",
+          color: "#e0115f",
+          description: "Ruby is the stone of passion and courage. Like you, it emanates energy, strength and determination. It is a symbol of deep love and vitality. People attracted to ruby are natural leaders with a fiery heart.",
+          traits: ["Passionate", "Courageous", "Energetic", "Leader"],
+          cta: "Discover our rubies"
+        },
+        sapphire: {
+          name: "Sapphire",
+          icon: "💙",
+          color: "#0f52ba",
+          description: "Sapphire represents wisdom, loyalty and nobility of spirit. Like you, it possesses a depth that fascinates and a calm that inspires trust. It is the stone of thinkers and truth seekers.",
+          traits: ["Wise", "Loyal", "Reflective", "Intuitive"],
+          cta: "Discover our sapphires"
+        },
+        emerald: {
+          name: "Emerald",
+          icon: "💚",
+          color: "#50c878",
+          description: "Emerald embodies rebirth, growth and harmony with nature. Like you, it brings balance and freshness wherever it goes. It is the stone of creatives and those seeking connection with the natural world.",
+          traits: ["Creative", "Balanced", "Natural", "Renewer"],
+          cta: "Discover our emeralds"
+        },
+        topaz: {
+          name: "Topaz",
+          icon: "🧡",
+          color: "#FFC87C",
+          description: "Topaz is the stone of joy, abundance and optimism. Like you, it brings light and warmth wherever it goes. It is a symbol of good fortune and generosity. People attracted to topaz radiate positivity.",
+          traits: ["Optimistic", "Generous", "Luminous", "Fortunate"],
+          cta: "Discover our topazes"
+        }
+      }
+    };
+
+    let currentQuestion = 0;
+    let answers = [];
+    let birthMonth = null;
+
+    function initQuiz() { showQuestion(0); }
+
+    function showQuestion(index) {
+      const question = quizData.questions[index];
+      const progress = ((index) / quizData.questions.length) * 100;
+      document.getElementById('progressBar').style.width = progress + '%';
+
+      let html = `
+        <div class="quiz-question">
+          <p style="color: var(--color-accent); font-size: 0.9rem; margin-bottom: 0.5rem;">Question ${index + 1} of ${quizData.questions.length}</p>
+          <h3>${question.question}</h3>
+          <p>${question.subtitle}</p>
+        </div>
+        <div class="quiz-options ${question.type === 'birthMonth' ? 'quiz-options-months' : ''}">
+      `;
+
+      question.options.forEach((option, i) => {
+        html += `
+          <div class="quiz-option ${question.type === 'birthMonth' ? 'quiz-option-month' : ''}" onclick="selectOption(${i}, '${option.value}', '${question.type || ''}')">
+            <div class="quiz-option-icon">${option.icon}</div>
+            <h4>${option.text}</h4>
+          </div>
+        `;
+      });
+
+      html += `</div>
+        <div class="quiz-nav">
+          ${index > 0 ? '<button class="btn btn-outline" onclick="prevQuestion()">← Back</button>' : '<div></div>'}
+          <span style="color: var(--color-gray);">${index + 1}/${quizData.questions.length}</span>
+          <div></div>
+        </div>
+      `;
+
+      document.getElementById('quizContent').innerHTML = html;
+    }
+
+    function selectOption(optionIndex, value, type) {
+      if (type === 'birthMonth') {
+        birthMonth = parseInt(value);
+      } else {
+        answers[currentQuestion - 1] = value;
+      }
+
+      document.querySelectorAll('.quiz-option').forEach((opt, i) => {
+        opt.classList.remove('selected');
+        if (i === optionIndex) opt.classList.add('selected');
+      });
+
+      setTimeout(() => {
+        if (currentQuestion < quizData.questions.length - 1) {
+          currentQuestion++;
+          showQuestion(currentQuestion);
+        } else {
+          showResult();
+        }
+      }, 400);
+    }
+
+    function prevQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function showResult() {
+      document.getElementById('progressBar').style.width = '100%';
+
+      const counts = {};
+      answers.forEach(a => { if (a) counts[a] = (counts[a] || 0) + 1; });
+      const resultKey = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+      const result = quizData.results[resultKey];
+      const birthstone = birthstones[birthMonth];
+
+      let traitsHtml = result.traits.map(t => `<span class="stone-property">${t}</span>`).join('');
+
+      let html = `
+        <div class="quiz-result">
+          <div class="quiz-result-gem" style="color: ${result.color};">${result.icon}</div>
+          <h2>Your personality stone is: <span style="color: ${result.color};">${result.name}</span></h2>
+          <p class="quiz-result-description">${result.description}</p>
+          <div class="stone-properties" style="justify-content: center; margin-bottom: 2rem;">
+            ${traitsHtml}
+          </div>
+
+          <div style="background: var(--color-light); padding: 1.5rem; border-radius: var(--border-radius); margin: 2rem 0; border-left: 4px solid ${birthstone.color};">
+            <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.5rem;">${birthstone.icon}</span>
+              Your birthstone: <span style="color: ${birthstone.color};">${birthstone.name}</span>
+            </h3>
+            <p style="margin: 0; color: var(--color-text-light);">${birthstone.description}</p>
+          </div>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="stone-guide.html" class="btn btn-primary">${result.cta}</a>
+            <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+          </div>
+          <p style="margin-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
+            Want a jewel with ${result.name} or ${birthstone.name}? <a href="contact.html">Contact us</a> for a free consultation!
+          </p>
+        </div>
+      `;
+
+      document.getElementById('quizContent').innerHTML = html;
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      answers = [];
+      birthMonth = null;
+      showQuestion(0);
+    }
+
+    document.addEventListener('DOMContentLoaded', initQuiz);
+  </script>
+
+  <style>
+    .quiz-options-months { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 1rem !important; }
+    .quiz-option-month { padding: 1rem !important; }
+    .quiz-option-month h4 { font-size: 0.9rem !important; }
+    @media (max-width: 768px) { .quiz-options-months { grid-template-columns: repeat(3, 1fr) !important; } }
+    @media (max-width: 480px) { .quiz-options-months { grid-template-columns: repeat(2, 1fr) !important; } }
+  </style>
+</body>
+</html>
