@@ -803,6 +803,45 @@ img {
   font-weight: 600;
 }
 
+.testimonial-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  color: white;
+}
+
+.testimonial-link.btn-google {
+  background: #ea4335;
+}
+
+.testimonial-link.btn-google:hover {
+  background: #d33426;
+  transform: translateY(-2px);
+}
+
+.testimonial-link.btn-facebook {
+  background: #1877f2;
+}
+
+.testimonial-link.btn-facebook:hover {
+  background: #0a66c2;
+  transform: translateY(-2px);
+}
+
+.testimonial-link.btn-instagram {
+  background: #e4405f;
+}
+
+.testimonial-link.btn-instagram:hover {
+  background: #d63447;
+  transform: translateY(-2px);
+}
+
 /* === FORM CONTATTI === */
 .contact-section {
   display: grid;
