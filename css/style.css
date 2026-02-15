@@ -617,6 +617,29 @@ img {
 }
 
 /* === GALLERIA === */
+.gallery-counter {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-light, #999);
+  margin-bottom: 1rem;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gallery-counter .category-count {
+  padding: 0.25rem 0.5rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+.gallery-counter .category-count.limit-reached {
+  color: #c41e3a;
+  font-weight: bold;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

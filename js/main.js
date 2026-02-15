@@ -186,6 +186,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
+  // GALLERIA - CONTATORE PER CATEGORIA
+  // ============================================
+  if (window.OG && window.OG.updateGalleryCounter) {
+    window.OG.updateGalleryCounter();
+  }
+
+  // ============================================
   // GALLERIA - LIGHTBOX
   // ============================================
   const lightbox = document.getElementById('lightbox');
@@ -402,6 +409,42 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 window.OG = window.OG || {};
 
+window.OG.config = {
+  MAX_ITEMS_PER_CATEGORY: {
+    gemme: 100,
+    anelli: 15,
+    collane: 15,
+    orecchini: 15,
+    altro: 15
+  },
+  DEFAULT_MAX_ITEMS: 15
+};
+
+window.OG.getCountByCategory = function(category) {
+  var grid = document.getElementById('galleryGrid');
+  if (!grid) return 0;
+  return grid.querySelectorAll('.gallery-item[data-category="' + category + '"]').length;
+};
+
+window.OG.getCategoryLimit = function(category) {
+  return window.OG.config.MAX_ITEMS_PER_CATEGORY[category] || window.OG.config.DEFAULT_MAX_ITEMS;
+};
+
+window.OG.updateGalleryCounter = function() {
+  var counterEl = document.getElementById('galleryCounter');
+  if (!counterEl) return;
+  var categories = Object.keys(window.OG.config.MAX_ITEMS_PER_CATEGORY);
+  var html = '';
+  categories.forEach(function(cat) {
+    var count = window.OG.getCountByCategory(cat);
+    var limit = window.OG.getCategoryLimit(cat);
+    var label = cat.charAt(0).toUpperCase() + cat.slice(1);
+    var limitClass = count >= limit ? ' limit-reached' : '';
+    html += '<span class="category-count' + limitClass + '">' + label + ': ' + count + '/' + limit + '</span>';
+  });
+  counterEl.innerHTML = html;
+};
+
 window.OG.addGalleryItem = function(options) {
   const defaults = {
     image: '',
@@ -415,6 +458,15 @@ window.OG.addGalleryItem = function(options) {
   const grid = document.getElementById('galleryGrid');
 
   if (grid && config.image) {
+    var currentCount = window.OG.getCountByCategory(config.category);
+    var limit = window.OG.getCategoryLimit(config.category);
+
+    if (currentCount >= limit) {
+      console.warn('Limite galleria raggiunto per la categoria "' + config.category + '": massimo ' + limit + ' immagini consentite.');
+      window.OG.updateGalleryCounter();
+      return false;
+    }
+
     const item = document.createElement('div');
     item.className = 'gallery-item reveal active';
     if (config.size !== 'normal') {
@@ -432,5 +484,9 @@ window.OG.addGalleryItem = function(options) {
     `;
 
     grid.appendChild(item);
+    window.OG.updateGalleryCounter();
+    return true;
   }
+
+  return false;
 };
