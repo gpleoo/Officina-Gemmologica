@@ -193,6 +193,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
+  // GALLERIA - CARICAMENTO DA JSON
+  // ============================================
+  window.OG.loadGalleryFromJSON = function(jsonData) {
+    Object.keys(jsonData).forEach(function(category) {
+      if (Array.isArray(jsonData[category])) {
+        jsonData[category].forEach(function(item) {
+          var config = Object.assign({}, item, { category: category });
+          window.OG.addGalleryItem(config);
+        });
+      }
+    });
+  };
+
+  // Carica foto da JSON
+  fetch('config/gallery-items.json')
+    .then(r => r.json())
+    .then(data => window.OG.loadGalleryFromJSON(data))
+    .catch(e => console.warn('Errore caricamento galleria:', e));
+
+  // ============================================
   // GALLERIA - LIGHTBOX
   // ============================================
   const lightbox = document.getElementById('lightbox');
