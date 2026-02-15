@@ -1,0 +1,84 @@
+{
+  "gemme": [
+    {
+      "image": "images/gallery/gemma-rubino.jpg",
+      "title": "Rubino Birmano",
+      "description": "Rubino naturale di alta qualità, 2.5 carati",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/zaffiro-ceylon.jpg",
+      "title": "Zaffiro Ceylon",
+      "description": "Zaffiro blu intenso, 3.5 carati",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/ametista.jpg",
+      "title": "Ametista Brasiliana",
+      "description": "Ametista naturale di eccellente trasparenza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/acquamarina.jpg",
+      "title": "Acquamarina",
+      "description": "Acquamarina cristallina, tonalità azzurra",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/opale-nero.jpg",
+      "title": "Opale Nero",
+      "description": "Opale nero australiano con splendidi giochi di luce",
+      "size": "normal"
+    }
+  ],
+  "anelli": [
+    {
+      "image": "images/gallery/anello-smeraldo.jpg",
+      "title": "Anello Solitario Smeraldo",
+      "description": "Anello in oro 18K con smeraldo colombiano",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/anello-fidanzamento.jpg",
+      "title": "Anello di Fidanzamento",
+      "description": "Anello in platino con diamante naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-tanzanite.jpg",
+      "title": "Anello Tanzanite",
+      "description": "Anello in oro bianco con tanzanite e diamanti",
+      "size": "normal"
+    }
+  ],
+  "collane": [
+    {
+      "image": "images/gallery/collana-perle.jpg",
+      "title": "Collana Perle",
+      "description": "Collana di perle australiane, chiusura oro 18K",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pendente-tormalina.jpg",
+      "title": "Pendente Tormalina",
+      "description": "Pendente in argento con tormalina rosa",
+      "size": "normal"
+    }
+  ],
+  "orecchini": [
+    {
+      "image": "images/gallery/orecchini-diamanti.jpg",
+      "title": "Orecchini Diamanti",
+      "description": "Orecchini in oro bianco con diamanti naturali",
+      "size": "tall"
+    }
+  ],
+  "altro": [
+    {
+      "image": "images/gallery/spilla-vintage.jpg",
+      "title": "Spilla Vintage",
+      "description": "Spilla in oro con pietre colorate, anni '60",
+      "size": "normal"
+    }
+  ]
+}

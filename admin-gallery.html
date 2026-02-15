@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amministrazione Galleria - Officina Gemmologica</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 2rem;
+      text-align: center;
+      border-bottom: 3px solid #c41e3a;
+      padding-bottom: 1rem;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      align-items: start;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 0.95rem;
+    }
+
+    select, input[type="text"], input[type="file"], textarea {
+      padding: 0.75rem;
+      border: 2px solid #e0e6ed;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+
+    select:focus, input:focus, textarea:focus {
+      outline: none;
+      border-color: #c41e3a;
+    }
+
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #c41e3a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #a01830;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+    }
+
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #5a6268;
+      transform: translateY(-2px);
+    }
+
+    .btn-danger {
+      background: #dc3545;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .btn-danger:hover {
+      background: #c82333;
+    }
+
+    .btn-success {
+      background: #28a745;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .btn-success:hover {
+      background: #218838;
+    }
+
+    .counter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #c41e3a;
+    }
+
+    .counter-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .counter-status {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    .counter-status.warning {
+      color: #ffc107;
+      font-weight: bold;
+    }
+
+    .counter-status.full {
+      color: #dc3545;
+      font-weight: bold;
+    }
+
+    .form-section {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .form-section h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .gallery-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .gallery-table thead {
+      background: #2c3e50;
+      color: white;
+    }
+
+    .gallery-table th {
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .gallery-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #e0e6ed;
+    }
+
+    .gallery-table tbody tr:hover {
+      background: #f8f9fa;
+    }
+
+    .item-thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+      background: #e0e6ed;
+    }
+
+    .item-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .item-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.25rem;
+    }
+
+    .item-description {
+      font-size: 0.85rem;
+      color: #6c757d;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .export-section {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 2px solid #e0e6ed;
+      text-align: center;
+    }
+
+    .export-section h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .message {
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      display: none;
+      border-left: 4px solid;
+    }
+
+    .message.success {
+      background: #d4edda;
+      color: #155724;
+      border-color: #28a745;
+      display: block;
+    }
+
+    .message.error {
+      background: #f8d7da;
+      color: #721c24;
+      border-color: #dc3545;
+      display: block;
+    }
+
+    .message.info {
+      background: #d1ecf1;
+      color: #0c5460;
+      border-color: #17a2b8;
+      display: block;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #6c757d;
+    }
+
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 768px) {
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .form-section {
+        padding: 1rem;
+      }
+
+      .gallery-table {
+        font-size: 0.85rem;
+      }
+
+      .gallery-table th, .gallery-table td {
+        padding: 0.5rem;
+      }
+
+      .item-thumbnail {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📸 Amministrazione Galleria</h1>
+
+    <div id="message" class="message"></div>
+
+    <div class="form-section">
+      <h3>Seleziona Categoria</h3>
+      <div class="form-group">
+        <select id="categorySelect">
+          <option value="gemme">Gemme</option>
+          <option value="anelli">Anelli</option>
+          <option value="collane">Collane</option>
+          <option value="orecchini">Orecchini</option>
+          <option value="altro">Altro</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="counterContainer" class="counter">
+      <span class="counter-text"><span id="categoryLabel">Gemme</span></span>
+      <span class="counter-status"><span id="counterText">0/100</span></span>
+    </div>
+
+    <div class="form-section">
+      <h3>Aggiungi Nuova Foto</h3>
+      <div class="controls">
+        <div>
+          <div class="form-group">
+            <label for="imageFile">Immagine *</label>
+            <input type="file" id="imageFile" accept="image/*" required>
+          </div>
+          <div class="form-group">
+            <label for="imageTitle">Titolo *</label>
+            <input type="text" id="imageTitle" placeholder="Es: Zaffiro Ceylon" required>
+          </div>
+        </div>
+        <div>
+          <div class="form-group">
+            <label for="imageDescription">Descrizione</label>
+            <textarea id="imageDescription" placeholder="Es: Zaffiro blu intenso, 3.5 carati"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="imageSize">Dimensione</label>
+            <select id="imageSize">
+              <option value="normal">Normale</option>
+              <option value="tall">Verticale (tall)</option>
+              <option value="wide">Orizzontale (wide)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary" id="addPhotoBtn" style="margin-top: 1rem;">➕ Aggiungi Foto</button>
+    </div>
+
+    <div class="form-section">
+      <h3>Foto nella categoria</h3>
+      <div id="tableContainer"></div>
+    </div>
+
+    <div class="export-section">
+      <h3>Esporta Configurazione</h3>
+      <button class="btn-success" id="exportBtn">📥 Scarica JSON</button>
+    </div>
+  </div>
+
+  <script src="admin/gallery-admin.js"></script>
+</body>
+</html>
