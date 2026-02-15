@@ -213,6 +213,67 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(e => console.warn('Errore caricamento galleria:', e));
 
   // ============================================
+  // TESTIMONIANZE - CARICAMENTO E RENDERING
+  // ============================================
+  window.OG.loadTestimonials = function(jsonData) {
+    var testimonialsContainer = document.querySelector('.testimonials-slider');
+    if (!testimonialsContainer) return;
+
+    if (!jsonData.testimonials || jsonData.testimonials.length === 0) {
+      return;
+    }
+
+    // Mantieni la prima testimonianza (filosofia)
+    var existingTestimonial = testimonialsContainer.querySelector('.testimonial');
+    testimonialsContainer.innerHTML = '';
+
+    // Aggiungi filosodia se esistente
+    if (existingTestimonial) {
+      testimonialsContainer.appendChild(existingTestimonial.cloneNode(true));
+    }
+
+    // Aggiungi testimonianze dai social
+    jsonData.testimonials.forEach(function(test) {
+      var stars = '★'.repeat(test.rating) + '☆'.repeat(5 - test.rating);
+      var platformIcon = '';
+      var platformClass = 'btn-' + test.platform;
+
+      if (test.platform === 'google') {
+        platformIcon = '🔍';
+      } else if (test.platform === 'facebook') {
+        platformIcon = 'f';
+      } else if (test.platform === 'instagram') {
+        platformIcon = '📷';
+      }
+
+      var html = `
+        <div class="testimonial reveal">
+          <p class="testimonial-quote">
+            "${test.text}"
+          </p>
+          <p class="testimonial-author">- ${test.name}</p>
+          <p style="font-size: 0.85rem; color: #ffc107; margin: 0.5rem 0;">
+            ${stars}
+          </p>
+          <a href="${test.url}" target="_blank" class="testimonial-link ${platformClass}">
+            Leggi su ${test.platform.charAt(0).toUpperCase() + test.platform.slice(1)} →
+          </a>
+        </div>
+      `;
+
+      var div = document.createElement('div');
+      div.innerHTML = html;
+      testimonialsContainer.appendChild(div.firstElementChild);
+    });
+  };
+
+  // Carica testimonianze da JSON
+  fetch('config/testimonials.json')
+    .then(r => r.json())
+    .then(data => window.OG.loadTestimonials(data))
+    .catch(e => console.warn('Errore caricamento testimonianze:', e));
+
+  // ============================================
   // GALLERIA - LIGHTBOX
   // ============================================
   const lightbox = document.getElementById('lightbox');
