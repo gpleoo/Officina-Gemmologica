@@ -95,16 +95,6 @@
       box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
     }
 
-    .btn-secondary {
-      background: #6c757d;
-      color: white;
-    }
-
-    .btn-secondary:hover {
-      background: #5a6268;
-      transform: translateY(-2px);
-    }
-
     .btn-danger {
       background: #dc3545;
       color: white;
@@ -119,12 +109,14 @@
     .btn-success {
       background: #28a745;
       color: white;
-      padding: 0.5rem 1rem;
-      font-size: 0.85rem;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
     }
 
     .btn-success:hover {
       background: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
     }
 
     .counter {
@@ -147,16 +139,6 @@
     .counter-status {
       font-size: 1rem;
       color: #6c757d;
-    }
-
-    .counter-status.warning {
-      color: #ffc107;
-      font-weight: bold;
-    }
-
-    .counter-status.full {
-      color: #dc3545;
-      font-weight: bold;
     }
 
     .form-section {
@@ -206,12 +188,6 @@
       background: #e0e6ed;
     }
 
-    .item-info {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
     .item-title {
       font-weight: 600;
       color: #2c3e50;
@@ -230,14 +206,22 @@
 
     .export-section {
       margin-top: 2rem;
-      padding-top: 2rem;
+      padding: 2rem;
       border-top: 2px solid #e0e6ed;
       text-align: center;
+      background: #f0fff4;
+      border-radius: 8px;
     }
 
     .export-section h3 {
       color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .export-section p {
+      color: #6c757d;
       margin-bottom: 1rem;
+      font-size: 0.9rem;
     }
 
     .message {
@@ -246,6 +230,8 @@
       margin-bottom: 1rem;
       display: none;
       border-left: 4px solid;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
     .message.success {
@@ -281,6 +267,15 @@
       opacity: 0.5;
     }
 
+    .preview-img {
+      max-width: 150px;
+      max-height: 100px;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+      display: none;
+      border: 2px solid #e0e6ed;
+    }
+
     @media (max-width: 768px) {
       .controls {
         grid-template-columns: 1fr;
@@ -307,7 +302,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>📸 Amministrazione Galleria</h1>
+    <h1>Amministrazione Galleria</h1>
 
     <div id="message" class="message"></div>
 
@@ -336,6 +331,7 @@
           <div class="form-group">
             <label for="imageFile">Immagine *</label>
             <input type="file" id="imageFile" accept="image/*" required>
+            <img id="imagePreview" class="preview-img" alt="Anteprima">
           </div>
           <div class="form-group">
             <label for="imageTitle">Titolo *</label>
@@ -357,20 +353,231 @@
           </div>
         </div>
       </div>
-      <button class="btn-primary" id="addPhotoBtn" style="margin-top: 1rem;">➕ Aggiungi Foto</button>
+      <button class="btn-primary" id="addPhotoBtn" style="margin-top: 1rem;">Aggiungi Foto</button>
     </div>
 
     <div class="form-section">
-      <h3>Foto nella categoria</h3>
+      <h3>Foto nella categoria (<span id="photoCount">0</span>)</h3>
       <div id="tableContainer"></div>
     </div>
 
     <div class="export-section">
       <h3>Esporta Configurazione</h3>
-      <button class="btn-success" id="exportBtn">📥 Scarica JSON</button>
+      <p>Quando hai finito di aggiungere le foto, clicca qui per scaricare il file JSON.<br>
+         Il file verra' salvato nella cartella <strong>Download</strong> del tuo PC.</p>
+      <button class="btn-success" id="exportBtn">Scarica gallery-items.json</button>
     </div>
   </div>
 
-  <script src="admin/gallery-admin.js"></script>
+  <script>
+    // ============================================
+    // CONFIGURAZIONE
+    // ============================================
+    var CATEGORY_LIMITS = {
+      gemme: 100,
+      anelli: 15,
+      collane: 15,
+      orecchini: 15,
+      altro: 15
+    };
+
+    var CATEGORY_LABELS = {
+      gemme: 'Gemme',
+      anelli: 'Anelli',
+      collane: 'Collane',
+      orecchini: 'Orecchini',
+      altro: 'Altro'
+    };
+
+    // Dati globali
+    var galleryData = {
+      gemme: [],
+      anelli: [],
+      collane: [],
+      orecchini: [],
+      altro: []
+    };
+    var currentCategory = 'gemme';
+    var imageFileName = null;
+
+    // ============================================
+    // INIZIALIZZAZIONE
+    // ============================================
+    document.getElementById('categorySelect').addEventListener('change', function() {
+      currentCategory = this.value;
+      document.getElementById('categoryLabel').textContent = CATEGORY_LABELS[currentCategory];
+      updateCounter();
+      renderTable();
+    });
+
+    document.getElementById('addPhotoBtn').addEventListener('click', function() {
+      addPhoto();
+    });
+
+    document.getElementById('exportBtn').addEventListener('click', function() {
+      exportJSON();
+    });
+
+    document.getElementById('imageFile').addEventListener('change', function() {
+      var file = this.files[0];
+      if (file) {
+        imageFileName = file.name;
+        // Mostra anteprima
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var preview = document.getElementById('imagePreview');
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    updateCounter();
+    renderTable();
+    showMessage('Pronto! Puoi iniziare ad aggiungere foto.', 'info');
+
+    // ============================================
+    // FUNZIONI
+    // ============================================
+
+    function showMessage(text, type) {
+      var el = document.getElementById('message');
+      el.textContent = text;
+      el.className = 'message ' + type;
+      if (type === 'success' || type === 'info') {
+        setTimeout(function() {
+          el.className = 'message';
+        }, 5000);
+      }
+    }
+
+    function updateCounter() {
+      var count = galleryData[currentCategory] ? galleryData[currentCategory].length : 0;
+      var limit = CATEGORY_LIMITS[currentCategory];
+      document.getElementById('counterText').textContent = count + '/' + limit;
+      document.getElementById('photoCount').textContent = count;
+    }
+
+    function addPhoto() {
+      var title = document.getElementById('imageTitle').value.trim();
+      var description = document.getElementById('imageDescription').value.trim();
+      var size = document.getElementById('imageSize').value;
+
+      if (!title) {
+        showMessage('ERRORE: Inserisci un titolo per la foto!', 'error');
+        return;
+      }
+
+      if (!imageFileName) {
+        showMessage('ERRORE: Seleziona un file immagine!', 'error');
+        return;
+      }
+
+      var count = galleryData[currentCategory] ? galleryData[currentCategory].length : 0;
+      var limit = CATEGORY_LIMITS[currentCategory];
+
+      if (count >= limit) {
+        showMessage('ERRORE: Limite raggiunto! Massimo ' + limit + ' foto per questa categoria.', 'error');
+        return;
+      }
+
+      // Crea oggetto foto
+      var newPhoto = {
+        image: 'images/gallery/' + imageFileName,
+        title: title,
+        description: description,
+        size: size
+      };
+
+      galleryData[currentCategory].push(newPhoto);
+
+      showMessage('FATTO! Foto "' + title + '" aggiunta alla categoria ' + CATEGORY_LABELS[currentCategory] + '! (Totale: ' + galleryData[currentCategory].length + ')', 'success');
+
+      // Reset form
+      document.getElementById('imageFile').value = '';
+      document.getElementById('imageTitle').value = '';
+      document.getElementById('imageDescription').value = '';
+      document.getElementById('imageSize').value = 'normal';
+      document.getElementById('imagePreview').style.display = 'none';
+      imageFileName = null;
+
+      updateCounter();
+      renderTable();
+    }
+
+    function deletePhoto(index) {
+      if (confirm('Sei sicuro di voler eliminare questa foto?')) {
+        galleryData[currentCategory].splice(index, 1);
+        showMessage('Foto eliminata.', 'info');
+        updateCounter();
+        renderTable();
+      }
+    }
+
+    function renderTable() {
+      var photos = galleryData[currentCategory] || [];
+      var container = document.getElementById('tableContainer');
+      var html = '';
+
+      if (photos.length === 0) {
+        html = '<div class="empty-state">' +
+          '<div class="empty-state-icon">📭</div>' +
+          '<p>Nessuna foto in questa categoria</p>' +
+          '</div>';
+      } else {
+        html = '<table class="gallery-table"><thead><tr>' +
+          '<th>N.</th><th>File</th><th>Titolo</th><th>Descrizione</th><th>Dimensione</th><th>Azioni</th>' +
+          '</tr></thead><tbody>';
+
+        for (var i = 0; i < photos.length; i++) {
+          var photo = photos[i];
+          var sizeLabel = photo.size === 'tall' ? 'Verticale' : (photo.size === 'wide' ? 'Orizzontale' : 'Normale');
+          html += '<tr>' +
+            '<td><strong>' + (i + 1) + '</strong></td>' +
+            '<td style="font-size:0.85rem;color:#6c757d;">' + photo.image.replace('images/gallery/', '') + '</td>' +
+            '<td><div class="item-title">' + photo.title + '</div></td>' +
+            '<td><div class="item-description">' + (photo.description || '—') + '</div></td>' +
+            '<td>' + sizeLabel + '</td>' +
+            '<td><button class="btn-danger" onclick="deletePhoto(' + i + ')">Elimina</button></td>' +
+            '</tr>';
+        }
+
+        html += '</tbody></table>';
+      }
+
+      container.innerHTML = html;
+    }
+
+    function exportJSON() {
+      // Conta totale foto
+      var total = 0;
+      for (var cat in galleryData) {
+        total += galleryData[cat].length;
+      }
+
+      if (total === 0) {
+        showMessage('ERRORE: Non hai ancora aggiunto nessuna foto! Aggiungi almeno una foto prima di esportare.', 'error');
+        return;
+      }
+
+      var dataStr = JSON.stringify(galleryData, null, 2);
+      var dataBlob = new Blob([dataStr], { type: 'application/json' });
+      var url = URL.createObjectURL(dataBlob);
+      var link = document.createElement('a');
+      link.href = url;
+      link.download = 'gallery-items.json';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+
+      setTimeout(function() {
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }, 100);
+
+      showMessage('JSON scaricato! Troverai il file "gallery-items.json" nella cartella Download del tuo PC. Copialo nella cartella config/ del progetto.', 'success');
+    }
+  </script>
 </body>
 </html>
