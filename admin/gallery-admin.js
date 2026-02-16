@@ -43,16 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Carica il JSON dalla configurazione
 function loadGalleryJSON() {
-  fetch('../config/gallery-items.json')
-    .then(response => response.json())
+  fetch('config/gallery-items.json')
+    .then(response => {
+      if (!response.ok) throw new Error('File non trovato');
+      return response.json();
+    })
     .then(data => {
       galleryData = data;
       showMessage('Configurazione caricata!', 'info');
+      updateCounter();
+      renderTable();
     })
     .catch(error => {
-      console.error('Errore caricamento JSON:', error);
-      showMessage('Errore nel caricamento della configurazione', 'error');
-      // Crea struttura vuota se il file non esiste
+      console.warn('Caricamento JSON non riuscito (normale se apri il file dal PC):', error);
+      showMessage('Nessuna configurazione trovata — puoi iniziare ad aggiungere foto', 'info');
+      // Crea struttura vuota se il file non esiste o fetch non è supportato
       galleryData = {
         gemme: [],
         anelli: [],
@@ -60,6 +65,8 @@ function loadGalleryJSON() {
         orecchini: [],
         altro: []
       };
+      updateCounter();
+      renderTable();
     });
 }
 
