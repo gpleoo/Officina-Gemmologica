@@ -842,6 +842,55 @@ img {
   transform: translateY(-2px);
 }
 
+/* === BOTTONI LASCIA RECENSIONE === */
+.review-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.review-btn-google {
+  background: #ea4335;
+}
+
+.review-btn-google:hover {
+  background: transparent;
+  border-color: #ea4335;
+  color: #ea4335;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(234, 67, 53, 0.3);
+}
+
+.review-btn-facebook {
+  background: #1877f2;
+}
+
+.review-btn-facebook:hover {
+  background: transparent;
+  border-color: #1877f2;
+  color: #1877f2;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+}
+
+.review-btn-instagram {
+  background: #e4405f;
+}
+
+.review-btn-instagram:hover {
+  background: transparent;
+  border-color: #e4405f;
+  color: #e4405f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(228, 64, 95, 0.3);
+}
+
 /* === FORM CONTATTI === */
 .contact-section {
   display: grid;
