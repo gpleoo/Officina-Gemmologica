@@ -475,6 +475,57 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ============================================
+  // CONTATORE VISITATORI REALE
+  // ============================================
+  (function() {
+    var footerBottom = document.querySelector('.footer-bottom');
+    if (!footerBottom) return;
+
+    // Crea l'elemento contatore
+    var counterDiv = document.createElement('p');
+    counterDiv.className = 'visitor-counter';
+
+    // Determina la lingua dalla pagina
+    var isEnglish = document.documentElement.lang === 'en';
+    var label = isEnglish ? 'Visitors' : 'Visitatori';
+
+    // Mostra subito il valore cachato (se esiste)
+    var cached = localStorage.getItem('og-visitor-count');
+    if (cached) {
+      counterDiv.innerHTML = '<span class="visitor-counter-icon">&#9670;</span> ' +
+        label + ': <span class="visitor-counter-value">' +
+        parseInt(cached).toLocaleString() + '</span>';
+    } else {
+      counterDiv.innerHTML = '<span class="visitor-counter-icon">&#9670;</span> ' +
+        label + ': <span class="visitor-counter-value">...</span>';
+    }
+
+    footerBottom.appendChild(counterDiv);
+
+    // Controlla se è un visitatore unico (non ancora contato in questa sessione)
+    var counted = sessionStorage.getItem('og-counted');
+    var apiBase = 'https://api.counterapi.dev/v1/officinagemmologica-site/visitors';
+    var endpoint = counted ? apiBase : apiBase + '/up';
+
+    fetch(endpoint)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var count = data.count || data.value;
+        if (count) {
+          var el = footerBottom.querySelector('.visitor-counter-value');
+          if (el) el.textContent = count.toLocaleString();
+          localStorage.setItem('og-visitor-count', count);
+          if (!counted) sessionStorage.setItem('og-counted', '1');
+        }
+      })
+      .catch(function() {
+        // Se l'API fallisce, il valore cachato resta visibile
+        // Se non c'è cache, nascondi il contatore
+        if (!cached) counterDiv.style.display = 'none';
+      });
+  })();
+
+  // ============================================
   // DEBUG INFO (rimuovi in produzione)
   // ============================================
   console.log('Officina Gemmologica - Sito caricato correttamente');
