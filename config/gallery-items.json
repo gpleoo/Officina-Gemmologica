@@ -29,6 +29,630 @@
       "title": "Opale Nero",
       "description": "Opale nero australiano con splendidi giochi di luce",
       "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-rubino-mozambico.jpg",
+      "title": "Rubino Mozambico",
+      "description": "Rubino naturale del Mozambico, taglio ovale, 1.8 carati, colore rosso vivace con eccellente saturazione",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-rubino-tailandia.jpg",
+      "title": "Rubino Tailandese",
+      "description": "Rubino della Tailandia, taglio cuscino, 3.1 carati, tonalità rosso scuro con sfumature granato",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-rubino-madagascar.jpg",
+      "title": "Rubino del Madagascar",
+      "description": "Rubino naturale malgascio, taglio a cuore, 1.4 carati, colore rosso lampone di grande luminosità",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-rubino-birmano-pigeon-blood.jpg",
+      "title": "Rubino Pigeon Blood Birmano",
+      "description": "Rarissimo rubino birmano \"sangue di piccione\", taglio ovale, 4.2 carati, certificato GRS, colore rosso puro eccezionale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-rubino-cabochon-stella.jpg",
+      "title": "Rubino Stella",
+      "description": "Rubino stellato naturale, taglio cabochon, 5.7 carati, asterismo a sei raggi nitido e ben centrato",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-rubino-mozambico-rotondo.jpg",
+      "title": "Rubino Rotondo del Mozambico",
+      "description": "Rubino del Mozambico, taglio brillante rotondo, 2.0 carati, purezza VS, colore rosso intenso",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-rubino-birmano-marquise.jpg",
+      "title": "Rubino Birmano Marquise",
+      "description": "Rubino birmano di pregio, taglio marquise, 1.6 carati, colore rosso cremisi con fluorescenza naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-kashmir.jpg",
+      "title": "Zaffiro Kashmir",
+      "description": "Zaffiro del Kashmir, taglio cuscino, 4.8 carati, leggendario colore blu fiordaliso vellutato, certificato GIA",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-madagascar.jpg",
+      "title": "Zaffiro Madagascar",
+      "description": "Zaffiro blu del Madagascar, taglio ovale, 3.2 carati, colore blu reale con ottima brillantezza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-birmano.jpg",
+      "title": "Zaffiro Birmano Royal Blue",
+      "description": "Zaffiro birmano, taglio smeraldo, 5.1 carati, colore blu reale profondo, purezza eccezionale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-rosa-ceylon.jpg",
+      "title": "Zaffiro Rosa di Ceylon",
+      "description": "Zaffiro rosa dello Sri Lanka, taglio a goccia, 2.7 carati, delicata tonalità rosa confetto naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-giallo-ceylon.jpg",
+      "title": "Zaffiro Giallo Ceylon",
+      "description": "Zaffiro giallo non trattato dello Sri Lanka, taglio radiante, 4.0 carati, colore giallo limone vivace",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-padparadscha.jpg",
+      "title": "Zaffiro Padparadscha",
+      "description": "Rarissimo zaffiro padparadscha dello Sri Lanka, taglio ovale, 3.3 carati, colore rosa-arancio del fiore di loto, certificato GRS",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-verde.jpg",
+      "title": "Zaffiro Verde Australiano",
+      "description": "Zaffiro verde naturale dell'Australia, taglio smeraldo, 2.9 carati, tonalità verde bosco con riflessi teal",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-stella-blu.jpg",
+      "title": "Zaffiro Stella Blu",
+      "description": "Zaffiro stellato dello Sri Lanka, taglio cabochon, 8.5 carati, magnifico asterismo a sei raggi su fondo blu intenso",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-ceylon-brillante.jpg",
+      "title": "Zaffiro Ceylon Taglio Brillante",
+      "description": "Zaffiro di Ceylon, taglio brillante rotondo, 1.9 carati, colore blu medio con eccellente fuoco e vivacità",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-bicolore.jpg",
+      "title": "Zaffiro Bicolore",
+      "description": "Zaffiro naturale bicolore blu-giallo del Montana, taglio cuscino, 2.4 carati, fenomeno cromatico unico",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-stella-rosa.jpg",
+      "title": "Zaffiro Stella Rosa",
+      "description": "Zaffiro stellato rosa della Birmania, taglio cabochon ovale, 6.3 carati, asterismo definito su tono rosato delicato",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zaffiro-viola-ceylon.jpg",
+      "title": "Zaffiro Viola di Ceylon",
+      "description": "Zaffiro viola naturale dello Sri Lanka, taglio a pera, 2.1 carati, colore viola ametista con sfumature blu",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-smeraldo-colombiano.jpg",
+      "title": "Smeraldo Colombiano Muzo",
+      "description": "Smeraldo colombiano dalla miniera di Muzo, taglio smeraldo, 3.8 carati, verde intenso con jardin caratteristico, certificato GIA",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-smeraldo-zambiano.jpg",
+      "title": "Smeraldo Zambiano",
+      "description": "Smeraldo dello Zambia, taglio ovale, 2.6 carati, colore verde bluastro profondo con eccellente trasparenza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-smeraldo-brasiliano.jpg",
+      "title": "Smeraldo Brasiliano",
+      "description": "Smeraldo del Brasile, taglio a goccia, 1.9 carati, verde chiaro luminoso con buona saturazione",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-smeraldo-colombiano-chivor.jpg",
+      "title": "Smeraldo Colombiano Chivor",
+      "description": "Smeraldo colombiano dalla miniera di Chivor, taglio cuscino, 4.5 carati, verde azzurrognolo caratteristico, pietra da collezione",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-smeraldo-trapiche.jpg",
+      "title": "Smeraldo Trapiche Colombiano",
+      "description": "Rarissimo smeraldo trapiche dalla Colombia, 3.2 carati, struttura a sei raggi naturale unica al mondo, pezzo da museo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-smeraldo-zambiano-rotondo.jpg",
+      "title": "Smeraldo Zambiano Rotondo",
+      "description": "Smeraldo dello Zambia, taglio brillante rotondo, 1.5 carati, verde scuro saturo con eccellente brillantezza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-brillante.jpg",
+      "title": "Diamante Taglio Brillante",
+      "description": "Diamante naturale, taglio brillante rotondo, 2.01 carati, colore D, purezza IF, certificato GIA, triplo Excellent",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-princess.jpg",
+      "title": "Diamante Taglio Princess",
+      "description": "Diamante naturale, taglio princess, 1.53 carati, colore E, purezza VVS1, eccellente simmetria e proporzioni",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-fancy-yellow.jpg",
+      "title": "Diamante Fancy Yellow",
+      "description": "Diamante fancy vivid yellow, taglio radiante, 3.2 carati, colore giallo canarino intenso naturale, certificato GIA",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-cognac.jpg",
+      "title": "Diamante Cognac",
+      "description": "Diamante naturale cognac, taglio cuscino, 2.8 carati, colore marrone dorato caldo con riflessi ambrati",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-rosa.jpg",
+      "title": "Diamante Rosa Argyle",
+      "description": "Rarissimo diamante rosa della miniera Argyle, taglio ovale, 0.85 carati, colore fancy intense pink, certificato GIA",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-pera.jpg",
+      "title": "Diamante Taglio a Pera",
+      "description": "Diamante naturale, taglio a pera, 1.72 carati, colore F, purezza VS2, proporzioni ideali con fuoco eccezionale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-nero.jpg",
+      "title": "Diamante Nero Naturale",
+      "description": "Diamante nero naturale, taglio brillante, 3.5 carati, opacità piena con lucentezza adamantina, pezzo unico",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-diamante-smeraldo.jpg",
+      "title": "Diamante Taglio Smeraldo",
+      "description": "Diamante naturale, taglio smeraldo, 2.30 carati, colore D, purezza VVS2, effetto hall-of-mirrors straordinario",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-ametista-uruguayana.jpg",
+      "title": "Ametista Uruguayana",
+      "description": "Ametista dell'Uruguay, taglio concavo, 12.5 carati, colore viola reale profondo con lampi rossi, qualità gemma",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-ametista-ovale.jpg",
+      "title": "Ametista Taglio Ovale",
+      "description": "Ametista brasiliana, taglio ovale, 8.3 carati, colore viola medio con eccellente trasparenza e saturazione",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-ametista-fantasy.jpg",
+      "title": "Ametista Taglio Fantasy",
+      "description": "Ametista brasiliana, taglio fantasy artistico a spirale, 15.7 carati, viola intenso con giochi di luce unici",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-ametista-cuore.jpg",
+      "title": "Ametista Taglio Cuore",
+      "description": "Ametista naturale, taglio a cuore, 6.2 carati, colore viola lilla delicato, perfetta per gioielleria romantica",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-acquamarina-santa-maria.jpg",
+      "title": "Acquamarina Santa Maria",
+      "description": "Acquamarina Santa Maria del Brasile, taglio smeraldo, 7.8 carati, colore blu intenso senza trattamento termico",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-acquamarina-pakistan.jpg",
+      "title": "Acquamarina del Pakistan",
+      "description": "Acquamarina del Pakistan, taglio a goccia, 5.4 carati, colore azzurro cielo cristallino con eccellente trasparenza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-acquamarina-ovale.jpg",
+      "title": "Acquamarina Taglio Ovale",
+      "description": "Acquamarina dello Sri Lanka, taglio ovale, 9.2 carati, tonalità azzurro-verde marina, purezza eye-clean",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-acquamarina-cabochon.jpg",
+      "title": "Acquamarina Cabochon Cat's Eye",
+      "description": "Acquamarina cat's eye naturale, taglio cabochon, 4.6 carati, raro effetto chatoyancy su fondo azzurro pallido",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-opale-bianco.jpg",
+      "title": "Opale Bianco Australiano",
+      "description": "Opale bianco di Coober Pedy, 6.8 carati, base lattiginosa con giochi di colore vivaci dal rosso al verde",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-opale-boulder.jpg",
+      "title": "Opale Boulder Australiano",
+      "description": "Opale boulder del Queensland, forma libera, 11.3 carati, vene di opale brillante nella matrice di ironstone",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/gemma-opale-fuoco-messicano.jpg",
+      "title": "Opale di Fuoco Messicano",
+      "description": "Opale di fuoco del Messico, taglio ovale, 4.2 carati, colore arancio-rosso trasparente con giochi di luce interni",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-opale-etiope.jpg",
+      "title": "Opale Etiope Welo",
+      "description": "Opale di Welo, Etiopia, taglio cabochon, 7.5 carati, base cristallina con spettacolari flash di tutti i colori dell'arcobaleno",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-opale-nero-lightning-ridge.jpg",
+      "title": "Opale Nero Lightning Ridge",
+      "description": "Opale nero di Lightning Ridge, 9.4 carati, base nera con pattern arlecchino multicolore, qualità gemma eccezionale",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-rosa.jpg",
+      "title": "Tormalina Rosa",
+      "description": "Tormalina rosa del Brasile, taglio cuscino, 5.3 carati, colore rosa bubblegum vivace, purezza eccellente",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-verde.jpg",
+      "title": "Tormalina Verde Chrome",
+      "description": "Tormalina verde cromo della Tanzania, taglio smeraldo, 3.8 carati, verde intenso paragonabile allo smeraldo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-watermelon.jpg",
+      "title": "Tormalina Watermelon",
+      "description": "Tormalina watermelon del Brasile, fetta lucida, 8.2 carati, nucleo rosa circondato da bordo verde naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-paraiba.jpg",
+      "title": "Tormalina Paraíba",
+      "description": "Rarissima tormalina Paraíba del Brasile, taglio ovale, 1.9 carati, colore blu-verde neon elettrico dovuto al rame, certificata GIA",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-rubellite.jpg",
+      "title": "Tormalina Rubellite",
+      "description": "Rubellite del Mozambico, taglio a pera, 6.7 carati, colore rosso magenta intenso con fluorescenza naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-indicolite.jpg",
+      "title": "Tormalina Indicolite",
+      "description": "Indicolite dell'Afghanistan, taglio smeraldo, 4.1 carati, colore blu inchiostro profondo con sfumature teal",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-bicolore.jpg",
+      "title": "Tormalina Bicolore",
+      "description": "Tormalina bicolore naturale del Brasile, taglio rettangolare, 7.3 carati, transizione graduale dal rosa al verde",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/gemma-tormalina-nera-schorl.jpg",
+      "title": "Tormalina Nera Schorl",
+      "description": "Tormalina nera (schorl) del Madagascar, taglio cabochon rettangolare, 12.0 carati, nero profondo con lucentezza vitrea",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-topazio-imperiale.jpg",
+      "title": "Topazio Imperiale",
+      "description": "Topazio imperiale di Ouro Preto, Brasile, taglio ovale, 8.6 carati, colore arancio-rosa intenso naturale non trattato",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-topazio-blu-london.jpg",
+      "title": "Topazio London Blue",
+      "description": "Topazio London Blue, taglio cuscino, 11.4 carati, colore blu scuro saturo con sfumature grigie eleganti",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-topazio-swiss-blue.jpg",
+      "title": "Topazio Swiss Blue",
+      "description": "Topazio Swiss Blue, taglio brillante, 6.8 carati, colore azzurro cielo vivace e luminoso",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-topazio-rosa.jpg",
+      "title": "Topazio Rosa",
+      "description": "Topazio rosa naturale del Pakistan, taglio a goccia, 5.2 carati, delicata tonalità rosa salmone non trattata",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-topazio-bianco.jpg",
+      "title": "Topazio Bianco Taglio Brillante",
+      "description": "Topazio bianco naturale, taglio brillante, 9.0 carati, trasparenza cristallina con fuoco eccezionale, alternativa al diamante",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-granato-tsavorite.jpg",
+      "title": "Granato Tsavorite",
+      "description": "Tsavorite della Tanzania, taglio ovale, 2.3 carati, colore verde intenso paragonabile allo smeraldo ma con maggiore brillantezza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-granato-rodolite.jpg",
+      "title": "Granato Rodolite",
+      "description": "Rodolite del Mozambico, taglio cuscino, 4.7 carati, colore rosa-viola lampone con eccellente trasparenza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-granato-demantoide.jpg",
+      "title": "Granato Demantoide",
+      "description": "Demantoide della Russia, taglio brillante, 1.2 carati, verde vivace con inclusioni di coda di cavallo caratteristiche, rarità da collezione",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-granato-spessartina.jpg",
+      "title": "Granato Spessartina",
+      "description": "Spessartina della Nigeria, taglio ovale, 5.8 carati, colore arancio mandarino vivace, purezza eye-clean",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-granato-almandino.jpg",
+      "title": "Granato Almandino",
+      "description": "Granato almandino dell'India, taglio cabochon stella, 7.6 carati, colore rosso scuro con magnifico asterismo a quattro raggi",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-granato-mandarino.jpg",
+      "title": "Granato Mandarino",
+      "description": "Granato spessartina \"mandarino\" della Namibia, taglio brillante, 3.1 carati, colore arancio puro elettrizzante",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-granato-malaya.jpg",
+      "title": "Granato Malaya",
+      "description": "Granato malaya della Tanzania, taglio a pera, 4.3 carati, rara varietà rosa-arancio con cambio colore alla luce artificiale",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-granato-hessonite.jpg",
+      "title": "Granato Hessonite",
+      "description": "Granato hessonite dello Sri Lanka, taglio ovale, 6.5 carati, colore miele-cannella con caratteristico effetto \"scotch and water\"",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tanzanite-ovale.jpg",
+      "title": "Tanzanite Taglio Ovale",
+      "description": "Tanzanite di Merelani, Tanzania, taglio ovale, 5.4 carati, colore viola-blu intenso con forte tricroismo naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tanzanite-cuscino.jpg",
+      "title": "Tanzanite Taglio Cuscino",
+      "description": "Tanzanite di qualità eccezionale, taglio cuscino, 8.2 carati, colore blu-viola saturo profondo, certificata",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tanzanite-trilliante.jpg",
+      "title": "Tanzanite Trilliante",
+      "description": "Tanzanite, taglio trilliante, 3.7 carati, colore viola predominante con lampi blu, taglio geometrico moderno",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-tanzanite-pera.jpg",
+      "title": "Tanzanite Taglio a Pera",
+      "description": "Tanzanite di grande dimensione, taglio a pera, 11.6 carati, colore blu reale eccezionale, pezzo da collezione raro",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-spinello-rosso.jpg",
+      "title": "Spinello Rosso Birmano",
+      "description": "Spinello rosso della Birmania, taglio cuscino, 3.4 carati, colore rosso vivo non trattato, storicamente confuso con il rubino",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-spinello-rosa.jpg",
+      "title": "Spinello Rosa di Mahenge",
+      "description": "Spinello rosa hot-pink di Mahenge, Tanzania, taglio ovale, 4.8 carati, colore rosa neon fluorescente straordinario",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-spinello-blu.jpg",
+      "title": "Spinello Blu Cobalto",
+      "description": "Spinello blu cobalto dello Sri Lanka, taglio cuscino, 2.1 carati, colore blu elettrico intenso, rarità assoluta",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-spinello-nero.jpg",
+      "title": "Spinello Nero",
+      "description": "Spinello nero naturale della Birmania, taglio brillante, 5.6 carati, nero profondo con lucentezza vitrea eccezionale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-spinello-lilla.jpg",
+      "title": "Spinello Lilla di Ceylon",
+      "description": "Spinello lilla-lavanda dello Sri Lanka, taglio ovale, 3.0 carati, delicata tonalità viola chiaro con eccellente brillantezza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-alessandrite-russa.jpg",
+      "title": "Alessandrite Russa",
+      "description": "Alessandrite degli Urali, taglio cuscino, 1.8 carati, spettacolare cambio colore da verde smeraldo a rosso lampone, certificata",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-alessandrite-brasiliana.jpg",
+      "title": "Alessandrite Brasiliana",
+      "description": "Alessandrite del Brasile, taglio ovale, 2.4 carati, cambio colore da blu-verde a viola-porpora, pietra eccezionale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-alessandrite-ceylon.jpg",
+      "title": "Alessandrite di Ceylon",
+      "description": "Alessandrite dello Sri Lanka, taglio brillante, 1.1 carati, cambio colore marcato da verde oliva a rosso brunastro",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-perla-tahiti.jpg",
+      "title": "Perla di Tahiti",
+      "description": "Perla nera di Tahiti, 13mm, colore nero pavone con overtone verde-rosa, lucentezza eccezionale, forma rotonda perfetta",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-perla-akoya.jpg",
+      "title": "Perla Akoya Giapponese",
+      "description": "Perla Akoya del Giappone, 8.5mm, bianco rosato con lucentezza specchio, qualità Hanadama certificata",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-perla-south-sea.jpg",
+      "title": "Perla South Sea Dorata",
+      "description": "Perla South Sea dorata delle Filippine, 15mm, colore oro saturo profondo, forma goccia, lucentezza satinata naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-perla-freshwater.jpg",
+      "title": "Perla Freshwater Lavanda",
+      "description": "Perla d'acqua dolce cinese, 11mm, raro colore lavanda naturale, forma barocca con lucentezza orientale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-quarzo-citrino.jpg",
+      "title": "Quarzo Citrino",
+      "description": "Citrino naturale non trattato del Brasile, taglio fantasia, 18.4 carati, colore giallo dorato caldo con sfumature miele",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-quarzo-rosa.jpg",
+      "title": "Quarzo Rosa Stellato",
+      "description": "Quarzo rosa stellato del Madagascar, taglio cabochon, 22.0 carati, colore rosa tenue con raro asterismo a sei raggi",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-quarzo-fume.jpg",
+      "title": "Quarzo Fumé",
+      "description": "Quarzo fumé delle Alpi svizzere, taglio smeraldo, 14.6 carati, colore marrone fumé trasparente di origine alpina",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-quarzo-rutilato.jpg",
+      "title": "Quarzo Rutilato",
+      "description": "Quarzo con inclusioni di rutilo dorato del Brasile, taglio cabochon, 16.8 carati, spettacolari aghi d'oro interni",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-quarzo-prasiolite.jpg",
+      "title": "Prasiolite",
+      "description": "Prasiolite (ametista verde) del Brasile, taglio cuscino, 10.3 carati, delicata tonalità verde menta trasparente",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-turchese-sleeping-beauty.jpg",
+      "title": "Turchese Sleeping Beauty",
+      "description": "Turchese Sleeping Beauty dell'Arizona, taglio cabochon, 8.5 carati, colore azzurro robin's egg puro senza matrice",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-lapislazzuli-afghanistan.jpg",
+      "title": "Lapislazzuli Afghano",
+      "description": "Lapislazzuli dell'Afghanistan, taglio cabochon ovale, 15.2 carati, colore blu reale intenso con punti di pirite dorata",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-malachite-congo.jpg",
+      "title": "Malachite del Congo",
+      "description": "Malachite della Repubblica Democratica del Congo, taglio cabochon, 20.0 carati, spettacolari bande concentriche verdi",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/gemma-turchese-persiano.jpg",
+      "title": "Turchese Persiano",
+      "description": "Turchese persiano dell'Iran, taglio cabochon rotondo, 6.3 carati, colore azzurro intenso classico con fine matrice scura",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-corallo-rosso-mediterraneo.jpg",
+      "title": "Corallo Rosso del Mediterraneo",
+      "description": "Corallo rosso (Corallium rubrum) del Mediterraneo, cabochon, 5.8 carati, colore rosso sangue di bue pregiato, provenienza Sardegna",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-corniola-indiana.jpg",
+      "title": "Corniola Indiana",
+      "description": "Corniola dell'India, taglio cabochon ovale, 12.4 carati, colore rosso-arancio saturo con traslucentezza uniforme",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-agata-muschiata.jpg",
+      "title": "Agata Muschiata Indiana",
+      "description": "Agata muschiata dell'India, taglio cabochon fantasia, 18.6 carati, inclusioni verdi tipo muschio su fondo traslucido",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-agata-blu-pizzo.jpg",
+      "title": "Agata Blue Lace",
+      "description": "Agata blue lace della Namibia, taglio cabochon, 14.2 carati, delicate bande azzurro cielo e bianche come pizzo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-kunzite-afghanistan.jpg",
+      "title": "Kunzite dell'Afghanistan",
+      "description": "Kunzite dell'Afghanistan, taglio cuscino, 22.5 carati, colore rosa-lilla intenso con forte pleocroismo naturale",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/gemma-morganite-brasile.jpg",
+      "title": "Morganite Brasiliana",
+      "description": "Morganite del Brasile, taglio ovale, 8.7 carati, colore rosa pesca delicato, purezza eccellente, berillo rosa naturale",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-peridoto-pakistan.jpg",
+      "title": "Peridoto del Pakistan",
+      "description": "Peridoto del Kashmir pakistano, taglio cuscino, 6.3 carati, colore verde oliva vivace con sfumature dorate luminose",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-zircone-blu-cambogia.jpg",
+      "title": "Zircone Blu della Cambogia",
+      "description": "Zircone blu naturale della Cambogia, taglio brillante, 5.8 carati, colore blu elettrico con fuoco e dispersione straordinari",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-taaffeite.jpg",
+      "title": "Taaffeite",
+      "description": "Taaffeite dello Sri Lanka, taglio ovale, 0.65 carati, colore lilla-malva, una delle gemme più rare al mondo, pezzo da museo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-benitoite.jpg",
+      "title": "Benitoite della California",
+      "description": "Benitoite di San Benito, California, taglio trilliante, 0.82 carati, colore blu zaffiro con forte fluorescenza UV blu",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-paraiba-mozambico.jpg",
+      "title": "Tormalina Paraíba del Mozambico",
+      "description": "Tormalina cuprifera tipo Paraíba del Mozambico, taglio ovale, 3.2 carati, colore blu-verde neon mozzafiato, certificata GRS",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemma-musgravite.jpg",
+      "title": "Musgravite",
+      "description": "Musgravite dello Sri Lanka, taglio brillante, 0.47 carati, grigio-verde con sfumature viola, tra le gemme più rare in assoluto",
+      "size": "normal"
     }
   ],
   "anelli": [
@@ -49,6 +673,144 @@
       "title": "Anello Tanzanite",
       "description": "Anello in oro bianco con tanzanite e diamanti",
       "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-solitario-rubino.jpg",
+      "title": "Solitario con Rubino Birmano",
+      "description": "Anello solitario in oro giallo 18K con rubino birmano di 1.8 carati, montatura a griffe classica con diamanti laterali",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-solitario-zaffiro.jpg",
+      "title": "Solitario con Zaffiro Ceylon",
+      "description": "Anello solitario in platino con zaffiro blu di Ceylon da 3.2 carati, contornato da diamanti brillante, stile Lady Diana",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/anello-solitario-diamante.jpg",
+      "title": "Solitario Diamante Brillante",
+      "description": "Anello solitario in platino con diamante naturale da 1.50 carati, colore D, purezza VVS1, taglio brillante triplo Excellent",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-solitario-tanzanite-ovale.jpg",
+      "title": "Solitario Tanzanite Ovale",
+      "description": "Anello in oro bianco 18K con tanzanite ovale da 4.5 carati e corona di diamanti, montatura cattedrale elegante",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-fidanzamento-vintage.jpg",
+      "title": "Anello Fidanzamento Stile Vintage",
+      "description": "Anello di fidanzamento in platino stile Art Déco con diamante taglio smeraldo da 1.20 carati e incisioni milgrain",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-fidanzamento-halo.jpg",
+      "title": "Anello Fidanzamento Halo",
+      "description": "Anello di fidanzamento in oro bianco 18K con diamante centrale a cuscino da 1.80 carati circondato da doppio halo di diamanti",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-fidanzamento-three-stone.jpg",
+      "title": "Anello Fidanzamento Three-Stone",
+      "description": "Anello three-stone in platino con diamante ovale centrale da 1.5 carati e due diamanti a pera laterali, simbolo del passato, presente e futuro",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-fidanzamento-moderno.jpg",
+      "title": "Anello Fidanzamento Design Moderno",
+      "description": "Anello di fidanzamento dal design contemporaneo in oro rosa 18K con diamante marquise da 1.30 carati, montatura a tensione",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/anello-cocktail-ametista.jpg",
+      "title": "Anello Cocktail con Ametista",
+      "description": "Anello cocktail in oro giallo 18K con ametista ovale da 15 carati, contornata da diamanti e zaffiri rosa",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-cocktail-acquamarina.jpg",
+      "title": "Anello Cocktail Acquamarina",
+      "description": "Anello cocktail in oro bianco con acquamarina taglio smeraldo da 12 carati e pavé di diamanti, design imponente",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-cocktail-tormalina-paraiba.jpg",
+      "title": "Anello Cocktail Tormalina Paraíba",
+      "description": "Anello cocktail in platino con tormalina Paraíba ovale da 4.8 carati, circondato da diamanti, pezzo unico di alta gioielleria",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-cocktail-opale.jpg",
+      "title": "Anello Cocktail con Opale",
+      "description": "Anello cocktail in oro rosa 18K con opale nero australiano cabochon da 8 carati e corona di diamanti e zaffiri",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-cocktail-morganite.jpg",
+      "title": "Anello Cocktail Morganite",
+      "description": "Anello cocktail in oro rosa con morganite a cuscino da 10 carati, pavé di diamanti bianchi e rosa, design romantico",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-eternity-diamanti.jpg",
+      "title": "Anello Eternity Diamanti",
+      "description": "Anello eternity in platino con diamanti taglio brillante per un totale di 3.50 carati, montatura a binario classica",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-eternity-zaffiri.jpg",
+      "title": "Anello Eternity Zaffiri e Diamanti",
+      "description": "Anello eternity in oro bianco 18K alternando zaffiri blu e diamanti brillante, totale 4.2 carati",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-eternity-rubini.jpg",
+      "title": "Anello Eternity Rubini",
+      "description": "Anello eternity in oro giallo 18K con rubini birmani taglio brillante per un totale di 2.8 carati, colore rosso vivace",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-vintage-art-deco.jpg",
+      "title": "Anello Vintage Art Déco",
+      "description": "Anello originale Art Déco anni '20 in platino con diamante taglio vecchia miniera da 1.2 carati, calibrature di onice e smeraldi",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/anello-vintage-edwardiano.jpg",
+      "title": "Anello Edwardiano con Perla",
+      "description": "Anello edwardiano in platino e oro con perla naturale e diamanti rosa antico, traforo delicato, circa 1905",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-vintage-liberty.jpg",
+      "title": "Anello Liberty con Opale",
+      "description": "Anello in stile Liberty in oro giallo con opale e smalti policromi, motivi floreali ispirati a René Lalique, circa 1910",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-uomo-onice.jpg",
+      "title": "Anello da Uomo con Onice",
+      "description": "Anello da uomo in oro giallo 18K con onice nero taglio cabochon rettangolare e dettagli in diamanti, design mascolino elegante",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-uomo-sigillo.jpg",
+      "title": "Anello Sigillo da Uomo",
+      "description": "Anello chevalier in oro giallo 18K con zaffiro blu cabochon e stemma araldico inciso, tradizione orafa romana",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-fede-classica.jpg",
+      "title": "Fede Nuziale Classica",
+      "description": "Coppia di fedi nuziali in oro giallo 18K, profilo comfort interno, incisione personalizzata, tradizione orafa italiana",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/anello-fede-diamanti.jpg",
+      "title": "Fede Nuziale con Diamanti",
+      "description": "Fede nuziale in platino con fila di diamanti incastonati a binario, totale 0.50 carati, finitura lucida satinata",
+      "size": "normal"
     }
   ],
   "collane": [
@@ -63,6 +825,150 @@
       "title": "Pendente Tormalina",
       "description": "Pendente in argento con tormalina rosa",
       "size": "normal"
+    },
+    {
+      "image": "images/gallery/pendente-smeraldo.jpg",
+      "title": "Pendente con Smeraldo",
+      "description": "Pendente in oro giallo 18K con smeraldo colombiano a goccia da 2.5 carati e contorno di diamanti brillante",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/pendente-zaffiro-ceylon.jpg",
+      "title": "Pendente Zaffiro di Ceylon",
+      "description": "Pendente in platino con zaffiro blu Ceylon ovale da 4.0 carati e catena in platino, montatura classica a griffe",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pendente-diamante-solitario.jpg",
+      "title": "Pendente Solitario Diamante",
+      "description": "Pendente solitario in oro bianco 18K con diamante taglio brillante da 1.0 carati, colore F, purezza VS1, catena veneziana",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pendente-rubino-cuore.jpg",
+      "title": "Pendente Rubino Cuore",
+      "description": "Pendente in oro rosa 18K con rubino taglio cuore da 1.8 carati circondato da diamanti, design romantico",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pendente-tanzanite-goccia.jpg",
+      "title": "Pendente Tanzanite a Goccia",
+      "description": "Pendente in oro bianco con tanzanite a goccia da 6.2 carati e pavé di diamanti, design raffinato",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/pendente-opale-australian.jpg",
+      "title": "Pendente Opale Australiano",
+      "description": "Pendente in oro giallo 18K con opale boulder australiano a forma libera da 8 carati e cornice di diamanti",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-perle-akoya.jpg",
+      "title": "Collana di Perle Akoya",
+      "description": "Collana di 89 perle Akoya giapponesi da 7-7.5mm, qualità AAA, chiusura in oro bianco con diamante, lunghezza opera",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-perle-tahiti.jpg",
+      "title": "Collana di Perle di Tahiti",
+      "description": "Collana di 35 perle nere di Tahiti da 10-12mm graduata, colore nero pavone, chiusura in oro bianco con diamanti",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/collana-perle-south-sea-dorate.jpg",
+      "title": "Collana Perle South Sea Dorate",
+      "description": "Collana di 31 perle South Sea dorate da 12-14mm, lucentezza satinata, chiusura in oro giallo con zaffiro giallo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-choker-diamanti.jpg",
+      "title": "Choker di Diamanti",
+      "description": "Choker in oro bianco 18K con diamanti taglio brillante per un totale di 8.5 carati, design a maglia flessibile elegante",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/collana-choker-zaffiri.jpg",
+      "title": "Choker con Zaffiri e Diamanti",
+      "description": "Choker in platino con zaffiri blu e diamanti alternati, totale 12 carati, ispirazione Belle Époque, pezzo di alta gioielleria",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-choker-perle-diamanti.jpg",
+      "title": "Choker di Perle e Diamanti",
+      "description": "Choker a quattro fili di perle Akoya con distanziatori in oro bianco e diamanti, chiusura centrale con zaffiro",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-multi-filo-granati.jpg",
+      "title": "Collana Multi-Filo di Granati",
+      "description": "Collana a cinque fili di granati rodolite sfaccettati con chiusura in oro giallo 18K, stile regale indiano, 320 carati totali",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-multi-filo-tormaline.jpg",
+      "title": "Collana Multi-Filo Tormaline",
+      "description": "Collana a tre fili di tormaline multicolori sfaccettate con distanziatori in oro giallo, cascata di colori naturali",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/collana-multi-filo-perle-colorate.jpg",
+      "title": "Collana Multi-Filo Perle Colorate",
+      "description": "Collana a tre fili combinando perle bianche, rosa e lavanda d'acqua dolce con chiusura in oro rosa e diamanti",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-cammeo-napoletano.jpg",
+      "title": "Collana con Cammeo Napoletano",
+      "description": "Collana in oro giallo 18K con cammeo in conchiglia di Torre del Greco raffigurante profilo femminile, incorniciato da perline e filigrana",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-cammeo-agata.jpg",
+      "title": "Collana con Cammeo in Agata",
+      "description": "Collana in oro giallo con cammeo in agata a strati raffigurante scena mitologica, contorno di diamanti rosetta, stile neoclassico",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-riviere-diamanti.jpg",
+      "title": "Rivière di Diamanti",
+      "description": "Collana rivière in platino con 45 diamanti taglio brillante graduati per un totale di 18 carati, capolavoro di alta gioielleria",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-riviere-smeraldi.jpg",
+      "title": "Rivière di Smeraldi e Diamanti",
+      "description": "Collana rivière in oro bianco alternando smeraldi colombiani ovale e diamanti brillante, totale 22 carati, design unico",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-riviere-zaffiri.jpg",
+      "title": "Rivière di Zaffiri",
+      "description": "Collana rivière in platino con zaffiri blu Ceylon graduati e diamanti, totale 15.8 carati, eleganza senza tempo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/collana-sautoir-perle.jpg",
+      "title": "Sautoir di Perle Art Déco",
+      "description": "Sautoir di perle Akoya con nappa in diamanti e onice, stile Art Déco, lunghezza 90cm, ispirazione anni '20",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/collana-sautoir-ametiste.jpg",
+      "title": "Sautoir di Ametiste e Oro",
+      "description": "Sautoir in oro giallo con ametiste sfaccettate e perle barocche, lunghezza 100cm, versatile e indossabile a più giri",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/ciondolo-personalizzato-iniziale.jpg",
+      "title": "Ciondolo Iniziale Personalizzato",
+      "description": "Ciondolo con iniziale in oro giallo 18K impreziosito da diamanti e catena veneziana, personalizzazione artigianale su richiesta",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/ciondolo-personalizzato-medaglione.jpg",
+      "title": "Medaglione Portafoto",
+      "description": "Medaglione portafoto in oro giallo 18K con incisione floreale e piccolo diamante, apertura a scatto con spazio per due foto",
+      "size": "normal"
     }
   ],
   "orecchini": [
@@ -71,6 +977,150 @@
       "title": "Orecchini Diamanti",
       "description": "Orecchini in oro bianco con diamanti naturali",
       "size": "tall"
+    },
+    {
+      "image": "images/gallery/orecchini-stud-diamanti-solitario.jpg",
+      "title": "Orecchini Punto Luce Diamanti",
+      "description": "Orecchini punto luce in oro bianco 18K con diamanti taglio brillante da 0.50 carati ciascuno, colore F, purezza VS1",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-stud-perle-akoya.jpg",
+      "title": "Orecchini a Bottone Perle Akoya",
+      "description": "Orecchini a bottone con perle Akoya giapponesi da 8mm, qualità AAA, montatura in oro giallo 18K, lucentezza specchio",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-stud-zaffiri.jpg",
+      "title": "Orecchini Punto Luce Zaffiri",
+      "description": "Orecchini punto luce in oro bianco con zaffiri blu Ceylon taglio brillante da 1.0 carato ciascuno, contorno di diamanti",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-stud-smeraldi.jpg",
+      "title": "Orecchini a Bottone Smeraldi",
+      "description": "Orecchini in oro giallo 18K con smeraldi colombiani taglio cuscino da 0.80 carati ciascuno e corona di diamanti",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-pendenti-chandelier-diamanti.jpg",
+      "title": "Orecchini Chandelier Diamanti",
+      "description": "Orecchini chandelier in oro bianco 18K con cascata di diamanti taglio goccia e brillante, totale 6.4 carati, pezzo di gala",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/orecchini-pendenti-smeraldi-goccia.jpg",
+      "title": "Orecchini Pendenti Smeraldi a Goccia",
+      "description": "Orecchini pendenti in platino con smeraldi colombiani a goccia da 3.0 carati ciascuno, circondati da diamanti",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/orecchini-pendenti-rubini-diamanti.jpg",
+      "title": "Orecchini Pendenti Rubini e Diamanti",
+      "description": "Orecchini pendenti in oro giallo 18K con rubini birmani ovali e diamanti in cascata, design Art Déco reinterpretato",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-pendenti-tanzanite.jpg",
+      "title": "Orecchini Pendenti con Tanzanite",
+      "description": "Orecchini pendenti in oro bianco con tanzaniti a goccia da 4.0 carati totali e diamanti brillante, eleganza raffinata",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-pendenti-perle-tahiti.jpg",
+      "title": "Orecchini Pendenti Perle di Tahiti",
+      "description": "Orecchini pendenti in oro bianco con perle nere di Tahiti da 12mm e pavé di diamanti, design contemporaneo",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/orecchini-cerchio-diamanti.jpg",
+      "title": "Orecchini a Cerchio con Diamanti",
+      "description": "Orecchini a cerchio in oro bianco 18K con diamanti taglio brillante incastonati inside-out, totale 3.6 carati, diametro 30mm",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-cerchio-zaffiri.jpg",
+      "title": "Orecchini a Cerchio con Zaffiri",
+      "description": "Orecchini a cerchio in oro bianco con zaffiri multicolori (blu, rosa, giallo, verde) incastonati a binario, arcobaleno di colori",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-cerchio-rubini-oro.jpg",
+      "title": "Orecchini a Cerchio Rubini e Oro",
+      "description": "Orecchini a cerchio in oro giallo 18K con rubini taglio brillante incastonati frontalmente, totale 2.4 carati, eleganza classica",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-cerchio-smeraldi.jpg",
+      "title": "Orecchini a Cerchio con Smeraldi",
+      "description": "Orecchini a cerchio in oro giallo con smeraldi e diamanti alternati, totale 4.0 carati, design raffinato",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-huggie-diamanti.jpg",
+      "title": "Orecchini Huggie con Diamanti",
+      "description": "Orecchini huggie in oro bianco 18K con diamanti pavé, profilo sottile aderente al lobo, totale 0.60 carati, uso quotidiano elegante",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-huggie-zaffiri-rosa.jpg",
+      "title": "Orecchini Huggie Zaffiri Rosa",
+      "description": "Orecchini huggie in oro rosa 18K con zaffiri rosa incastonati a griffe, colore rosa delicato, design femminile contemporaneo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-creoli-oro-giallo.jpg",
+      "title": "Orecchini Creoli in Oro",
+      "description": "Orecchini creoli in oro giallo 18K con superficie sfaccettata diamantata, diametro 35mm, leggerezza e brillantezza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-vintage-art-nouveau.jpg",
+      "title": "Orecchini Vintage Art Nouveau",
+      "description": "Orecchini pendenti in stile Art Nouveau in oro giallo con smalti policromi, perle e diamanti, motivi floreali, circa 1900",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/orecchini-vintage-art-deco.jpg",
+      "title": "Orecchini Art Déco",
+      "description": "Orecchini pendenti Art Déco in platino con diamanti, zaffiri calibrati e onice, geometria perfetta, circa 1925",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-vintage-vittoriani.jpg",
+      "title": "Orecchini Vittoriani con Granati",
+      "description": "Orecchini pendenti vittoriani in oro giallo con granati almandini e perle naturali, design a grappolo, circa 1870",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-asimmetrici-tormaline.jpg",
+      "title": "Orecchini Asimmetrici Tormaline",
+      "description": "Orecchini asimmetrici in oro rosa con tormaline multicolori di forme diverse, design artistico contemporaneo firmato",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-moderni-geometrici.jpg",
+      "title": "Orecchini Moderni Geometrici",
+      "description": "Orecchini dal design geometrico in oro bianco con diamanti e lapislazzuli, linee nette e colori contrastanti, stile minimal chic",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-asimmetrici-perle-diamanti.jpg",
+      "title": "Orecchini Asimmetrici Perle e Diamanti",
+      "description": "Orecchini asimmetrici in oro bianco con perla South Sea da un lato e cascata di diamanti dall'altro, design d'avanguardia",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-uomo-diamante-nero.jpg",
+      "title": "Orecchino Uomo Diamante Nero",
+      "description": "Orecchino singolo da uomo in oro bianco 18K con diamante nero taglio brillante da 0.50 carati, montatura a griffes moderna",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/orecchini-uomo-onice.jpg",
+      "title": "Orecchini Uomo Onice e Oro",
+      "description": "Orecchini da uomo in oro giallo 18K con onice nero cabochon rotondo, design essenziale maschile, chiusura a pressione",
+      "size": "normal"
     }
   ],
   "altro": [
@@ -78,6 +1128,162 @@
       "image": "images/gallery/spilla-vintage.jpg",
       "title": "Spilla Vintage",
       "description": "Spilla in oro con pietre colorate, anni '60",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/spilla-floreale-diamanti.jpg",
+      "title": "Spilla Floreale con Diamanti",
+      "description": "Spilla a forma di rosa in oro bianco 18K con petali pavé di diamanti e foglie in smeraldi, totale 4.8 carati, artigianato italiano",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/spilla-animale-farfalla.jpg",
+      "title": "Spilla Farfalla en Tremblant",
+      "description": "Spilla a forma di farfalla in oro giallo con ali in zaffiri multicolori, diamanti e rubini, meccanismo en tremblant vibrante",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/spilla-art-deco-smeraldo.jpg",
+      "title": "Spilla Art Déco con Smeraldo",
+      "description": "Spilla Art Déco in platino con smeraldo colombiano centrale da 5 carati, diamanti e onice, geometria precisa, circa 1930",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/spilla-cammeo-corallo.jpg",
+      "title": "Spilla con Cammeo in Corallo",
+      "description": "Spilla ovale in oro giallo con cammeo in corallo rosa di Torre del Greco, profilo classico, cornice di perline d'oro",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/spilla-vintage-coccinella.jpg",
+      "title": "Spilla Coccinella Portafortuna",
+      "description": "Spilla a forma di coccinella in oro giallo con smalto rosso, diamanti neri e rubini, porta fortuna della tradizione italiana",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/bracciale-tennis-diamanti.jpg",
+      "title": "Bracciale Tennis Diamanti",
+      "description": "Bracciale tennis in oro bianco 18K con diamanti taglio brillante per un totale di 5.0 carati, colore G, purezza VS, chiusura di sicurezza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/bracciale-tennis-rubini.jpg",
+      "title": "Bracciale Tennis Rubini e Diamanti",
+      "description": "Bracciale tennis in oro giallo 18K alternando rubini ovali e diamanti brillante, totale 8.2 carati, colore caldo e luminoso",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/bracciale-rigido-zaffiri.jpg",
+      "title": "Bracciale Rigido con Zaffiri",
+      "description": "Bracciale rigido in oro bianco 18K con zaffiri blu e diamanti incastonati su tutta la superficie, totale 12 carati, pezzo di gala",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/bracciale-charm-oro.jpg",
+      "title": "Bracciale Charm in Oro",
+      "description": "Bracciale a maglie in oro giallo 18K con charm in pietre colorate: cuore rubino, stella diamante, luna zaffiro, personalizzabile",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/bracciale-bangle-diamanti.jpg",
+      "title": "Bracciale Bangle Diamanti",
+      "description": "Bracciale bangle in oro giallo 18K con fila di diamanti incastonati sul frontale, totale 2.0 carati, apertura a cerniera",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/bracciale-tennis-smeraldi.jpg",
+      "title": "Bracciale Tennis Smeraldi",
+      "description": "Bracciale tennis in platino con smeraldi colombiani ovale e diamanti, totale 10 carati, verde intenso, chiusura doppia sicurezza",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/bracciale-perle-multifilo.jpg",
+      "title": "Bracciale Multi-Filo di Perle",
+      "description": "Bracciale a tre fili di perle Akoya da 6mm con distanziatori e chiusura in oro bianco e diamanti, eleganza classica",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemelli-onice-oro.jpg",
+      "title": "Gemelli in Onice e Oro",
+      "description": "Gemelli da polso in oro giallo 18K con onice nero cabochon e bordo diamantato, meccanismo a barretta, eleganza maschile",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemelli-lapislazzuli.jpg",
+      "title": "Gemelli con Lapislazzuli",
+      "description": "Gemelli in oro giallo con lapislazzuli afghano cabochon rotondo e filetto d'oro, stile classico per occasioni formali",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/gemelli-personalizzati-iniziali.jpg",
+      "title": "Gemelli Personalizzati con Iniziali",
+      "description": "Gemelli in oro bianco 18K con iniziali incise e piccolo diamante, personalizzazione artigianale su ordinazione, regalo esclusivo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/tiara-diamanti-perle.jpg",
+      "title": "Tiara con Diamanti e Perle",
+      "description": "Tiara nuziale in argento rodiato con diamanti e perle d'acqua dolce, design a foglie e volute, ideale per cerimonie",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/diadema-zaffiri-diamanti.jpg",
+      "title": "Diadema con Zaffiri e Diamanti",
+      "description": "Diadema in oro bianco con zaffiri blu Ceylon e diamanti, design regale ispirato alle corone europee, pezzo unico di alta gioielleria",
+      "size": "wide"
+    },
+    {
+      "image": "images/gallery/fermaglio-capelli-fiore.jpg",
+      "title": "Fermaglio per Capelli Floreale",
+      "description": "Fermaglio per capelli in oro rosa con fiore in madreperla, diamanti e zaffiri rosa, design delicato e femminile",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/fermaglio-capelli-farfalla.jpg",
+      "title": "Fermaglio Farfalla per Capelli",
+      "description": "Fermaglio per capelli a farfalla in oro giallo con smalti, tormaline multicolori e diamanti, artigianato italiano raffinato",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pendente-orologio-tasca.jpg",
+      "title": "Pendente per Orologio da Tasca",
+      "description": "Pendente catena per orologio da tasca in oro giallo 18K con sigillo in corniola incisa e moschettone, stile classico gentleman",
+      "size": "tall"
+    },
+    {
+      "image": "images/gallery/pendente-orologio-diamanti.jpg",
+      "title": "Ciondolo Orologio con Diamanti",
+      "description": "Ciondolo-orologio donna in oro bianco 18K con cassa tempestata di diamanti, catena lunga, gioiello e segnatempo",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/cavigliera-oro-diamanti.jpg",
+      "title": "Cavigliera in Oro e Diamanti",
+      "description": "Cavigliera in oro giallo 18K con piccoli diamanti incastonati lungo la catena, charm a stella marina, lunghezza regolabile",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/cavigliera-perle-turchesi.jpg",
+      "title": "Cavigliera Perle e Turchesi",
+      "description": "Cavigliera in oro giallo con perle d'acqua dolce e turchesi cabochon alternati, stile boho-chic elegante, estiva",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pietra-sfusa-rubino-montabile.jpg",
+      "title": "Rubino Sfuso Certificato",
+      "description": "Rubino naturale sfuso da 2.1 carati, taglio ovale, certificato GIA, pronto per montatura personalizzata su anello, pendente o orecchini",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pietra-sfusa-zaffiro-montabile.jpg",
+      "title": "Zaffiro Sfuso per Montatura",
+      "description": "Zaffiro blu Ceylon sfuso da 3.8 carati, taglio cuscino, certificato, disponibile per montatura su misura in qualsiasi gioiello",
+      "size": "normal"
+    },
+    {
+      "image": "images/gallery/pietra-sfusa-smeraldo-montabile.jpg",
+      "title": "Smeraldo Sfuso Colombiano",
+      "description": "Smeraldo colombiano sfuso da 2.5 carati, taglio smeraldo, purezza eccellente, ideale per anello solitario o pendente personalizzato",
       "size": "normal"
     }
   ]

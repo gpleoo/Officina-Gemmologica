@@ -122,6 +122,62 @@
     </div>
   </section>
 
+  <!-- Video: From Rough to Jewel -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>From Rough to Jewel</h2>
+        <div class="gold-line"></div>
+        <p class="subtitle">Watch the transformation process of our gems</p>
+      </div>
+
+      <div class="video-showcase">
+        <div class="video-showcase-player-wrapper reveal-left">
+          <div class="video-showcase-player" id="videoShowcase">
+            <video id="timelapse-video" poster="../images/video-poster-timelapse.jpg" preload="metadata">
+              <source src="../videos/dal-grezzo-al-gioiello.mp4" type="video/mp4">
+              <source src="../videos/dal-grezzo-al-gioiello.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-poster-overlay" id="videoPlayOverlay" onclick="playShowcaseVideo()">
+              <div class="video-play-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="video-showcase-text reveal-right">
+          <h2>The Art of Transformation</h2>
+          <div class="gold-line gold-line-left"></div>
+          <p>
+            Every gem undergoes an extraordinary journey: from the rough stone,
+            extracted from the depths of the earth, to the finished jewel that will shine
+            for generations. This timelapse video captures the essence of our artisan
+            work.
+          </p>
+          <p>
+            Hours of meticulous work, condensed into a few minutes, to show you
+            the patience, precision, and passion we put into every single creation.
+          </p>
+          <ul class="video-features">
+            <li>Selection and analysis of the rough stone</li>
+            <li>Precision cutting with traditional techniques</li>
+            <li>Manual polishing and finishing</li>
+            <li>Setting and creation of the finished jewel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  function playShowcaseVideo() {
+    var video = document.getElementById('timelapse-video');
+    var overlay = document.getElementById('videoPlayOverlay');
+    video.controls = true;
+    video.play();
+    overlay.style.display = 'none';
+  }
+  </script>
+
   <!-- Values Section -->
   <section class="section">
     <div class="container">
