@@ -153,9 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // GALLERIA - FILTRI
   // ============================================
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
 
-  if (filterButtons.length > 0 && galleryItems.length > 0) {
+  if (filterButtons.length > 0) {
     filterButtons.forEach(function(button) {
       button.addEventListener('click', function() {
         // Rimuovi active da tutti i bottoni
@@ -166,10 +165,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Aggiungi active al bottone cliccato
         this.classList.add('active');
 
-        // Filtra gli elementi
+        // Filtra gli elementi (ri-query dal DOM per includere quelli caricati da JSON)
         const filter = this.getAttribute('data-filter');
+        var currentItems = document.querySelectorAll('.gallery-item');
 
-        galleryItems.forEach(function(item) {
+        currentItems.forEach(function(item) {
+          // Rimuovi anche data-load-hidden per mostrare tutti gli item filtrati
+          item.removeAttribute('data-load-hidden');
           if (filter === 'all' || item.getAttribute('data-category') === filter) {
             item.style.display = 'block';
             // Riattiva animazione
@@ -181,6 +183,12 @@ document.addEventListener('DOMContentLoaded', function() {
             item.style.display = 'none';
           }
         });
+
+        // Nascondi il pulsante "Carica altro" quando un filtro è attivo
+        var loadMoreBtn = document.getElementById('galleryLoadMore');
+        if (loadMoreBtn) {
+          loadMoreBtn.style.display = (filter === 'all') ? 'block' : 'none';
+        }
       });
     });
   }
@@ -475,55 +483,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ============================================
-  // CONTATORE VISITATORI REALE
+  // CONTATORE VISITATORI (disabilitato - counterapi.dev non supporta CORS da GitHub Pages)
+  // Per riattivare, sostituire con un servizio compatibile CORS
   // ============================================
-  (function() {
-    var footerBottom = document.querySelector('.footer-bottom');
-    if (!footerBottom) return;
-
-    // Crea l'elemento contatore
-    var counterDiv = document.createElement('p');
-    counterDiv.className = 'visitor-counter';
-
-    // Determina la lingua dalla pagina
-    var isEnglish = document.documentElement.lang === 'en';
-    var label = isEnglish ? 'Visitors' : 'Visitatori';
-
-    // Mostra subito il valore cachato (se esiste)
-    var cached = localStorage.getItem('og-visitor-count');
-    if (cached) {
-      counterDiv.innerHTML = '<span class="visitor-counter-icon">&#9670;</span> ' +
-        label + ': <span class="visitor-counter-value">' +
-        parseInt(cached).toLocaleString() + '</span>';
-    } else {
-      counterDiv.innerHTML = '<span class="visitor-counter-icon">&#9670;</span> ' +
-        label + ': <span class="visitor-counter-value">...</span>';
-    }
-
-    footerBottom.appendChild(counterDiv);
-
-    // Controlla se è un visitatore unico (non ancora contato in questa sessione)
-    var counted = sessionStorage.getItem('og-counted');
-    var apiBase = 'https://api.counterapi.dev/v1/officinagemmologica-site/visitors';
-    var endpoint = counted ? apiBase : apiBase + '/up';
-
-    fetch(endpoint)
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        var count = data.count || data.value;
-        if (count) {
-          var el = footerBottom.querySelector('.visitor-counter-value');
-          if (el) el.textContent = count.toLocaleString();
-          localStorage.setItem('og-visitor-count', count);
-          if (!counted) sessionStorage.setItem('og-counted', '1');
-        }
-      })
-      .catch(function() {
-        // Se l'API fallisce, il valore cachato resta visibile
-        // Se non c'è cache, nascondi il contatore
-        if (!cached) counterDiv.style.display = 'none';
-      });
-  })();
 
   // ============================================
   // DEBUG INFO (rimuovi in produzione)
@@ -544,13 +506,13 @@ window.OG = window.OG || {};
 
 window.OG.config = {
   MAX_ITEMS_PER_CATEGORY: {
-    gemme: 100,
-    anelli: 15,
-    collane: 15,
-    orecchini: 15,
-    altro: 15
+    gemme: 500,
+    anelli: 500,
+    collane: 500,
+    orecchini: 500,
+    altro: 500
   },
-  DEFAULT_MAX_ITEMS: 15
+  DEFAULT_MAX_ITEMS: 500
 };
 
 window.OG.getCountByCategory = function(category) {
