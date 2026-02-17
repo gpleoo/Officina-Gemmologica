@@ -1073,6 +1073,24 @@ img {
   font-size: 0.9rem;
 }
 
+.visitor-counter {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  letter-spacing: 0.05em;
+}
+
+.visitor-counter-icon {
+  color: var(--color-accent);
+  font-size: 0.6rem;
+  vertical-align: middle;
+}
+
+.visitor-counter-value {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
   .about-content,
