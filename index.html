@@ -186,7 +186,7 @@
       <div class="about-content">
         <div class="about-image reveal-left">
           <!-- MODIFICA: Sostituisci con la tua immagine -->
-          <img src="images/about-preview.jpg" alt="Laboratorio Officina Gemmologica"
+          <img src="images/about-preview.jpg" alt="Laboratorio Officina Gemmologica" loading="lazy"
                onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)'; this.style.height='400px';">
         </div>
         <div class="about-text reveal-right">
@@ -240,7 +240,7 @@
         </div>
       </div>
 
-      <div class="text-center" style="margin-top: 3rem;">
+      <div class="text-center" style="margin-top: 1.5rem;">
         <a href="servizi.html" class="btn btn-primary reveal">Tutti i Servizi</a>
       </div>
     </div>
@@ -258,7 +258,7 @@
       <div class="gallery-grid">
         <!-- MODIFICA: Sostituisci le immagini con le tue -->
         <div class="gallery-item reveal">
-          <img src="images/gallery-1.jpg" alt="Creazione 1"
+          <img src="images/gallery-1.jpg" alt="Creazione 1" loading="lazy"
                onerror="this.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)';">
           <div class="gallery-overlay">
             <h4>Rubino Taglio Brillante</h4>
@@ -267,7 +267,7 @@
         </div>
 
         <div class="gallery-item reveal">
-          <img src="images/gallery-2.jpg" alt="Creazione 2"
+          <img src="images/gallery-2.jpg" alt="Creazione 2" loading="lazy"
                onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #2d2d2d)';">
           <div class="gallery-overlay">
             <h4>Anello Smeraldo</h4>
@@ -276,7 +276,7 @@
         </div>
 
         <div class="gallery-item reveal">
-          <img src="images/gallery-3.jpg" alt="Creazione 3"
+          <img src="images/gallery-3.jpg" alt="Creazione 3" loading="lazy"
                onerror="this.style.background='linear-gradient(135deg, #2d2d2d, #1a1a1a)';">
           <div class="gallery-overlay">
             <h4>Zaffiro Ceylon</h4>
@@ -285,7 +285,7 @@
         </div>
       </div>
 
-      <div class="text-center" style="margin-top: 3rem;">
+      <div class="text-center" style="margin-top: 1.5rem;">
         <a href="galleria.html" class="btn btn-outline reveal">Vedi Tutta la Galleria</a>
       </div>
     </div>
@@ -350,8 +350,16 @@
         </div>
       </div>
 
+      <!-- Vedi altre recensioni -->
+      <div class="load-more-container" id="testimonialsLoadMore" style="display: none;">
+        <button class="btn-load-more" onclick="window.OG.showMoreTestimonials()">Vedi altre recensioni</button>
+      </div>
+
+      <!-- Testimonials extra (caricati da JSON, nascosti) -->
+      <div class="testimonials-extra" id="testimonialsExtra"></div>
+
       <!-- Quote filosofica -->
-      <div class="testimonials-slider" style="margin-top: 4rem;">
+      <div class="testimonials-slider" style="margin-top: 2rem;">
         <div class="testimonial reveal">
           <p class="testimonial-quote">
             Ogni pietra ha una sua anima, un suo carattere unico.
@@ -363,7 +371,7 @@
       </div>
 
       <!-- Lascia una Recensione -->
-      <div class="review-cta reveal" style="margin-top: 4rem; text-align: center;">
+      <div class="review-cta reveal" style="margin-top: 2rem; text-align: center;">
         <h3 style="color: var(--color-white); margin-bottom: 1.5rem; font-size: 1.3rem;">
           Condividi la tua esperienza ⭐
         </h3>
@@ -499,7 +507,7 @@
         </div>
       </div>
 
-      <div class="text-center" style="margin-top: 2rem;">
+      <div class="text-center" style="margin-top: 1.5rem;">
         <!-- MODIFICA: Inserisci il tuo handle Instagram -->
         <a href="https://instagram.com/officinagemmologica" target="_blank" rel="noopener" class="btn btn-outline-white reveal">
           @officinagemmologica

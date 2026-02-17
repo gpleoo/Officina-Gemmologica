@@ -206,65 +206,66 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   };
 
-  // Carica foto da JSON
+  // Carica foto da JSON, poi attiva "Carica altro"
   fetch('config/gallery-items.json')
     .then(r => r.json())
-    .then(data => window.OG.loadGalleryFromJSON(data))
+    .then(data => {
+      window.OG.loadGalleryFromJSON(data);
+      window.OG.initGalleryLoadMore(5);
+    })
     .catch(e => console.warn('Errore caricamento galleria:', e));
 
   // ============================================
   // TESTIMONIANZE - CARICAMENTO E RENDERING
   // ============================================
   window.OG.loadTestimonials = function(jsonData) {
-    var testimonialsContainer = document.querySelector('.testimonials-slider');
-    if (!testimonialsContainer) return;
+    var extraContainer = document.getElementById('testimonialsExtra');
+    var loadMoreBtn = document.getElementById('testimonialsLoadMore');
 
-    if (!jsonData.testimonials || jsonData.testimonials.length === 0) {
-      return;
-    }
+    if (!extraContainer) return;
+    if (!jsonData.testimonials || jsonData.testimonials.length === 0) return;
 
-    // Mantieni la prima testimonianza (filosofia)
-    var existingTestimonial = testimonialsContainer.querySelector('.testimonial');
-    testimonialsContainer.innerHTML = '';
-
-    // Aggiungi filosodia se esistente
-    if (existingTestimonial) {
-      testimonialsContainer.appendChild(existingTestimonial.cloneNode(true));
-    }
-
-    // Aggiungi testimonianze dai social
+    // Aggiungi testimonianze nel container nascosto
     jsonData.testimonials.forEach(function(test) {
-      var stars = '★'.repeat(test.rating) + '☆'.repeat(5 - test.rating);
-      var platformIcon = '';
+      var stars = '';
+      for (var i = 0; i < test.rating; i++) stars += '\u2605';
+      for (var j = test.rating; j < 5; j++) stars += '\u2606';
       var platformClass = 'btn-' + test.platform;
 
-      if (test.platform === 'google') {
-        platformIcon = '🔍';
-      } else if (test.platform === 'facebook') {
-        platformIcon = 'f';
-      } else if (test.platform === 'instagram') {
-        platformIcon = '📷';
-      }
-
-      var html = `
-        <div class="testimonial reveal">
-          <p class="testimonial-quote">
-            "${test.text}"
-          </p>
-          <p class="testimonial-author">- ${test.name}</p>
-          <p style="font-size: 0.85rem; color: #ffc107; margin: 0.5rem 0;">
-            ${stars}
-          </p>
-          <a href="${test.url}" target="_blank" class="testimonial-link ${platformClass}">
-            Leggi su ${test.platform.charAt(0).toUpperCase() + test.platform.slice(1)} →
-          </a>
-        </div>
-      `;
+      var html = '<div class="testimonial reveal">' +
+        '<p class="testimonial-quote">"' + test.text + '"</p>' +
+        '<p class="testimonial-author">- ' + test.name + '</p>' +
+        '<p style="font-size: 0.85rem; color: #ffc107; margin: 0.5rem 0;">' + stars + '</p>' +
+        '<a href="' + test.url + '" target="_blank" class="testimonial-link ' + platformClass + '">' +
+        'Leggi su ' + test.platform.charAt(0).toUpperCase() + test.platform.slice(1) + ' \u2192</a>' +
+        '</div>';
 
       var div = document.createElement('div');
       div.innerHTML = html;
-      testimonialsContainer.appendChild(div.firstElementChild);
+      extraContainer.appendChild(div.firstElementChild);
     });
+
+    // Mostra il pulsante "Vedi altre recensioni"
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display = 'block';
+    }
+  };
+
+  // Mostra/nascondi testimonianze extra
+  window.OG.showMoreTestimonials = function() {
+    var extraContainer = document.getElementById('testimonialsExtra');
+    var loadMoreBtn = document.getElementById('testimonialsLoadMore');
+
+    if (extraContainer) {
+      extraContainer.classList.add('visible');
+      // Attiva animazioni reveal
+      extraContainer.querySelectorAll('.reveal').forEach(function(el) {
+        el.classList.add('active');
+      });
+    }
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display = 'none';
+    }
   };
 
   // Carica testimonianze da JSON
@@ -555,14 +556,12 @@ window.OG.addGalleryItem = function(options) {
     }
     item.setAttribute('data-category', config.category);
 
-    item.innerHTML = `
-      <img src="${config.image}" alt="${config.title}">
-      <div class="gallery-overlay">
-        <span class="category">${config.category}</span>
-        <h4>${config.title}</h4>
-        <p>${config.description}</p>
-      </div>
-    `;
+    item.innerHTML = '<img src="' + config.image + '" alt="' + config.title + '" loading="lazy">' +
+      '<div class="gallery-overlay">' +
+      '<span class="category">' + config.category + '</span>' +
+      '<h4>' + config.title + '</h4>' +
+      '<p>' + config.description + '</p>' +
+      '</div>';
 
     grid.appendChild(item);
     window.OG.updateGalleryCounter();
@@ -570,4 +569,55 @@ window.OG.addGalleryItem = function(options) {
   }
 
   return false;
+};
+
+// ============================================
+// GALLERIA - LOAD MORE (mostra primi N, nasconde il resto)
+// ============================================
+window.OG.initGalleryLoadMore = function(limit) {
+  var grid = document.getElementById('galleryGrid');
+  var loadMoreBtn = document.getElementById('galleryLoadMore');
+  if (!grid || !loadMoreBtn) return;
+
+  var items = grid.querySelectorAll('.gallery-item');
+  if (items.length <= limit) {
+    loadMoreBtn.style.display = 'none';
+    return;
+  }
+
+  // Nascondi elementi oltre il limite
+  for (var i = limit; i < items.length; i++) {
+    items[i].style.display = 'none';
+    items[i].setAttribute('data-load-hidden', 'true');
+  }
+
+  loadMoreBtn.style.display = 'block';
+};
+
+window.OG.showMoreGallery = function() {
+  var grid = document.getElementById('galleryGrid');
+  var loadMoreBtn = document.getElementById('galleryLoadMore');
+  if (!grid) return;
+
+  // Rivela tutti gli elementi nascosti
+  var hiddenItems = grid.querySelectorAll('.gallery-item[data-load-hidden]');
+  hiddenItems.forEach(function(item) {
+    item.style.display = '';
+    item.removeAttribute('data-load-hidden');
+  });
+
+  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+
+  // Ri-applica filtro categoria attivo se presente
+  var activeFilter = document.querySelector('.filter-btn.active');
+  if (activeFilter) {
+    var filter = activeFilter.getAttribute('data-filter');
+    if (filter && filter !== 'all') {
+      grid.querySelectorAll('.gallery-item').forEach(function(item) {
+        if (item.getAttribute('data-category') !== filter) {
+          item.style.display = 'none';
+        }
+      });
+    }
+  }
 };

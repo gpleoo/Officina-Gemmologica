@@ -70,79 +70,52 @@
         </div>
     </section>
 
-    <!-- Blog Grid -->
+    <!-- Blog List -->
     <section class="blog-section section">
         <div class="container">
-            <div class="blog-grid">
+            <div class="blog-list" id="blogList">
 
-                <!-- Articolo 1 - Guide -->
-                <article class="blog-card reveal-up" data-category="guide">
-                    <div class="blog-image">
-                        <img src="images/blog/scegliere-pietra.jpg" alt="Come Scegliere la Pietra Giusta" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #c9a962, #9a7b3c)'">
-                        <span class="blog-category">Guide</span>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">15 Gennaio 2024</span>
-                            <span class="blog-read">5 min lettura</span>
-                        </div>
-                        <h3><a href="blog/come-scegliere-pietra.html">Come Scegliere la Pietra Giusta per Te</a></h3>
-                        <p>Guida completa per scegliere la gemma perfetta: colore, durezza, significato e occasione d'uso.</p>
-                        <a href="blog/come-scegliere-pietra.html" class="read-more">Leggi tutto →</a>
-                    </div>
-                </article>
+                <!-- Articolo 4 - 30 Gennaio 2024 (più recente) -->
+                <div class="blog-list-item" data-category="tecnica" data-date="2024-01-30">
+                    <a href="blog/arte-taglio-mano.html">
+                        <span class="blog-list-date">30 Gen 2024</span>
+                        <span class="blog-list-title">L'Arte del Taglio a Mano: Dal Grezzo al Gioiello</span>
+                        <span class="blog-list-category">Tecnica</span>
+                    </a>
+                </div>
 
-                <!-- Articolo 2 - Curiosità -->
-                <article class="blog-card reveal-up" data-category="curiosita">
-                    <div class="blog-image">
-                        <img src="images/blog/significato-pietre.jpg" alt="Significato delle Pietre" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #E31B23, #9a1b1b)'">
-                        <span class="blog-category">Curiosità</span>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">20 Gennaio 2024</span>
-                            <span class="blog-read">6 min lettura</span>
-                        </div>
-                        <h3><a href="blog/significato-pietre-culture.html">Il Significato delle Pietre nelle Culture del Mondo</a></h3>
-                        <p>Dall'Egitto alla Cina, dall'India all'Europa: scopri i poteri simbolici attribuiti alle gemme attraverso i millenni.</p>
-                        <a href="blog/significato-pietre-culture.html" class="read-more">Leggi tutto →</a>
-                    </div>
-                </article>
+                <!-- Articolo 3 - 25 Gennaio 2024 -->
+                <div class="blog-list-item" data-category="tendenze" data-date="2024-01-25">
+                    <a href="blog/tendenze-gemme-2024.html">
+                        <span class="blog-list-date">25 Gen 2024</span>
+                        <span class="blog-list-title">Tendenze Gemme e Gioielli 2024</span>
+                        <span class="blog-list-category">Tendenze</span>
+                    </a>
+                </div>
 
-                <!-- Articolo 3 - Tendenze -->
-                <article class="blog-card reveal-up" data-category="tendenze">
-                    <div class="blog-image">
-                        <img src="images/blog/tendenze-2024.jpg" alt="Tendenze 2024" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #0F52BA, #1E3A8A)'">
-                        <span class="blog-category">Tendenze</span>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">25 Gennaio 2024</span>
-                            <span class="blog-read">7 min lettura</span>
-                        </div>
-                        <h3><a href="blog/tendenze-gemme-2024.html">Tendenze Gemme e Gioielli 2024</a></h3>
-                        <p>I colori, i tagli e gli stili che stanno conquistando il mondo della gioielleria quest'anno.</p>
-                        <a href="blog/tendenze-gemme-2024.html" class="read-more">Leggi tutto →</a>
-                    </div>
-                </article>
+                <!-- Articolo 2 - 20 Gennaio 2024 -->
+                <div class="blog-list-item" data-category="curiosita" data-date="2024-01-20">
+                    <a href="blog/significato-pietre-culture.html">
+                        <span class="blog-list-date">20 Gen 2024</span>
+                        <span class="blog-list-title">Il Significato delle Pietre nelle Culture del Mondo</span>
+                        <span class="blog-list-category">Curiosità</span>
+                    </a>
+                </div>
 
-                <!-- Articolo 4 - Tecnica -->
-                <article class="blog-card reveal-up" data-category="tecnica">
-                    <div class="blog-image">
-                        <img src="images/blog/taglio-mano.jpg" alt="L'Arte del Taglio a Mano" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #50C878, #2E8B57)'">
-                        <span class="blog-category">Tecnica</span>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">30 Gennaio 2024</span>
-                            <span class="blog-read">8 min lettura</span>
-                        </div>
-                        <h3><a href="blog/arte-taglio-mano.html">L'Arte del Taglio a Mano: Dal Grezzo al Gioiello</a></h3>
-                        <p>Scopri il processo artigianale che trasforma un cristallo grezzo in una gemma sfaccettata.</p>
-                        <a href="blog/arte-taglio-mano.html" class="read-more">Leggi tutto →</a>
-                    </div>
-                </article>
+                <!-- Articolo 1 - 15 Gennaio 2024 -->
+                <div class="blog-list-item" data-category="guide" data-date="2024-01-15">
+                    <a href="blog/come-scegliere-pietra.html">
+                        <span class="blog-list-date">15 Gen 2024</span>
+                        <span class="blog-list-title">Come Scegliere la Pietra Giusta per Te</span>
+                        <span class="blog-list-category">Guide</span>
+                    </a>
+                </div>
 
+            </div>
+
+            <!-- Carica altro (visibile solo se più di 5 articoli) -->
+            <div class="load-more-container" id="blogLoadMore" style="display: none;">
+                <button class="btn-load-more" id="blogLoadMoreBtn">Carica altri articoli</button>
             </div>
         </div>
     </section>
@@ -213,27 +186,56 @@
     <script src="js/main.js"></script>
     <script>
         // Blog category filter
-        const categoryTabs = document.querySelectorAll('.category-tab');
-        const blogCards = document.querySelectorAll('.blog-card');
+        var categoryTabs = document.querySelectorAll('.category-tab');
+        var blogItems = document.querySelectorAll('.blog-list-item');
 
-        categoryTabs.forEach(tab => {
+        categoryTabs.forEach(function(tab) {
             tab.addEventListener('click', function() {
-                const category = this.dataset.category;
+                var category = this.dataset.category;
 
-                // Update active tab
-                categoryTabs.forEach(t => t.classList.remove('active'));
+                categoryTabs.forEach(function(t) { t.classList.remove('active'); });
                 this.classList.add('active');
 
-                // Filter cards
-                blogCards.forEach(card => {
-                    if (category === 'all' || card.dataset.category === category) {
-                        card.style.display = 'block';
+                blogItems.forEach(function(item) {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = '';
                     } else {
-                        card.style.display = 'none';
+                        item.style.display = 'none';
                     }
                 });
             });
         });
+
+        // Blog load more (mostra primi 5, nasconde il resto)
+        (function() {
+            var blogList = document.getElementById('blogList');
+            var loadMoreBtn = document.getElementById('blogLoadMore');
+            if (!blogList || !loadMoreBtn) return;
+
+            var items = blogList.querySelectorAll('.blog-list-item');
+            var limit = 5;
+
+            if (items.length <= limit) {
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            for (var i = limit; i < items.length; i++) {
+                items[i].style.display = 'none';
+                items[i].setAttribute('data-load-hidden', 'true');
+            }
+
+            loadMoreBtn.style.display = 'block';
+
+            document.getElementById('blogLoadMoreBtn').onclick = function() {
+                var hidden = blogList.querySelectorAll('.blog-list-item[data-load-hidden]');
+                hidden.forEach(function(item) {
+                    item.style.display = '';
+                    item.removeAttribute('data-load-hidden');
+                });
+                loadMoreBtn.style.display = 'none';
+            };
+        })();
     </script>
 </body>
 </html>
