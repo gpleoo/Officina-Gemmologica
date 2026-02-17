@@ -506,13 +506,13 @@ window.OG = window.OG || {};
 
 window.OG.config = {
   MAX_ITEMS_PER_CATEGORY: {
-    gemme: 500,
-    anelli: 500,
-    collane: 500,
-    orecchini: 500,
-    altro: 500
+    gemme: 100,
+    anelli: 25,
+    collane: 25,
+    orecchini: 25,
+    altro: 25
   },
-  DEFAULT_MAX_ITEMS: 500
+  DEFAULT_MAX_ITEMS: 25
 };
 
 window.OG.getCountByCategory = function(category) {
