@@ -1435,6 +1435,189 @@ img {
   }
 }
 
+/* === VIDEO HERO BACKGROUND === */
+.hero-video {
+  position: relative;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* Fallback: se il video non si carica, mostra il poster come sfondo */
+.hero-video .hero-overlay {
+  z-index: 1;
+}
+
+.hero-video .hero-content {
+  z-index: 2;
+}
+
+.hero-video .hero-scroll {
+  z-index: 2;
+}
+
+/* Su mobile, riduci qualità video per performance */
+@media (max-width: 768px) {
+  .hero-video-bg {
+    opacity: 0.25;
+  }
+}
+
+/* === VIDEO PLAYER SECTION (Dal Grezzo al Gioiello) === */
+.video-showcase {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.video-showcase-player {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--color-primary);
+  aspect-ratio: 16 / 9;
+}
+
+.video-showcase-player video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-showcase-player .video-poster-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-normal);
+}
+
+.video-showcase-player .video-poster-overlay:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.video-play-btn {
+  width: 80px;
+  height: 80px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  box-shadow: 0 8px 30px rgba(201, 169, 98, 0.4);
+}
+
+.video-play-btn::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 14px 0 14px 24px;
+  border-color: transparent transparent transparent var(--color-primary);
+  margin-left: 4px;
+}
+
+.video-poster-overlay:hover .video-play-btn {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(201, 169, 98, 0.6);
+}
+
+.video-showcase-text h2 {
+  margin-bottom: 1rem;
+}
+
+.video-showcase-text .gold-line {
+  margin: 1.5rem 0;
+  margin-left: 0;
+}
+
+.video-showcase-text p {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.video-showcase-text .video-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.video-showcase-text .video-features li {
+  padding: 0.6rem 0;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.video-showcase-text .video-features li::before {
+  content: '\2713';
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Decorazione bordo dorato per il player */
+.video-showcase-player-wrapper {
+  position: relative;
+}
+
+.video-showcase-player-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .video-showcase {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .video-showcase-player-wrapper::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-play-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .video-play-btn::after {
+    border-width: 10px 0 10px 18px;
+    margin-left: 3px;
+  }
+}
+
 /* === PARALLAX HERO === */
 .hero-parallax {
   background-attachment: fixed;
