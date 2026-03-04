@@ -371,6 +371,16 @@
 
   <script>
     // ============================================
+    // SICUREZZA - Sanitizzazione XSS
+    // ============================================
+    function escapeHtml(str) {
+      if (!str) return '';
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
+    // ============================================
     // CONFIGURAZIONE
     // ============================================
     var CATEGORY_LIMITS = {
@@ -535,10 +545,10 @@
           var sizeLabel = photo.size === 'tall' ? 'Verticale' : (photo.size === 'wide' ? 'Orizzontale' : 'Normale');
           html += '<tr>' +
             '<td><strong>' + (i + 1) + '</strong></td>' +
-            '<td style="font-size:0.85rem;color:#6c757d;">' + photo.image.replace('images/gallery/', '') + '</td>' +
-            '<td><div class="item-title">' + photo.title + '</div></td>' +
-            '<td><div class="item-description">' + (photo.description || '—') + '</div></td>' +
-            '<td>' + sizeLabel + '</td>' +
+            '<td style="font-size:0.85rem;color:#6c757d;">' + escapeHtml(photo.image.replace('images/gallery/', '')) + '</td>' +
+            '<td><div class="item-title">' + escapeHtml(photo.title) + '</div></td>' +
+            '<td><div class="item-description">' + escapeHtml(photo.description || '—') + '</div></td>' +
+            '<td>' + escapeHtml(sizeLabel) + '</td>' +
             '<td><button class="btn-danger" onclick="deletePhoto(' + i + ')">Elimina</button></td>' +
             '</tr>';
         }

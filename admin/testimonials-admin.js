@@ -1,3 +1,11 @@
+// Sanitizzazione testo per prevenire XSS
+function escapeHtml(str) {
+  if (!str) return '';
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 // Dati globali
 let testimonials = [];
 let currentRating = 5;
@@ -165,13 +173,13 @@ function renderTable() {
 
       html += `
         <tr>
-          <td><strong>${test.name}</strong></td>
-          <td><em>"${test.text.substring(0, 50)}${test.text.length > 50 ? '...' : ''}"</em></td>
+          <td><strong>${escapeHtml(test.name)}</strong></td>
+          <td><em>"${escapeHtml(test.text.substring(0, 50))}${test.text.length > 50 ? '...' : ''}"</em></td>
           <td><span class="stars-display">${stars}</span></td>
-          <td><span class="platform-badge ${platformClass}">${test.platform}</span></td>
-          <td>${test.date}</td>
+          <td><span class="platform-badge ${platformClass}">${escapeHtml(test.platform)}</span></td>
+          <td>${escapeHtml(test.date)}</td>
           <td>
-            <button class="btn-danger" onclick="deleteTestimonial(${index})">🗑️ Elimina</button>
+            <button class="btn-danger" onclick="deleteTestimonial(${index})">Elimina</button>
           </td>
         </tr>
       `;
