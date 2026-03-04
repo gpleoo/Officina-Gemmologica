@@ -233,19 +233,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!extraContainer) return;
     if (!jsonData.testimonials || jsonData.testimonials.length === 0) return;
 
-    // Aggiungi testimonianze nel container nascosto
+    // Aggiungi testimonianze nel container nascosto (con sanitizzazione XSS)
+    var esc = window.OG.escapeHtml;
+    var sanitizeUrl = window.OG.sanitizeUrl;
+
     jsonData.testimonials.forEach(function(test) {
+      var rating = parseInt(test.rating) || 0;
+      if (rating < 0) rating = 0;
+      if (rating > 5) rating = 5;
       var stars = '';
-      for (var i = 0; i < test.rating; i++) stars += '\u2605';
-      for (var j = test.rating; j < 5; j++) stars += '\u2606';
-      var platformClass = 'btn-' + test.platform;
+      for (var i = 0; i < rating; i++) stars += '\u2605';
+      for (var j = rating; j < 5; j++) stars += '\u2606';
+      var allowedPlatforms = ['google', 'facebook', 'instagram'];
+      var platform = allowedPlatforms.indexOf(test.platform) !== -1 ? test.platform : 'google';
+      var platformClass = 'btn-' + platform;
 
       var html = '<div class="testimonial reveal">' +
-        '<p class="testimonial-quote">"' + test.text + '"</p>' +
-        '<p class="testimonial-author">- ' + test.name + '</p>' +
+        '<p class="testimonial-quote">"' + esc(test.text) + '"</p>' +
+        '<p class="testimonial-author">- ' + esc(test.name) + '</p>' +
         '<p style="font-size: 0.85rem; color: #ffc107; margin: 0.5rem 0;">' + stars + '</p>' +
-        '<a href="' + test.url + '" target="_blank" class="testimonial-link ' + platformClass + '">' +
-        'Leggi su ' + test.platform.charAt(0).toUpperCase() + test.platform.slice(1) + ' \u2192</a>' +
+        '<a href="' + sanitizeUrl(test.url) + '" target="_blank" rel="noopener noreferrer" class="testimonial-link ' + platformClass + '">' +
+        'Leggi su ' + esc(platform.charAt(0).toUpperCase() + platform.slice(1)) + ' \u2192</a>' +
         '</div>';
 
       var div = document.createElement('div');
@@ -351,6 +359,13 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.forEach(function(value, key) {
         data[key] = value;
       });
+
+      // Honeypot anti-spam: se il campo nascosto è compilato, è un bot
+      if (data.website) {
+        showFormMessage('Grazie per averci contattato! Ti risponderemo il prima possibile.', 'success');
+        contactForm.reset();
+        return;
+      }
 
       // Validazione base
       if (!data.nome || !data.cognome || !data.email || !data.messaggio) {
@@ -487,11 +502,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Per riattivare, sostituire con un servizio compatibile CORS
   // ============================================
 
-  // ============================================
-  // DEBUG INFO (rimuovi in produzione)
-  // ============================================
-  console.log('Officina Gemmologica - Sito caricato correttamente');
-
 });
 
 // ============================================
@@ -503,6 +513,24 @@ document.addEventListener('DOMContentLoaded', function() {
  * Usa questa funzione nel file config.js per gestire i contenuti
  */
 window.OG = window.OG || {};
+
+// Sanitizzazione testo per prevenire XSS
+window.OG.escapeHtml = function(str) {
+  if (!str) return '';
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+// Sanitizzazione URL per prevenire XSS via href (blocca javascript:, data:, etc.)
+window.OG.sanitizeUrl = function(url) {
+  if (!url) return '#';
+  var trimmed = url.trim().toLowerCase();
+  if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
+    return window.OG.escapeHtml(url.trim());
+  }
+  return '#';
+};
 
 window.OG.config = {
   MAX_ITEMS_PER_CATEGORY: {
@@ -569,11 +597,12 @@ window.OG.addGalleryItem = function(options) {
     }
     item.setAttribute('data-category', config.category);
 
-    item.innerHTML = '<img src="' + config.image + '" alt="' + config.title + '" loading="lazy">' +
+    var esc = window.OG.escapeHtml;
+    item.innerHTML = '<img src="' + esc(config.image) + '" alt="' + esc(config.title) + '" loading="lazy">' +
       '<div class="gallery-overlay">' +
-      '<span class="category">' + config.category + '</span>' +
-      '<h4>' + config.title + '</h4>' +
-      '<p>' + config.description + '</p>' +
+      '<span class="category">' + esc(config.category) + '</span>' +
+      '<h4>' + esc(config.title) + '</h4>' +
+      '<p>' + esc(config.description) + '</p>' +
       '</div>';
 
     grid.appendChild(item);

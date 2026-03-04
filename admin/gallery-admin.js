@@ -1,3 +1,11 @@
+// Sanitizzazione testo per prevenire XSS
+function escapeHtml(str) {
+  if (!str) return '';
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 // Configurazione dei limiti per categoria
 const CATEGORY_LIMITS = {
   gemme: 100,
@@ -214,18 +222,18 @@ function renderTable() {
       html += `
         <tr>
           <td>
-            <img src="${photo.image}" alt="${photo.title}" class="item-thumbnail" onerror="this.style.background='linear-gradient(45deg, #ddd, #eee)'">
+            <img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.title)}" class="item-thumbnail" onerror="this.style.background='linear-gradient(45deg, #ddd, #eee)'">
           </td>
           <td>
-            <div class="item-title">${photo.title}</div>
+            <div class="item-title">${escapeHtml(photo.title)}</div>
           </td>
           <td>
-            <div class="item-description">${photo.description || '—'}</div>
+            <div class="item-description">${escapeHtml(photo.description) || '—'}</div>
           </td>
-          <td>${sizeLabel}</td>
+          <td>${escapeHtml(sizeLabel)}</td>
           <td>
             <div class="actions">
-              <button class="btn-danger" onclick="deletePhoto(${index})">🗑️ Elimina</button>
+              <button class="btn-danger" onclick="deletePhoto(${index})">Elimina</button>
             </div>
           </td>
         </tr>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Errore del server - Officina Gemmologica di Monica Amato">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>500 - Errore del Server | Officina Gemmologica</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .error-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-content::before {
+      content: '500';
+      position: absolute;
+      font-family: var(--font-heading);
+      font-size: clamp(15rem, 30vw, 30rem);
+      font-weight: 700;
+      color: rgba(201, 169, 98, 0.05);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .error-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+
+    .error-gem {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 2rem;
+    }
+
+    .error-gem svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 8vw, 6rem);
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .error-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--color-white);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .error-text {
+      color: var(--color-gray);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .error-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-suggestion {
+      margin-top: 3rem;
+      padding: 1.5rem 2rem;
+      background: rgba(201, 169, 98, 0.1);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--border-radius);
+      color: var(--color-gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .error-suggestion strong {
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <!-- Header -->
+    <header class="header" style="position: absolute;">
+      <div class="container">
+        <a href="index.html" class="logo">Officina <span>Gemmologica</span> di Monica Amato</a>
+
+        <nav class="nav" id="nav">
+          <a href="index.html">Home</a>
+          <a href="chi-siamo.html">Chi Siamo</a>
+          <a href="servizi.html">Servizi</a>
+          <a href="galleria.html">Galleria</a>
+          <a href="contatti.html">Contatti</a>
+          <div class="lang-switcher">
+            <a href="500.html" class="active" title="Italiano">IT</a>
+            <span>|</span>
+            <a href="en/index.html" title="English">EN</a>
+          </div>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Error Content -->
+    <main class="error-content">
+      <div class="error-inner">
+        <div class="error-gem">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="40,5 65,25 55,70 25,70 15,25" fill="none" stroke="#c9a962" stroke-width="2" opacity="0.6"/>
+            <polygon points="40,15 55,28 48,58 32,58 25,28" fill="none" stroke="#c9a962" stroke-width="1.5" opacity="0.4"/>
+            <line x1="25" y1="28" x2="55" y2="58" stroke="#c9a962" stroke-width="1" opacity="0.2"/>
+            <line x1="55" y1="28" x2="25" y2="58" stroke="#c9a962" stroke-width="1" opacity="0.2"/>
+          </svg>
+        </div>
+
+        <div class="error-code">500</div>
+        <h1 class="error-title">Errore del Server</h1>
+        <p class="error-text">
+          Si è verificato un problema tecnico. Il nostro laboratorio sta lavorando per risolvere il problema.
+          Riprova tra qualche istante.
+        </p>
+
+        <div class="error-buttons">
+          <a href="index.html" class="btn btn-primary">Torna alla Home</a>
+          <a href="contatti.html" class="btn btn-outline-white">Contattaci</a>
+        </div>
+
+        <div class="error-suggestion">
+          <strong>Nel frattempo puoi:</strong><br>
+          Ricaricare la pagina, tornare alla homepage oppure contattarci direttamente
+          via email a <a href="mailto:info@officinagemmologica.com" style="color: var(--color-accent);">info@officinagemmologica.com</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
